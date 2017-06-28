@@ -1,0 +1,216 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Портфолио{% endblock %}
+{% block meta %}Посмотрите и оцените наши работы.{% endblock %}
+{% block content %}
+<!-- Portfolio-->
+<section class="our-portfolio layout-4 padding-top-100 page-branding">
+   <div class="box-content-wrap">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <div class="group-content">
+                  <div class="group-title group-title-1 style-3">
+                     <h2 class="main-title">Наше <span>портфолио</span> <span class="dot"></span> <span class="mute-title">Работы</span></h2>
+                  </div>
+                  <div class="group-wrapper">
+                     <div class="group-filter filter-button-group"><a href="javascript:;" data-filter="*" class="filter-item active">Все</a><a href="javascript:;" data-filter=".shop" class="filter-item">Интернет-магазины</a><a href="javascript:;" data-filter=".visit" class="filter-item">Сайт визитка</a><a href="javascript:;" data-filter=".coop" class="filter-item">Корпоративные</a><a href="javascript:;" data-filter=".service" class="filter-item">Сервисы</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="clearfix"></div>
+   </div>
+   <div class="gallery-masonry-isotope" style="position: relative; height: 595px;">
+      <div class="grid-sizer"></div>
+      <div class="grid-item">
+         {% for item in portfolio_list %}
+         <div class="content-grid-item item-width-50-responsive item-width-{{item.width}} item-height-{{item.height}} print-ads {{item.position}}" >
+            <div class="inner">
+               <div class="pic">
+                  <a href="{{item.img.url}}" data-fancybox-group="gallery" class="fancybox"><img src="{{item.thumb.url}}" alt="{{item.title}}" class="img-responsive"><span class="dh-overlay"></span></a>
+               </div>
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+</section>
+<!-- What we do (what-we-do-1)-->
+<section class="what-we-do layout-5 padding-top-100 padding-bottom-100 page-branding">
+   <div class="box-content-wrap">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <div class="group-content">
+                  <div class="group-title group-title-1 style-3">
+                     <h2 class="main-title">Что <span>мы делаем</span> <span class="dot">делаем</span> <span class="mute-title">Делаем</span></h2>
+                  </div>
+                  <div class="what-we-do-wrapper">
+                     <div class="row group-list">
+                        {% for item in whatwedo %}
+                        <div class="col-sm-4">
+                           <div data-wow-delay="0.2s" class="box-media layout-5 wow fadeIn" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                              <div class="box-media-wrapper">
+                                 <div class="box-icon"><a href="{{item.link}}" class="icons"><i class="{{item.icon}}"></i></a></div>
+                                 <div class="box-info">
+                                    <a href="{{item.link}}" class="title">{{item.title}}</a>
+                                    <div class="text">{{item.body|safe}}</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        {% endfor %}
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="clearfix"></div>
+      </div>
+   </div>
+</section>
+<!-- Team (team-1)-->
+<section class="our-team layout-1 padding-top-100 padding-bottom-100 blind re-style page-branding">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <div class="group-content">
+               <div class="group-title group-title-1 style-3">
+                  <h2 class="main-title">Наша <span>команда</span> <span class="dot"></span> <span class="mute-title">Встречайте</span></h2>
+               </div>
+               <div class="group-wrapper">
+                  <div class="team-slick">
+                     <div class="item item-member">
+                        <div class="member-line-1"></div>
+                        <div class="member-line-2">
+                           <div class="member-social member-left">
+                              <ul class="list-unstyled">
+                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                              </ul>
+                           </div>
+                           <div class="member-right"></div>
+                        </div>
+                        <div class="member-info">
+                           <div class="member-info-wrapper">
+                              <a href="#" class="member-name">Cristian Smith</a>
+                              <div class="member-position">Дизайнер</div>
+                           </div>
+                        </div>
+                        <div class="member-wrapper">
+                           <div class="member-img"><img src="{% static 'assets/img/homepage/team-1.png' %}" alt="" class="img-responsive"></div>
+                        </div>
+                     </div>
+                     <div class="item item-member">
+                        <div class="member-line-1"></div>
+                        <div class="member-line-2">
+                           <div class="member-social member-left">
+                              <ul class="list-unstyled">
+                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                              </ul>
+                           </div>
+                           <div class="member-right"></div>
+                        </div>
+                        <div class="member-info">
+                           <div class="member-info-wrapper">
+                              <a href="#" class="member-name">Ryan Reynolds</a>
+                              <div class="member-position">Оптимизатор</div>
+                           </div>
+                        </div>
+                        <div class="member-wrapper">
+                           <div class="member-img"><img src="{% static 'assets/img/homepage/team-2.png' %}" alt="" class="img-responsive"></div>
+                        </div>
+                     </div>
+                     <div class="item item-member">
+                        <div class="member-line-1"></div>
+                        <div class="member-line-2">
+                           <div class="member-social member-left">
+                              <ul class="list-unstyled">
+                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                              </ul>
+                           </div>
+                           <div class="member-right"></div>
+                        </div>
+                        <div class="member-info">
+                           <div class="member-info-wrapper">
+                              <a href="#" class="member-name">Johan Neeskens</a>
+                              <div class="member-position">Back-end разработчик</div>
+                           </div>
+                        </div>
+                        <div class="member-wrapper">
+                           <div class="member-img"><img src="{% static 'assets/img/homepage/team-3.png' %}" alt="" class="img-responsive"></div>
+                        </div>
+                     </div>
+                     <div class="item item-member">
+                        <div class="member-line-1"></div>
+                        <div class="member-line-2">
+                           <div class="member-social member-left">
+                              <ul class="list-unstyled">
+                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                              </ul>
+                           </div>
+                           <div class="member-right"></div>
+                        </div>
+                        <div class="member-info">
+                           <div class="member-info-wrapper">
+                              <a href="#" class="member-name">Cristian Smith</a>
+                              <div class="member-position">Front-end разработчик</div>
+                           </div>
+                        </div>
+                        <div class="member-wrapper">
+                           <div class="member-img"><img src="{% static 'assets/img/homepage/team-4.png' %}" alt="" class="img-responsive"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- Get In Touch - 2-->
+<section class="contact layout-1 page-branding">
+   <div class="container">
+      <div class="row banner">
+         <div class="col-sm-4 banner-right">
+            <div class="group-title group-title-3">
+               <h2 class="main-title">Напишите  <span>нам</span> <span class="dot"></span> <span class="mute-title">start</span></h2>
+            </div>
+         </div>
+         <div class="col-sm-8 banner-left">
+            <div class="banner-content">
+               <div class="title">Давайте работать <span>над новыми проектами</span> вместе!</div>
+               <form action="#" class="form-contact">
+                  <div class="form-group">
+                     <input type="text" placeholder="Name" class="form-control">
+                  </div>
+                  <div class="form-group">
+                     <input type="email" placeholder="Email" class="form-control">
+                  </div>
+                  <div class="form-group">
+                     <textarea rows="5" placeholder="Message" class="form-control"></textarea>
+                  </div>
+                  <a href="#" class="btn btn-main">Отправить</a>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{%endblock%}
+

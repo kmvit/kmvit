@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Блог ITkitcheN{% endblock %}
+{% block meta %}Блог ITkitcheN. Здесь будут заметки наших разработчиков.{% endblock %}
+{% block content %}
+<section class="page-title layout-5 page-service">
+   <div class="page-title-wrapper">
+      <div class="page-title-content">
+         <div class="container">
+            <div class="box-content">
+               <div class="box-img"><img src="{% static 'assets/img/blog/blog.jpg'%}" alt="Блог kmv-it" class="img-responsive"></div>
+            </div>
+            <div class="group-content">
+               <div class="group-title group-title-1 group-heading">
+                  <h2 class="main-title">Блог <span class="dot"></span> <span class="mute-title">Полезное</span></h2>
+                  <ol class="breadcrumb">
+                     <li><a href="/">Главная</a></li>
+                     <li class="active">Блог</li>
+                  </ol>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="blog-news padding-top-100 padding-bottom-100 blog-main-right">
+   <div class="box-content-wrap">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-8 pull-right">
+               <div class="group-content">
+                  <div class="group-wrapper">
+                     <ul class="list-blog-news list-unstyled">
+                         {% for item in blog_list %}
+                        <li>
+                           <div class="box-img">
+                              <a href="{% url 'blog:blog_detail' slug=item.slug %}"><img src="{{item.img.url}}" alt="{{item.title}}" class="img-responsive"></a>
+                           </div>
+                           <div class="box-date">
+                              <div class="date">{{ item.born|date:"d"|slice:":1" }}<span>{{ item.born|date:"d"|slice:"1:2" }}</span></div>
+                              <div class="month">{{ item.born|date:"M" }}</div>
+                           </div>
+                           <div class="box-content">
+                              <div class="info">
+                                 <div class="item views"><i class="fa fa-user"></i> View: 56</div>
+                                 <div class="item comments"><i class="fa fa-comment"></i> Comment: 239</div>
+                              </div>
+                              <a href="{% url 'blog:blog_detail' slug=item.slug %}" class="title">{{item.title}}</a>
+                              <div class="text">{{item.body|safe|linebreaks|slice:":300"}}</div>
+                              <a href="{% url 'blog:blog_detail' slug=item.slug %}" class="btn btn-main">Подробнее...</a>
+                           </div>
+                        </li>
+                         {% endfor %}
+                     </ul>
+
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="row">
+                  <div class="blog-base">
+                     <div class="col-md-12 col-sm-6 item-base">
+                        <div class="blog-base-widget">
+                           <div class="title">
+                              <div class="line"><span class="dot"></span></div>
+                              Категории
+                           </div>
+                           <div class="categories-list-widget">
+                               {% for item in category_list %}
+                               <a href="{% url 'blog:category_detail' slug=item.slug%}" class="categories-list-inner"><i class="fa fa-angle-double-right"></i>{{item.title}}<span class="number"></span></a>
+                               {% endfor %}
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-12 col-sm-6 item-base">
+                        <div class="blog-base-widget">
+                           <div class="title">
+                              <div class="line"><span class="dot"></span></div>
+                              Тэги
+                           </div>
+                           <div class="tag-widget">
+                               {% for item in tags_list %}
+                               <a href="{% url 'blog:tag_detail' slug=item.slug %}" class="tag">{{item.title}}</a>
+                               {% endfor %}
+                           </div>
+                        </div>
+                     </div>
+                     <div class="clearfix"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{blog.title}}{% endblock %}
+{% block meta %}{{blog.body|safe|slice:":200"}}{% endblock %}
+{% block content %}
+<section class="page-title layout-5 page-service">
+   <div class="page-title-wrapper">
+      <div class="page-title-content">
+         <div class="container">
+            <div class="box-content">
+               <div class="box-img"><img src="{% static 'assets/img/blog/blog.jpg'%}" alt="{{blog.title}}" class="img-responsive"></div>
+            </div>
+            <div class="group-content">
+               <div class="group-title group-title-1 group-heading">
+                  <h2 class="main-title">Блог <span class="dot"></span> <span class="mute-title">Полезное</span></h2>
+                  <ol class="breadcrumb">
+                     <li><a href="/">Главная</a></li>
+                     <li><a href="{% url 'blog:blog_list' %}">Блог</a></li>
+                     <li class="active">{{blog.title}}</li>
+                  </ol>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="blog-news padding-top-100 padding-bottom-100 blog-main-right">
+   <div class="box-content-wrap">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-8 pull-right">
+               <div class="group-content">
+                  <div class="group-wrapper">
+                     <div class="blog-entry">
+                        <img src="{{blog.img.url}}" alt="{{blog.title}}" class="img-responsive">
+                        <div class="blog-info">
+                           <div class="box-date">
+                              <div class="date">{{ blog.born|date:"d"|slice:":1" }}<span>{{ blog.born|date:"d"|slice:"1:2" }}</span></div>
+                              <div class="month">{{ blog.born|date:"M" }}</div>
+                           </div>
+
+                           <div class="meta-tag">
+                              <div class="info">
+                                 <div class="item views"><a href="#"><i class="fa fa-user"></i> View : 56</a></div>
+                                 <div class="item comments"><a href="#"><i class="fa fa-comment"></i> Comment : 239</a></div>
+                              </div>
+                           </div>
+                        </div>
+                        <h2 class="title-blog">{{blog.title}}</h2>
+                        <div class="blog-detail-inner">
+                           {{blog.body|safe|linebreaks}}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="row">
+                  <div class="blog-base">
+                     <div class="col-md-12 col-sm-6 item-base">
+                        <div class="blog-base-widget">
+                           <div class="title">
+                              <div class="line"><span class="dot"></span></div>
+                              Категории
+                           </div>
+                           <div class="categories-list-widget">
+                              {% for item in category_list %}
+                              <a href="{% url 'blog:category_detail' slug=item.slug%}" class="categories-list-inner"><i class="fa fa-angle-double-right"></i>{{item.title}}<span class="number"></span></a>
+                              {% endfor %}
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-12 col-sm-6 item-base">
+                        <div class="blog-base-widget">
+                           <div class="title">
+                              <div class="line"><span class="dot"></span></div>
+                              Тэги
+                           </div>
+                           <div class="tag-widget">
+                              {% for item in tags_list %}
+                              <a href="{% url 'blog:tag_detail' slug=item.slug %}" class="tag">{{item.title}}</a>
+                              {% endfor %}
+                           </div>
+                        </div>
+                     </div>
+                     <div class="clearfix"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
