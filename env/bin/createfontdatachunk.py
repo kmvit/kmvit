@@ -1,4 +1,4 @@
-#!/home/justscoundrel/django/kmvit/env/bin/python3
+#!/srv/django/kmvit/env/bin/python3.4
 from __future__ import print_function
 import base64
 import os

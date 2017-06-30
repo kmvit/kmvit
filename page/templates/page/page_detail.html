@@ -1,4 +1,7 @@
+
+
 {% extends 'base.html' %}
+{% load thumbnail %}
 {% load static %}
 {% block title %}{{page.pre_title}}{% endblock %}
 {% block meta %}{{page.description}}{% endblock %}
@@ -13,13 +16,14 @@
             <div class="homepage-banner-warpper">
                <div class="homepage-banner-content">
                   <div class="banner-info">
-                     <h1 class="mute-title fadeIn animated delay-01">{{item.title}}</h1>
-                     <div class="group-title">
-                        <div class="line-diamond"><span></span></div>
-                     </div>
                      <div class="main-title">
-                        <h2 class="caption fadeInUp animated delay-02">{{item.caption|safe}}</h2>
-                        <div class="description fadeInUp animated delay-04">{{item.body|safe}}</div>
+                        <h2 class="caption fadeInDown animated delay-03">{{item.caption|safe|linebreaks}}</h2>
+                        <div class="group-title">
+                           <div class="line-diamond fadeIn animated delay-03"><span></span><span></span></div>
+                           <div class="text fadeInDown animated delay-04">{{item.title|safe|linebreaks}}</div>
+                        </div>
+                        <div class="description fadeInUp animated delay-04">{{item.body}}</div>
+                        <div class="group-actions fadeInUp animated delay-05"><a href="#" class="btn btn-primary btn-read-more" tabindex="0">Подробнее...</a></a><a href="#" class="btn btn-white btn-outline btn-purchase-now" tabindex="0">Заказать сайт</a></div>
                      </div>
                   </div>
                </div>
@@ -72,7 +76,7 @@
             </div>
             <div class="col-sm-6">
                <div data-wow-delay="0.2s" class="box-content wow fadeIn">
-                  <div class="box-img about-us-img"><img src="{{whoweare.img.url}}" alt="" class="img-responsive"></div>
+                  <div class="box-img about-us-img"><img src="{% thumbnail whoweare.img 613x443 crop %}" alt="" class="img-responsive"></div>
                </div>
             </div>
          </div>
@@ -595,3 +599,4 @@
    </div>
 </section>
 {%endblock%}
+

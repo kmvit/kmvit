@@ -25,7 +25,7 @@ SECRET_KEY = 'b$euzsuuqi5m_^yke3@6fd3s_k*)bmtmtodx2xro*#7@60u-tl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'blog',
     'portfolio',
+    'easy_thumbnails',
 ]
 
 
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'kmvit.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/justscoundrel/django/kmvit/templates'],
+        'DIRS': ['/srv/django/kmvit/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,8 +116,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = '/srv/django/kmvit/'
+STATICFILES_DIRS = (
+   # Put strings here, like "/home/html/static" or "C:/www/django/static".
+   # Always use forward slashes, even on Windows.
+   # Don't forget to use absolute paths, not relative paths.
+   # /home/user/Projects/project/project/static
+   os.path.join(BASE_DIR, 'static'), 
+)
 
 
 

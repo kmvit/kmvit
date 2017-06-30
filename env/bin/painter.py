@@ -1,4 +1,4 @@
-#!/home/justscoundrel/django/kmvit/env/bin/python3
+#!/srv/django/kmvit/env/bin/python3.4
 #
 # The Python Imaging Library
 # $Id$
