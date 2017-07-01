@@ -121,7 +121,8 @@
                                         <div class="group-title group-title-1 hidden-lg hidden-md">
                                             <h2 class="main-title"><span class="mute-title">Menu</span></h2></div>
                                         <ul class="nav-links nav navbar-nav">
-                                            <li class="dropdown active"><a href="/" class="main-menu"><span class="text">Главная</span></a>
+                                            {% with request.resolver_match.url_name as url_name %}
+                                            <li class="dropdown"><a href="/" class="main-menu"><span class="text">Главная</span></a>
                                             </li>
                                             <li class="dropdown"><a href="javascript:void(0)" class="main-menu"><span class="text">Услуги</span><span class="icons-dropdown"><i class="fa fa-angle-down"></i></span></a>
                                                 <ul class="dropdown-menu dropdown-menu-1">
@@ -140,6 +141,7 @@
                                             <li><a href="/portfolio" class="main-menu"><span class="text">Портфолио</span></a></li>
                                             <li><a href="/blog" class="main-menu"><span class="text">Блог</span></a></li>
                                             <li><a href="/contact" class="main-menu"><span class="text">Контакты</span></a></li>
+                                            {% endwith %}
                                         </ul>
                                         <div class="button-search btn-search-s2"><a class="btn btn-search"><i class="fa fa-search"></i></a>
                                             <div class="form-search display-none">
@@ -175,7 +177,7 @@
                             <div class="footer-main-wrapper">
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <div class="footer-logo"><img src="{% static 'assets/img/logo/logo-header-branding.png' %}" alt="" />
+                                        <div class="footer-logo"><img src="{% static 'assets/img/logo/logo-footer-branding.png' %}" alt="" />
                                             <div class="text">Студия ITkitcheN</div>
                                         </div>
                                     </div>

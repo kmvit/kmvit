@@ -63,6 +63,7 @@ class Banner(models.Model):
 	img = models.ImageField(upload_to='images/banner', verbose_name='Изображение')
 	caption = models.CharField(max_length=1000, verbose_name='Захват')
 	body = RichTextField(verbose_name='Содержание' ,blank=True)
+	link = models.CharField(max_length=200, verbose_name='Ссылка на страницу', blank=True)
 	class Meta:
 		verbose_name='Баннер'
 		verbose_name_plural='Баннеры'
@@ -96,3 +97,12 @@ class Page(models.Model):
 	def __str__(self):
 		return self.title
 
+class FeedBack(models.Model):
+	name = models.CharField(max_length=200, verbose_name='Имя')
+	email = models.EmailField(verbose_name='Email')
+	message = models.TextField(verbose_name='Письмо')
+	class Meta:
+		verbose_name='Обратная связь'
+		verbose_name_plural='Письма от пользователей'
+	def __str__(self):
+		return self.name

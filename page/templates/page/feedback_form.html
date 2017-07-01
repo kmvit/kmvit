@@ -1,0 +1,30 @@
+<section class="contact layout-1 page-branding">
+   <div class="container">
+      <div class="row banner">
+         <div class="col-sm-4 banner-right">
+            <div class="group-title group-title-3">
+               <h2 class="main-title">Напишите  <span>нам</span> <span class="dot"></span> <span class="mute-title">start</span></h2>
+            </div>
+         </div>
+         <div class="col-sm-8 banner-left">
+            <div class="banner-content">
+               <div class="title">Давайте работать <span>над новыми проектами</span> вместе!</div>
+               <form action="/feedback/" id='feedback' class="form-contact" method="post" enctype="multipart/form-data">
+                   {% csrf_token %}
+                  <div class="form-group">
+                     <input type="text" placeholder="Name" name="name" maxlength="200" required id="id_name" class="form-control">
+                  </div>
+                  <div class="form-group">
+                     <input type="email" placeholder="Email" name="email" maxlength="254" required id="id_email"  class="form-control">
+                  </div>
+                  <div class="form-group">
+                     <textarea rows="5" placeholder="Message" name="message" cols="40" required id="id_message"  class="form-control"></textarea>
+                  </div>
+
+                   <input type="submit" class="btn btn-main" value="Отправить">
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

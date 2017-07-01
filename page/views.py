@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from .models import *
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView
 from portfolio.models import *
 from blog.models import *
+from .forms import *
 
 
 
@@ -41,3 +43,8 @@ class PageDetail(DetailView):
         context['blog'] = Blog.objects.all()
         assert isinstance(context, object)
         return context
+
+class FeedBack(CreateView):
+    model = FeedBack
+    form_class = FeedBackAdd
+    success_url = '/'

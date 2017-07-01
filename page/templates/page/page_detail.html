@@ -23,7 +23,7 @@
                            <div class="text fadeInDown animated delay-04">{{item.title|safe|linebreaks}}</div>
                         </div>
                         <div class="description fadeInUp animated delay-04">{{item.body}}</div>
-                        <div class="group-actions fadeInUp animated delay-05"><a href="#" class="btn btn-primary btn-read-more" tabindex="0">Подробнее...</a></a><a href="#" class="btn btn-white btn-outline btn-purchase-now" tabindex="0">Заказать сайт</a></div>
+                        <div class="group-actions fadeInUp animated delay-05"><a href="{{item.link}}" class="btn btn-primary btn-read-more" tabindex="0">Подробнее...</a></a><a href="#feedback" class="btn btn-white btn-outline btn-purchase-now" tabindex="0">Заказать сайт</a></div>
                      </div>
                   </div>
                </div>
@@ -151,7 +151,7 @@
       <div class="box-purchase">
          <div class="box-purchase-main">
             <div class="purchase-wrapper">
-               <h1 class="mute-title">Но только если нужен</h1>
+               <h1 class="mute-title">Качественный и профессиональный</h1>
                <h4 class="main-title">Закажите разработку сайта у нас <span>ITkiTcheN</span></h4>
                <a href="#" class="btn btn-primary">Заказать</a>
             </div>
@@ -550,9 +550,9 @@
                            </div>
                            <div class="box-content">
                               <div class="info">
-                                 <div class="item author">Posted By: <a href="#">John Smith</a></div>
+                                 <div class="item author">Опубликовано: <a href="#">Андрей Галкин</a></div>
                               </div>
-                              <a href="#" class="title">{{item.title}}</a>
+                              <a href="{% url 'blog:blog_detail' slug=item.slug%}" class="title">{{item.title}}</a>
                               <div class="text">{{item.body|slice:":250"|safe}}</div>
                               <a href="{% url 'blog:blog_detail' slug=item.slug%}" class="btn btn-main">Читать</a>
                            </div>
@@ -570,33 +570,6 @@
 {% endblock %}
 {% endif %}
 <!-- Get In Touch - 2-->
-<section class="contact layout-1 page-branding">
-   <div class="container">
-      <div class="row banner">
-         <div class="col-sm-4 banner-right">
-            <div class="group-title group-title-3">
-               <h2 class="main-title">Напишите  <span>нам</span> <span class="dot"></span> <span class="mute-title">start</span></h2>
-            </div>
-         </div>
-         <div class="col-sm-8 banner-left">
-            <div class="banner-content">
-               <div class="title">Давайте работать <span>над новыми проектами</span> вместе!</div>
-               <form action="#" class="form-contact">
-                  <div class="form-group">
-                     <input type="text" placeholder="Name" class="form-control">
-                  </div>
-                  <div class="form-group">
-                     <input type="email" placeholder="Email" class="form-control">
-                  </div>
-                  <div class="form-group">
-                     <textarea rows="5" placeholder="Message" class="form-control"></textarea>
-                  </div>
-                  <a href="#" class="btn btn-main">Отправить</a>
-               </form>
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
+{% include 'page/feedback_form.html'%}
 {%endblock%}
 

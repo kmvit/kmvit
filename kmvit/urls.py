@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^blog/', include('blog.urls', namespace='blog')),
     url(r'^portfolio/', include('portfolio.urls', namespace='portfolio')),
+    url(r'^feedback/', FeedBack.as_view(), name='feedback'),
     url(r'^(?P<slug>[\w-]+)/$', PageDetail.as_view(), name='page'),
 
 
