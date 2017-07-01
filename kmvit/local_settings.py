@@ -13,5 +13,5 @@ DATABASES = {
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    '/home/django/kmvit/',
+    '/srv/django/kmvit/',
 ]
