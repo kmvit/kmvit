@@ -1,0 +1,20 @@
+User-agent: *
+Disallow: /admin
+Disallow: /static
+Disallow: /manager
+Disallow: /assets
+
+User-agent: Yandex
+Disallow: /admin
+Disallow: /static
+Disallow: /manager
+Disallow: /assets
+Host: kmv-it.ru
+
+User-agent: Googlebot
+Disallow: /admin
+Disallow: /static
+Disallow: /manager
+Disallow: /assets
+
+Sitemap: http://kmv-it.ru/sitemap.xml
