@@ -11,3 +11,7 @@ class PortfolioList(ListView):
         context['whatwedo'] = Whatwedo.objects.all()
         assert isinstance(context, object)
         return context
+        
+class PortfolioDetail(DetailView):
+    model = Portfolio
+    

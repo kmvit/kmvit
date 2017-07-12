@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% load static %}
+{% block title %}{{portfolio.title}}{% endblock %}
+{% block meta %}{{portfolio.description}}{% endblock %}
+{% block content %}
+<section class="page-title layout-7 page-sourcecode">
+   <div class="page-title-wrapper">
+      <div class="page-title-content">
+         <div class="container">
+            <div class="box-content">
+               <div class="box-img"><img src="/media/images/page/about-us-branding_MUkbvp2.png" alt="{{portfolio.title}}" class="img-responsive"></div>
+            </div>
+            <div class="group-content">
+               <div class="group-title group-title-1 group-heading">
+                  <h1 class="main-title">{{portfolio.title}} <span class="dot"></span></h1>
+                  <ol class="breadcrumb">
+                     <li><a href="/">Главная</a></li>
+                     <li><a href="/portfolio">Портфолио</a></li>
+                     <li class="active">{{portfolio.title}}</li>
+                  </ol>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="about-project slide-vertical padding-top-100 padding-bottom-100">
+   <div class="box-content-wrap">
+      <div class="container">
+         <div class="group-wrapper">
+            <div class="group-content">
+               <div class="group-title group-title-5">
+                  <h2 class="main-title">О проекте</h2>
+               </div>
+               <div class="row">
+                  <div class="col-md-2">
+                     <div class="about-project-left">
+                        <div class="about-project-inner">
+                           <div class="small-title">Кто делал</div>
+                           <div class="text">{{portfolio.developer}}</div>
+                        </div>
+                        <div class="about-project-inner">
+                           <div class="small-title">Год</div>
+                           <div class="text">{{portfolio.year}} </div>
+                        </div>
+                        <div class="about-project-inner">
+                           <div class="small-title">Клиент</div>
+                           <div class="text">{{portfolio.client}} </div>
+                        </div>
+                        <div class="about-project-inner">
+                           <div class="small-title">Что использовали</div>
+                           <div class="text">{{portfolio.skills}} </div>
+                        </div>
+                        <div class="about-project-inner">
+                           <div class="small-title">Посмотреть вживую</div>
+                           <div class="text"><!--noindex--><a href="{{portfolio.link}}">{{portfolio.link}}</a><!--/noindex--></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-10">
+                     <div class="group-wrapper">
+                        <div class="slide-gallery slick-initialized slick-slider slick-dotted slick-vertical">
+                           <div aria-live="polite" class="slick-list draggable">
+                              <div class="slick-track" role="listbox">
+                                 <div class="gallery-item slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1"><img src="{{portfolio.img.url}}" alt="{{portfolio.title}}" class="img-responsive"></div>
+
+                              </div>
+                           </div>
+                        </div>
+                        {%  if portfolio.img2 %}
+                        <div class="slide-gallery slick-initialized slick-slider slick-dotted slick-vertical">
+                           <div aria-live="polite" class="slick-list draggable">
+                              <div class="slick-track" role="listbox">
+                                 <div class="gallery-item slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1"><img src="{{portfolio.img2.url}}" alt="{{portfolio.description|slice:":100"}}" class="img-responsive"></div>
+
+                              </div>
+                           </div>
+                        </div>
+                        {% endif %}
+                        {%  if portfolio.img3 %}
+                        <div class="slide-gallery slick-initialized slick-slider slick-dotted slick-vertical">
+                           <div aria-live="polite" class="slick-list draggable">
+                              <div class="slick-track" role="listbox">
+                                 <div class="gallery-item slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1"><img src="{{portfolio.img3.url}}" alt="создание сайта {{portfolio.title}}" class="img-responsive"></div>
+
+                              </div>
+                           </div>
+                        </div>
+                        {% endif %}
+                     </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="col-sm-6">
+                     <div class="about-project-base">
+                        <div class="title">Описание</div>
+                        <div class="description">
+                           <div class="text">{{portfolio.description}}</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="about-project-base">
+                        <div class="title">Что было сделано</div>
+                        <div class="description">
+                           <div class="text">{{portfolio.work|safe|linebreaks}}</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{%endblock%}

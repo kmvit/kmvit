@@ -31,7 +31,7 @@
          <div class="content-grid-item item-width-50-responsive item-width-{{item.width}} item-height-{{item.height}} print-ads {{item.position}}" >
             <div class="inner">
                <div class="pic">
-                  <a href="{{item.img.url}}" data-fancybox-group="gallery" class="fancybox"><img src="{{item.thumb.url}}" alt="{{item.title}}" class="img-responsive"><span class="dh-overlay"></span></a>
+                  <a href="{% url 'portfolio:portfolio_detail' slug=item.slug %}" data-fancybox-group="gallery" class="fancybox"><img src="{{item.thumb.url}}" alt="{{item.title}}" class="img-responsive"><span class="dh-overlay"></span></a>
                </div>
             </div>
          </div>
@@ -89,18 +89,15 @@
                         <div class="member-line-2">
                            <div class="member-social member-left">
                               <ul class="list-unstyled">
-                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-vk"></i></a></li>
                               </ul>
                            </div>
                            <div class="member-right"></div>
                         </div>
                         <div class="member-info">
                            <div class="member-info-wrapper">
-                              <a href="#" class="member-name">Cristian Smith</a>
-                              <div class="member-position">Дизайнер</div>
+                              <a href="#" class="member-name">Галкин Андрей</a>
+                              <div class="member-position">Менеджер проектов</div>
                            </div>
                         </div>
                         <div class="member-wrapper">
@@ -114,16 +111,14 @@
                               <ul class="list-unstyled">
                                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                               </ul>
                            </div>
                            <div class="member-right"></div>
                         </div>
                         <div class="member-info">
                            <div class="member-info-wrapper">
-                              <a href="#" class="member-name">Ryan Reynolds</a>
-                              <div class="member-position">Оптимизатор</div>
+                              <a href="#" class="member-name">Архипов Денис</a>
+                              <div class="member-position">Разработчик</div>
                            </div>
                         </div>
                         <div class="member-wrapper">
@@ -145,35 +140,12 @@
                         </div>
                         <div class="member-info">
                            <div class="member-info-wrapper">
-                              <a href="#" class="member-name">Johan Neeskens</a>
-                              <div class="member-position">Back-end разработчик</div>
+                              <a href="#" class="member-name">Леонова Анастасия</a>
+                              <div class="member-position">Дизайнер</div>
                            </div>
                         </div>
                         <div class="member-wrapper">
-                           <div class="member-img"><img src="{% static 'assets/img/homepage/team-3.png' %}" alt="" class="img-responsive"></div>
-                        </div>
-                     </div>
-                     <div class="item item-member">
-                        <div class="member-line-1"></div>
-                        <div class="member-line-2">
-                           <div class="member-social member-left">
-                              <ul class="list-unstyled">
-                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                              </ul>
-                           </div>
-                           <div class="member-right"></div>
-                        </div>
-                        <div class="member-info">
-                           <div class="member-info-wrapper">
-                              <a href="#" class="member-name">Cristian Smith</a>
-                              <div class="member-position">Front-end разработчик</div>
-                           </div>
-                        </div>
-                        <div class="member-wrapper">
-                           <div class="member-img"><img src="{% static 'assets/img/homepage/team-4.png' %}" alt="" class="img-responsive"></div>
+                           <div class="member-img"><img src="{% static 'assets/img/homepage/anastasia.png' %}" alt="" class="img-responsive"></div>
                         </div>
                      </div>
                   </div>

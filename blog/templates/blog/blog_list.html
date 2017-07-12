@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static thumbnail %}
 {% block title %}Блог ITkitcheN{% endblock %}
 {% block meta %}Блог ITkitcheN. Здесь будут заметки наших разработчиков.{% endblock %}
 {% block content %}
@@ -34,7 +34,7 @@
                          {% for item in blog_list %}
                         <li>
                            <div class="box-img">
-                              <a href="{% url 'blog:blog_detail' slug=item.slug %}"><img src="{{item.img.url}}" alt="{{item.title}}" class="img-responsive"></a>
+                              <a href="{% url 'blog:blog_detail' slug=item.slug %}"><img src="{% thumbnail item.img 650x200 %}" alt="{{item.title}}" class="img-responsive"></a>
                            </div>
                            <div class="box-date">
                               <div class="date">{{ item.born|date:"d"|slice:":1" }}<span>{{ item.born|date:"d"|slice:"1:2" }}</span></div>

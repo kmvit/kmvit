@@ -899,7 +899,7 @@ ul.slick-dots li.slick-active {
 }
 .box-media .box-info .title {
   font-family: "Yanone Kaffeesatz", sans-serif;
-  font-size: 1.143em;
+  font-size: 1.6em;
   font-weight: bold;
   color: #1e1e25;
   display: inline-block;
@@ -2640,9 +2640,9 @@ Yanone Kaffeesatz
 }
 .our-latest-work.layout-3 .box-media .box-icon .title {
   position: relative;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  font-weight: 500;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
   margin-left: 30px;
 }
 .our-latest-work.layout-3 .box-media .box-icon .title:before {
@@ -2954,7 +2954,7 @@ Yanone Kaffeesatz
   background-position: left;
   background-size: cover;
   -webkit-background-size: cover;
-  background-image: url("../img/homepage/client-1.jpg");
+  background: #ececec;
 }
 .our-client.layout-1 .banner {
   position: static;
@@ -3030,7 +3030,6 @@ Yanone Kaffeesatz
 .our-client.layout-1 .client-slick .item .description {
     position: relative;
     padding: 20px;
-    background: #2f3436;
     opacity: 0.8;
 }
 .our-client.layout-1 .client-slick .item .description:before {
@@ -3055,7 +3054,7 @@ Yanone Kaffeesatz
 }
 .our-client.layout-1 .client-slick .item .description .text {
   font-style: italic;
-  color: #ffffff;
+  color: #000;
 }
 .our-client.layout-1 .client-slick .item .description .line:before {
   content: '';
@@ -3411,7 +3410,6 @@ Yanone Kaffeesatz
   background-position: right;
   background-size: cover;
   -webkit-background-size: cover;
-  background-image: url("../img/homepage/contact-1.jpg");
   padding: 60px 0 45px;
   overflow: hidden;
 }
@@ -3428,7 +3426,7 @@ Yanone Kaffeesatz
   right: 0;
   bottom: -100px;
   width: 300%;
-  background-color: #c9363b;
+  background-color: #29abe2;
 }
 .contact.layout-1 .banner .banner-left:after {
   content: '';
@@ -6810,6 +6808,7 @@ Yanone Kaffeesatz
   margin: 0 0 40px;
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-weight: 700;
+  color: #5dade2;
 }
 .post-titles h1 {
   font-size: 4.286em;
@@ -7078,7 +7077,6 @@ Yanone Kaffeesatz
   cursor: url(../img/cursor/cursor-2.png), pointer;
 }
 .slider-img-banner .slide {
-  height: 100vh;
   overflow: hidden;
   background-size: cover;
   -webkit-background-size: cover;
@@ -7199,7 +7197,7 @@ Yanone Kaffeesatz
   color: #fff;
 }
 .page-banner-4 .homepage-banner-warpper {
-  height: 100vh;
+  height: 65vh;
 }
 .page-banner-4 .homepage-banner-warpper .banner-info {
   text-align: center;
@@ -9677,6 +9675,144 @@ Yanone Kaffeesatz
 .read-more-nav ul li a span {
   font-family: "Roboto", Helvetica, Arial, sans-serif !important;
 }
+.overlay {
+	background: #000;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1000;
+	opacity: .5;
+}
+.visible {
+	background: #fff;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-top: -200px;
+	overflow: hidden;
+	z-index: 2000;
+	width: 500px;
+	padding: 0px;
+	margin-left: -250px;
+}
+#win button {
+	float: right;
+	line-height: 20px;
+	margin: 1.2em;
+	border: none;
+	background: transparent;
+	color: blue;
+}
+#win button[type="button"]:hover {
+	cursor: pointer;
+	color: navy;
+	text-decoration: underline;
+}
+#win h3 {
+	text-align: center;
+	color: #555;
+}
+.content-modal {
+	padding: 0 1.4em;
+
+}
+.package {
+    width: 250px;
+    box-sizing: border-box;
+    height: 380px;
+    border: 3px solid #e8e8e8;
+    border-radius: 7px;
+    display: inline-block;
+    padding: 24px;
+    text-align: center;
+    float: left;
+    -webkit-transition: margin-top 0.5s linear;
+    transition: margin-top 0.5s linear;
+    position: relative;
+    margin-right: 11px;
+    margin-bottom: 15px;
+}
+.package:hover {
+  margin-top: -10px;
+  -webkit-transition: margin-top 0.3s linear;
+  transition: margin-top 0.3s linear;
+}
+.name {
+  color: #565656;
+  font-weight: 300;
+  font-size: 3rem;
+  margin-top: -5px;
+}
+.price {
+  margin-top: 7px;
+  font-weight: bold;
+}
+
+.package hr {
+  background-color: #dedede;
+  border: none;
+  height: 1px;
+}
+.trial {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 2px 21px 2px 21px;
+    color: #29abe2;
+    border: 1px solid #e4e4e4;
+    display: inline-block;
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
+    bottom: -20px;
+}
+.package ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-top: 29px;
+}
+.package li {
+  margin-bottom: 15px;
+}
+.checkIcon {
+  font-family: "FontAwesome";
+  content: "\f00c";
+}
+.package li::before {
+    font-family: "FontAwesome";
+    content: "\f00c";
+    font-size: 1.3rem;
+    color: #00acee;
+    margin-right: 3px;
+}
+.brilliant {
+  border-color: #33c4b6;
+}
+/* Triangle */
+.brilliant::before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 64px 64px 0 0;
+  border-color: #3bc6b8 transparent transparent transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+}
+.brilliant::after {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  color: white;
+  position: absolute;
+  left: 9px;
+  top: 6px;
+  text-shadow: 0 0 2px #37c5b6;
+  font-size: 1.4rem;
+}
+
 /*
 =====  End of PAGE  ======
 */

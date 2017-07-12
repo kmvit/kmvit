@@ -1,5 +1,3 @@
-
-
 {% extends 'base.html' %}
 {% load thumbnail %}
 {% load static %}
@@ -45,7 +43,7 @@
             </div>
             <div class="group-content">
                <div class="group-title group-title-1 group-heading">
-                  <h2 class="main-title">{{page.title}} <span class="dot"></span> <span class="mute-title">{{page.title}}</span></h2>
+                  <h1 class="main-title">{{page.title}} <span class="dot"></span></h1>
                   <ol class="breadcrumb">
                      <li><a href="/">Главная</a></li>
                      <li class="active">{{page.title}}</li>
@@ -94,7 +92,6 @@
             <div class="col-sm-12">
                <div class="block-header-inner padding-bottom-100">
                   <div class="post-titles">
-                     <h1>{{page.title}}</h1>
                   </div>
                   <div class="text">{{page.body|safe}}</div>
                </div>
@@ -144,21 +141,44 @@
 {% endif %}
 {% if page.order %}
 <!-- Banner-->
+<!-- Banner-->
 <section class="banner-homepage layout-2 page-branding">
    <div class="box-content-wrap">
-      <div class="box-img box-left"><img src="assets/img/homepage/banner-adv-3.png" alt="" class="img-responsive"></div>
-      <div class="box-img box-right"><img src="assets/img/homepage/banner-adv-4.png" alt="" class="img-responsive"></div>
       <div class="box-purchase">
          <div class="box-purchase-main">
             <div class="purchase-wrapper">
                <h1 class="mute-title">Качественный и профессиональный</h1>
                <h4 class="main-title">Закажите разработку сайта у нас <span>ITkiTcheN</span></h4>
-               <a href="#" class="btn btn-primary">Заказать</a>
+               <button onClick="getElementById('win').removeAttribute('style');" class='btn btn-primary' type="button">Заказать</button>
             </div>
          </div>
       </div>
    </div>
    <div class="clearfix"></div>
+   <div id="win" style="display: none;">
+      <div class="overlay"></div>
+      <div class="visible">
+         <h3>Напишите нам</h3>
+         <div class="content-modal">
+            <form action="/feedback/" class="form-contact" method="post" enctype="multipart/form-data">
+               {% csrf_token %}
+               <div class="form-group">
+                  <input type="text" placeholder="Имя" name="name" maxlength="200" required id="id_name" class="form-control">
+               </div>
+               <div class="form-group">
+                  <input type="email" placeholder="Email" name="email" maxlength="254" required id="id_email"  class="form-control">
+               </div>
+               <div class="form-group">
+                  <textarea rows="5" placeholder="Комментарий" name="message" cols="40" required id="id_message"  class="form-control"></textarea>
+               </div>
+               <input type="submit" class="btn btn-primary" value="Отправить">
+            </form>
+         </div>
+         <p>        
+            <button type="button" onclick="getElementById('win').style.display='none';">x</button>
+         </p>
+      </div>
+   </div>
 </section>
 {% endif %}
 {% if page.fact %}
@@ -303,11 +323,11 @@
    <div class="gallery-masonry-isotope" style="position: relative; height: 595px;">
       <div class="grid-sizer"></div>
       <div class="grid-item">
-         {% for item in portfolio %}
+         {% for item in portfolio|slice:":7" %}
          <div class="content-grid-item item-width-50-responsive item-width-{{item.width}} item-height-{{item.height}} print-ads {{item.position}}" >
             <div class="inner">
                <div class="pic">
-                  <a href="{{item.img.url}}" data-fancybox-group="gallery" class="fancybox"><img src="{{item.thumb.url}}" alt="{{item.title}}" class="img-responsive"><span class="dh-overlay"></span></a>
+                  <a href="{% url 'portfolio:portfolio_detail' slug=item.slug %}" data-fancybox-group="gallery" class="fancybox"><img src="{{item.thumb.url}}" alt="{{item.title}}" class="img-responsive"><span class="dh-overlay"></span></a>
                </div>
             </div>
          </div>
@@ -546,7 +566,7 @@
                               <div class="month">{{ item.born|date:"M" }}</div>
                            </div>
                            <div class="box-img">
-                              <a href="{% url 'blog:blog_detail' slug=item.slug%}"><img src="{{item.img.url}}" alt="" class="img-responsive"></a>
+                              <a href="{% url 'blog:blog_detail' slug=item.slug%}"><img src="{% thumbnail item.img 514x130 %}" alt="{{item.description}}" class="img-responsive"></a>
                            </div>
                            <div class="box-content">
                               <div class="info">
@@ -569,7 +589,107 @@
 </section>
 {% endblock %}
 {% endif %}
+<section class="what-we-do layout-5 padding-top-100 padding-bottom-100 page-branding">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <div class="group-content">
+                <div class="group-title group-title-1 style-3">
+                     <h2 class="main-title">Цены <span>на</span> <span class="dot">наши</span> <span class="mute-title">Услуги</span></h2>
+                 </div>
+                 <div class="col-sm-3">
+               <div class='package'>
+                  <div class='name'><a href="/razrabotka-saita-visitki">Сайт-визитка</a></div>
+                  <div class='price'>от 10000 руб.</div>
+                  <div class='trial'>4-5 дней</div>
+                  <hr>
+                  <ul>
+                     <li>
+                        
+                        Уникальный дизайн
+                     </li>
+                     <li>
+                        
+                        CMS
+                     </li>
+                     <li>
+                        
+                        Хостинг и домен
+                     </li>
+                  </ul>
+               </div>
+               </div>
+                <div class="col-sm-3">
+               <div class='package'>
+                  <div class='name'><a href="/razrabotka-internet-magazina/">Интернет-магазин</a></div>
+                  <div class='price'>от 20000 руб.</div>
+                  <div class='trial'>12-30 дней</div>
+                  <hr>
+                  <ul>
+                     <li>
+                         Уникальный дизайн
+                     </li>
+                     <li>
+                        Система оплаты
+                     </li>
+                     <li>
+                         Система управления
+                     </li>
+                     <li>
+                         Оптимизайция
+                     </li>
+                  </ul>
+               </div>
+               </div>
+               <div class="col-sm-3">
+               <div class='package'>
+                  <div class='name'><a href="/razrabotka-corporativnogo-saita">Корпоративный сайт</a></div>
+                  <div class='price'>от 17000 руб.</div>
+                  <div class='trial'>10-20 дней</div>
+                  <hr>
+                  <ul>
+                     <li>
+                         Уникальный дизайн
+                     </li>
+                     <li>
+                         Система управления
+                     </li>
+                     <li>
+                         Различные модули
+                     </li>
+                     <li>
+                         Оптимизация
+                     </li>
+                  </ul>
+               </div>
+               </div>
+               <div class="col-sm-3">
+               <div class='package'>
+                  <div class='name'><a href="/landing-page">Landing Page</a></div>
+                  <div class='price'>от 10000 руб.</div>
+                  <div class='trial'>от 5 дней</div>
+                  <hr>
+                  <ul>
+                     <li>
+                        Высокая конверсия
+                     </li>
+                     <li>
+                        Дизайн на аудиторию
+                     </li>
+                     <li>
+                        Система управления
+                     </li>
+                     <li>
+                         Счетчики
+                     </li>
+                  </ul>
+               </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
 <!-- Get In Touch - 2-->
 {% include 'page/feedback_form.html'%}
 {%endblock%}
-

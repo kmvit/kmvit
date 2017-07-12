@@ -31,12 +31,14 @@ class Blog(models.Model):
     born = models.DateField(default=timezone.now, verbose_name='Дата')
     category = models.ForeignKey(Category, verbose_name='Категория')
     tags = models.ForeignKey(Tag,verbose_name='Тэги')
+    description = models.TextField()
     body = RichTextField(verbose_name='Содержание')
 
 
     class Meta:
         verbose_name='Блог статья'
         verbose_name_plural = 'Блог'
+        ordering = ['-born']
 
     def __str__(self):
         return self.title

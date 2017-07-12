@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}{{blog.title}}{% endblock %}
-{% block meta %}{{blog.body|safe|slice:":200"}}{% endblock %}
+{% block meta %}{{blog.description}}{% endblock %}
 {% block content %}
 <section class="page-title layout-5 page-service">
    <div class="page-title-wrapper">

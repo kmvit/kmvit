@@ -87,20 +87,21 @@ html {
   overflow-x: hidden;
 }
 body {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-size: 13.95px;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 15px;
   line-height: 1.714em;
   font-weight: 400;
   color: #555e69;
   background-color: #fff;
 }
-a,
+
 label,
 p,
 span {
   font-size: 1em;
 }
 a {
+  font-size: 1.1em;
   transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -225,7 +226,7 @@ a:hover {
   width: 50%;
 }
 .group-title {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   position: relative;
 }
 .group-title .line-diamond {
@@ -3305,12 +3306,14 @@ footer .socials .link:last-child,
   background-image: url("../img/background/homepage-01-footer.jpg");
 }
 .footer-main .widget .title-widget {
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  color: #ffffff;
-  text-transform: uppercase;
-  margin-bottom: 65px;
-  position: relative;
+    font-size: 22px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 65px;
+    position: relative;
+}
+.content-widget {
+    font-size: 14px;
 }
 .footer-main .widget .title-widget:before {
   content: '';
@@ -3487,10 +3490,12 @@ footer .socials .link:last-child,
   margin: 0;
 }
 .info-list .item {
-  display: table;
-  border: none;
-  width: 100%;
-  padding: 0 0 10px 0;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: 16px;
+    display: table;
+    border: none;
+    width: 100%;
+    padding: 0 0 10px 0;
 }
 .info-list .item:last-child {
   padding-bottom: 0;
@@ -3557,6 +3562,13 @@ footer .socials .link:last-child,
 }
 .box-img {
     width: 80%;
+}
+.text a{
+    border-bottom: 1px #3a74ba dashed;
+}
+.text a:hover{
+    border-bottom: none;
+    color:#337ab7;
 }
 /*
 ----------  5.2. Sub Footer  ----------
