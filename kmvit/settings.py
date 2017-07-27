@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'b$euzsuuqi5m_^yke3@6fd3s_k*)bmtmtodx2xro*#7@60u-tl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'blog',
     'portfolio',
     'easy_thumbnails',
+    'srm',
 ]
 
 
@@ -116,11 +117,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 
-
-
 CKEDITOR_UPLOAD_PATH =  'uploads/'
 CKEDITOR_CONFIGS = {
     'default': {
+        'extraAllowedContent' : '*(*)',
         'skin': 'moono',
         # 'skin': 'office2013',
         'toolbar_Basic': [

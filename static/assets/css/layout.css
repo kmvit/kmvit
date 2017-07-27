@@ -3570,6 +3570,249 @@ footer .socials .link:last-child,
     border-bottom: none;
     color:#337ab7;
 }
+
+/*
+----------  Blocks  ----------
+*/
+#what_blocks {
+    background: url(../img/homepage/landing.png) no-repeat scroll center top transparent;
+    margin-top: 50px;
+    width: 100%;
+    height: 550px;
+    position: relative;
+}
+#what_blocks .block a {
+    color: #3498db;
+    line-height: 1.4em;
+    text-decoration: none;
+    border-bottom: 1px dashed;
+}
+#what_blocks .block {
+    position: absolute;
+    color: #ffffff;
+    font-size: 16px;
+    width: 238px;
+}
+#what_blocks .block.b1 {
+    text-align: right;
+    left: 0px;
+    top: 22px;
+}
+
+#what_blocks .block.b2 {
+    text-align: right;
+    left: 0px;
+    top: 102px;
+}
+#what_blocks .block.b3 {
+    text-align: right;
+    left: 0px;
+    top: 182px;
+}
+#what_blocks .block.b4 {
+    text-align: right;
+    left: 0px;
+    top: 302px;
+}
+#what_blocks .block.b5 {
+    text-align: right;
+    left: 0px;
+    top: 457px;
+}
+#what_blocks .block.b6 {
+    text-align: left;
+    right: 0px;
+    top: 32px;
+}
+#what_blocks .block.b7 {
+    text-align: left;
+    right: 0px;
+    top: 102px;
+}
+#what_blocks .block.b8 {
+    text-align: left;
+    right: 0px;
+    top: 237px;
+}
+#what_blocks .block.b9 {
+    text-align: left;
+    right: 0px;
+    top: 377px;
+}
+#what_blocks .block.b10 {
+    text-align: left;
+    right: 0px;
+    top: 457px;
+}
+#left_block {
+    padding: 20px;
+    width: 380px;
+    height: 500px;
+    display: none;
+    background-color: #FFFFFF;
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    z-index: 99999;
+}
+#right_block {
+    padding: 20px;
+    width: 380px;
+    height: 500px;
+    display: none;
+    background-color: #FFFFFF;
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    z-index: 99999;
+}
+@media only screen and (max-width: 980px){
+#what_blocks {
+    background: none;
+}
+#what_blocks .block.b1, #what_blocks .block.b2, #what_blocks .block.b3, #what_blocks .block.b4, #what_blocks .block.b5, #what_blocks .block.b6, #what_blocks .block.b7, #what_blocks .block.b8, #what_blocks .block.b9, #what_blocks .block.b10 {
+    text-align: center;
+}
+#what_blocks {
+    margin-top: 50px;
+    width: 100%;
+    height: 550px;
+    position: relative;
+}
+#what_blocks .block {
+    position: static;
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 11px;
+    border: 1px solid #bdc3c7;
+    background: #ecf0f1;
+}
+/*
+=====  End of Block  ======
+*/
+}
+.text h3 {
+    color: #29abe2;
+}
+/*
+----------  Section  ----------
+*/
+
+.better {
+    border-top: 5px solid #161f28;
+    background: #29abe2;
+    height: 415px;
+}
+.better h3 {
+    margin: 0.3em 0 0.9em;
+    text-align: center;
+    font-size: 40px;
+    color: #ffffff;
+}
+.better .conteiner>div {
+    vertical-align: top;
+    width: 49%;
+    display: inline-block;
+    text-align: center;
+}
+.better .conteiner>div>p {
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    margin: 10px 0;
+}
+.better .conteiner>div>img {
+    max-width: 100%;
+    height: auto;
+}
+.conteiner {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+    position: relative;
+}
+.dop .conteiner>div.first {
+    width: 56%;
+}
+.dop h3 {
+    margin: 0.3em 0 0.9em;
+    text-align: center;
+    font-size: 40px;
+}
+.dop .conteiner>div {
+    display: inline-block;
+    vertical-align: top;
+}
+.dop .conteiner>div img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.dop .conteiner>div.second {
+    width: 42%;
+}
+.dop .conteiner>div>p {
+    text-align: left;
+    font-size: 20px;
+    color: #7f8c8d;
+    line-height: 1.5em;
+    margin-bottom: 0.8em;
+}
+.technology {
+    margin-top:40px;
+    border-top: 5px solid #161f28;
+    background: #bec6ca;
+    height: 415px;
+}
+.technology  h3 {
+    margin: 0.3em 0 0.9em;
+    text-align: center;
+    font-size: 40px;
+}
+.technology .css, .technology .js {
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    top: 184px;
+    right: 191px;
+}
+.technology .html {
+    position: absolute;
+    right: 153px;
+    top: 73px;
+    width: 220px;
+    height: 364px;
+    background: url(../img/page/html_center.png) no-repeat;
+}
+.technology .css {
+    position: absolute;
+    right: 330px;
+    top: 151px;
+    width: 142px;
+    height: 200px;
+    background: url(../img/page/c9_left.png) no-repeat;
+}
+.technology .js {
+    position: absolute;
+    right: 55px;
+    top: 151px;
+    width: 142px;
+    height: 200px;
+    background: url(../img/page/js_right.png) no-repeat;
+}
+@media screen and (max-width: 991px){
+.technology .html,
+.technology .css,
+.technology .js {
+   display:none; 
+}
+}
+.h3 {
+    text-align:center !important;
+}
+/*
+=====  End of Section  ======
+*/
 /*
 ----------  5.2. Sub Footer  ----------
 */

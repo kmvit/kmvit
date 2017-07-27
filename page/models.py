@@ -69,7 +69,8 @@ class Banner(models.Model):
 		verbose_name_plural='Баннеры'
 	def __str__(self):
 		return self.title
-
+		
+		
 
 class Page(models.Model):
 	title = models.CharField(max_length=300, verbose_name='Название')
@@ -96,6 +97,16 @@ class Page(models.Model):
 
 	def __str__(self):
 		return self.title
+
+class Section(models.Model):
+    title = models.CharField(max_length=300, verbose_name='Заголовок')
+    body = RichTextField(blank=True, verbose_name='Содержание') 
+    page = models.ForeignKey(Page, verbose_name='Страница к которой принадлежит')
+    class Meta:
+	    verbose_name='Секции'
+	    verbose_name_plural='Секция'
+    def __str__(self):
+	    return self.title
 
 class FeedBack(models.Model):
 	name = models.CharField(max_length=200, verbose_name='Имя')

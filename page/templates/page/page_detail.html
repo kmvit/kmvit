@@ -101,6 +101,11 @@
    </div>
 </section>
 {% endif %}
+{% for item in page.section_set.all%}
+<section class="{{item.title}}">
+    {{item.body|safe}}
+</section>
+{% endfor%}
 {% if page.whatwedo %}
 {% block whatwedo %}
 <!-- What we do (what-we-do-1)-->
