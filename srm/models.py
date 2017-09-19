@@ -6,6 +6,7 @@ from datetime import datetime
 
 class Stage(models.Model):
     title = models.CharField(max_length=300, verbose_name='Название')
+    label = models.CharField(max_length=300, verbose_name='Цвет', default='label-default')
     class Meta:
         verbose_name = 'Этап'
         verbose_name_plural = 'Этапы'

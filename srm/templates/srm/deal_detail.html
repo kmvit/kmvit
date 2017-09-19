@@ -1,0 +1,58 @@
+{% extends 'srm/base.html' %}
+{% block content %}
+<div class="panel panel-bd lobidisable">
+   <div class="panel-heading">
+      <div class="btn-group" id="buttonexport">
+         <a href="#">
+            <h4>Заказы</h4>
+         </a>
+      </div>
+   </div>
+   <div class="panel-body">
+      <!-- Plugin content:powerpoint,txt,pdf,png,word,xl -->
+      <div class="btn-group">
+      </div>
+      <!-- ./Plugin content:powerpoint,txt,pdf,png,word,xl -->
+      <div class="table-responsive">
+         <table id="dataTableExample1" class="table table-bordered table-striped table-hover">
+            <thead>
+               <tr class="info">
+                  <th>Номер заказа</th>
+                  <th>Дата</th>
+                  <th>Клиент</th>
+                  <th>Телефон</th>
+                  <th>Сайт</th>
+                  <th>Город</th>
+                  <th>Примечания</th>
+                  <th>Статус</th>
+                  <th>Предоплата</th>
+                  <th>Дата предоплаты</th>
+                  <th>Сумма</th>
+                  <th>Действия</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td><a href="{% url 'orders:order_detail' pk=deal.id%}">{{deal.id}}</a></td>
+                  <td>{{deal.born}}</td>
+                  <td>{{deal.name}}</td>
+                  <td>{{deal.phone}}</td>
+                  <td><a href="{{deal.site}}">{{deal.site}}</a></td>
+                  <td>{{deal.city}}</td>
+                  <td>{{deal.description}}</td>
+                  <td><span class="{{deal.stage.label}}">{{deal.stage}}</span></td>
+                  <td>{{deal.prepayment}}</td>
+                  <td>{{deal.prepayment_date}}</td>
+                  <td>{{deal.budget}}</td>
+                  <td>
+                     <a class="btn btn-add btn-xs" href="{% url 'orders:order_edit' pk=deal.id %}"><i class="fa fa-pencil"></i></a>
+                     <a class="btn btn-danger btn-xs" href="{% url 'orders:order_delete' pk=deal.id %}"><i class="fa fa-trash-o"></i> </a>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+
+   </div>
+</div>
+{% endblock %}
