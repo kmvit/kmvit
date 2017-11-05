@@ -277,7 +277,7 @@ a:hover {
   margin-bottom: 30px;
 }
 .group-title .main-title span {
-  color: #c9363b;
+  color: #facf07;
 }
 .group-title.group-title-1 {
   background-color: transparent;
@@ -302,8 +302,8 @@ a:hover {
 .group-title.group-title-1 .main-title .dot {
   width: 10px;
   height: 10px;
-  border: 1px solid #c32026;
-  background-color: #c32026;
+  border: 1px solid #f2e145;
+  background-color: #59b3db;
   transform: rotate(45deg) translate(100%, 100%);
   transform-origin: 100% 100%;
   display: inline-block;
@@ -923,11 +923,11 @@ a:hover {
   background-color: #5fac75;
 }
 .page-branding .group-title .main-title span {
-  color: #00acee;
+  color: #facf07;
 }
 .page-branding .group-title.group-title-1 .main-title .dot {
-  border: 1px solid #00acee;
-  background-color: #00acee;
+  border: 1px solid #facf07;
+  background-color: #facf07;
 }
 .page-game .group-title .main-title span {
   color: #facf07;
@@ -1913,7 +1913,13 @@ a:hover {
   border-bottom: 1px solid #efefef;
 }
 .header-layout-3 .read-more-nav .info-contact a {
-  color: #bebebe;
+  color: #facf07;
+}
+.info-contact.list-unstyled {
+    font-size: 18px;
+}
+.benefits img {
+    max-height: 110px;
 }
 .header-layout-3 .read-more-nav .info-contact a:hover {
   color: #c32026;
@@ -2103,16 +2109,16 @@ a:hover {
 .header-layout-3.page-branding .navigation .nav-links li.active .main-menu,
 .header-layout-3.page-branding .navigation .nav-links li:hover .icons-dropdown i,
 .header-layout-3.page-branding .navigation .nav-links li.active .icons-dropdown i {
-  color: #00acee;
+  color: #facf07;
 }
 .header-layout-3.page-branding .dropdown-menu > li > a:focus,
 .header-layout-3.page-branding .dropdown-menu > li > a:hover,
 .header-layout-3.page-branding .dropdown-menu-1 li:hover > .link-page,
 .header-layout-3.page-branding .dropdown-menu-2 li:hover > .link-page {
-  color: #00acee;
+  color: #facf07;
 }
 .header-layout-3.page-branding .read-more-nav .info-contact a span {
-  color: #555e69;
+  color: #999;
   transition: color 0.3s;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
@@ -2121,24 +2127,24 @@ a:hover {
 .header-layout-3.page-branding .read-more-nav .info-contact a:hover,
 .header-layout-3.page-branding .read-more-nav .info-contact a:hover span,
 .header-layout-3.page-branding .read-more-nav .socials a:hover {
-  color: #00acee;
+  color: #facf07;
 }
 .header-layout-3.page-branding .button-search a {
   color: #555555;
 }
 .header-layout-3.page-branding .button-search a:hover {
-  color: #00acee;
+  color: #facf07;
 }
 .header-layout-3.page-branding .button-search .nav-search form:before,
 .header-layout-3.page-branding .button-search .nav-search form:after {
-  background-color: #00acee;
+  background-color: #facf07;
 }
 .header-layout-3.page-branding .button-search .nav-search form:hover:before,
 .header-layout-3.page-branding .button-search .nav-search form:hover:after {
-  background-color: #00acee;
+  background-color: #facf07;
 }
 .header-layout-3.page-branding .button-search .nav-search form:hover .btn-search {
-  color: #00acee;
+  color: #facf07;
 }
 .header-layout-4 {
   background-color: #1e1e25;
@@ -3539,7 +3545,7 @@ footer .socials .link:last-child,
 .page-branding .contact-us-widget .info-list ul li .link:hover,
 .page-branding .twitter-widget .recent-list ul li a:hover,
 .page-branding.footer-main .socials .link:hover {
-  color: #00acee;
+  color: #facf07;
 }
 .page-game .contact-us-widget .info-list ul li .link:hover,
 .page-game .twitter-widget .recent-list ul li a:hover,
@@ -3687,12 +3693,13 @@ footer .socials .link:last-child,
     border: 1px solid #bdc3c7;
     background: #ecf0f1;
 }
+
 /*
 =====  End of Block  ======
 */
 }
 .text h3 {
-    color: #29abe2;
+    color: #000;
 }
 /*
 ----------  Section  ----------
@@ -3700,7 +3707,7 @@ footer .socials .link:last-child,
 
 .better {
     border-top: 5px solid #161f28;
-    background: #29abe2;
+    background: #facf07;
     height: 415px;
 }
 .better h3 {
@@ -3809,6 +3816,9 @@ footer .socials .link:last-child,
 }
 .h3 {
     text-align:center !important;
+}
+h4.post-title {
+    border-bottom: 1px dashed #999;
 }
 /*
 =====  End of Section  ======

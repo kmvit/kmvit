@@ -61,6 +61,7 @@ a:hover {
 }
 
 
+
 /*-------------------------------------------------
 MASTER: FORM ELEMENTS
 -------------------------------------------------*/
@@ -215,4 +216,9 @@ form input[type="text"] { background: #fff; }
 .home-links ul li a{
     display: inline-block;
     margin: 0 5px;
+}
+
+h4.post-title {
+    border-bottom: 1px #cecece dashed;
+    width: auto;
 }

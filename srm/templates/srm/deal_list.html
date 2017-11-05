@@ -19,10 +19,11 @@
          <form action="{% url 'orders:order_filter' %}" method="get">
             <select name="select">
                <option selected value="all">Все</option>
-               <option value="1">Выполнен</option>
-               <option value="2">В работе</option>
-               <option value="3">Невыполнен</option>
-               <option value="4">Отказ</option>
+               <option value="Успешное завершение">Успешное завершение</option>
+               <option value="Разработка">Разработка</option>
+               <option value="Предоплата">Предоплата</option>
+               <option value="Принимает решение">Принимает решение</option>
+               <option value="Закрыто и не реализовано">Закрыто и не реализовано</option>
             </select>
             <button type="submit" class="btn btn-add btn-sm">Фильтровать</button>
          </form>
@@ -33,11 +34,10 @@
             <thead>
                <tr class="info">
                   <th>Номер заказа</th>
-                  <th>Дата</th>
+                  <th>Название</th>
                   <th>Клиент</th>
                   <th>Телефон</th>
                   <th>Сайт</th>
-                  <th>Город</th>
                   <th>Примечания</th>
                   <th>Статус</th>
                   <th>Предоплата</th>
@@ -50,11 +50,10 @@
                {% for item in deal_list %}
                <tr>
                   <td><a href="{% url 'orders:order_detail' pk=item.id%}">{{item.id}}</a></td>
-                  <td>{{item.born}}</td>
+                  <td>{{item.title}}</td>
                   <td>{{item.name}}</td>
                   <td>{{item.phone}}</td>
                   <td><a href="{{item.site}}">{{item.site}}</a></td>
-                  <td>{{item.city}}</td>
                   <td>{{item.description}}</td>
                   <td><span class="{{item.stage.label}}">{{item.stage}}</span></td>
                   <td>{{item.prepayment}}</td>

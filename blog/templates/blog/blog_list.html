@@ -42,8 +42,8 @@
                            </div>
                            <div class="box-content">
                               <div class="info">
-                                 <div class="item views"><i class="fa fa-user"></i> View: 56</div>
-                                 <div class="item comments"><i class="fa fa-comment"></i> Comment: 239</div>
+                                 <div class="item views"><i class="fa fa-user"></i> Просмотры: 56</div>
+                                 <div class="item comments"><i class="fa fa-comment"></i> Комментарии: Закрыты</div>
                               </div>
                               <a href="{% url 'blog:blog_detail' slug=item.slug %}" class="title">{{item.title}}</a>
                               <div class="text">{{item.body|safe|linebreaks|slice:":300"}}</div>

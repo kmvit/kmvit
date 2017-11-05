@@ -47,4 +47,7 @@ class PageDetail(DetailView):
 class FeedBack(CreateView):
     model = FeedBack
     form_class = FeedBackAdd
-    success_url = '/'
+    success_url = '/success'
+    
+def success(request):
+    return render(request, 'page/success.html')

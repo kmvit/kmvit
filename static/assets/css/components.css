@@ -127,14 +127,14 @@
   box-shadow: none;
 }
 .btn.btn-main:hover {
-  border-color: #c32026;
-  color: #c32026;
+  border-color: #facf07;
+  color: #facf07;
 }
 .btn.btn-main:hover:before,
 .btn.btn-main:hover:after {
-  color: #c32026;
+  color: #facf07;
   transform: rotateX(180deg);
-  border-color: #c32026;
+  border-color: #facf07;
 }
 .btn.btn-main:before {
   font-family: 'FontAwesome';
@@ -187,12 +187,12 @@
   border-bottom: 1px solid #1e1e25;
 }
 .btn.btn-second:hover {
-  border-color: #c32026;
-  color: #c32026;
+  border-color: #facf07;
+  color: #facf07;
 }
 .btn.btn-primary {
-  background-color: #c32026;
-  border-color: #c32026;
+  background-color: #facf07;
+  border-color: #facf07;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -257,10 +257,10 @@
   -o-transition: 0.3s;
 }
 .btn.btn-load-more:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .btn.btn-load-more:hover:before {
-  border-color: #c32026;
+  border-color: #facf07;
   transform: rotateX(180deg);
   -webkit-transform: rotateX(180deg);
   -moz-transform: rotateX(180deg);
@@ -278,7 +278,7 @@
 .page-title {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 290px;
   color: #3f3f50;
   text-align: left;
   overflow: hidden;
@@ -314,7 +314,7 @@
   font-size: 24px;
 }
 .btn-wrapper.back-to-top .btn {
-  color: #c32026;
+  color: #facf07;
   background-color: #1e1e25;
   border-color: #1e1e25;
   font-size: 24px;
@@ -375,13 +375,13 @@
   z-index: 100;
 }
 .btn-wrapper.back-to-top.homepage-advertising .btn {
-  color: #ff6000;
+  color: #facf07;
 }
 .btn-wrapper.back-to-top.homepage-artist .btn {
   color: #5fac75;
 }
 .btn-wrapper.back-to-top.homepage-branding .btn {
-  color: #00acee;
+  color: #facf07;
 }
 .btn-wrapper.back-to-top.homepage-game .btn {
   color: #facf07;
@@ -502,8 +502,8 @@ ul.slick-dots li:first-child {
   margin-left: 0;
 }
 ul.slick-dots li.slick-active {
-  background-color: #c32026;
-  border-color: #c32026;
+  background-color: #facf07;
+  border-color: #facf07;
 }
 .slick-prev:before {
   content: '\f104';
@@ -575,7 +575,7 @@ ul.slick-dots li.slick-active {
   content: '\f101';
   top: -1px;
   left: 0;
-  color: #c32026;
+  color: #facf07;
   font-size: 1em;
 }
 .group-progress-bar-list .progress-item:last-child .progress {
@@ -606,7 +606,7 @@ ul.slick-dots li.slick-active {
   content: '';
   width: 10px;
   height: 10px;
-  background-color: #c32026;
+  background-color: #facf07;
   position: absolute;
   top: -4px;
   right: 0;
@@ -695,7 +695,7 @@ ul.slick-dots li.slick-active {
   border-radius: 50%;
 }
 .item-member .member-line-2 .member-social ul li a:hover {
-  background-color: #c32026;
+  background-color: #facf07;
   color: #ffffff;
 }
 .item-member .member-info {
@@ -758,7 +758,7 @@ ul.slick-dots li.slick-active {
 }
 .item-member:hover .member-line-1,
 .item-member:hover .member-line-2 {
-  border-color: #c32026;
+  border-color: #facf07;
 }
 .box-item {
   text-align: center;
@@ -854,7 +854,7 @@ ul.slick-dots li.slick-active {
   content: '';
   left: -30px;
   top: 50%;
-  background-color: #c32026;
+  background-color: #facf07;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transition: left 0.3s, right 0.3s, opacity 0.3s;
@@ -882,8 +882,8 @@ ul.slick-dots li.slick-active {
   right: -10px;
   top: -5px;
   bottom: -10px;
-  border-left: 1px solid #c32026;
-  border-bottom: 1px solid #c32026;
+  border-left: 1px solid #facf07;
+  border-bottom: 1px solid #facf07;
 }
 .box-media .box-icon .title {
   font-family: "Yanone Kaffeesatz", sans-serif;
@@ -895,7 +895,7 @@ ul.slick-dots li.slick-active {
   margin-left: 15px;
 }
 .box-media .box-icon .title:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .box-media .box-info .title {
   font-family: "Yanone Kaffeesatz", sans-serif;
@@ -906,7 +906,7 @@ ul.slick-dots li.slick-active {
   margin-bottom: 10px;
 }
 .box-media .box-info .title:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .box-media:hover .box-icon .number {
   color: #fff;
@@ -925,7 +925,7 @@ ul.slick-dots li.slick-active {
   right: -5px;
 }
 .box-media:hover .box-icon .icon-2 i {
-  color: #c32026;
+  color: #facf07;
 }
 .box-media:hover .box-icon .icon-2:before {
   transform: scale(1);
@@ -985,7 +985,7 @@ ul.slick-dots li.slick-active {
   content: '';
   width: 0;
   height: 2px;
-  background-color: #c32026;
+  background-color: #facf07;
   position: absolute;
   top: -1px;
   left: 0;
@@ -995,7 +995,7 @@ ul.slick-dots li.slick-active {
   content: '';
   width: 2px;
   height: 0;
-  background-color: #c32026;
+  background-color: #facf07;
   position: absolute;
   top: 0;
   left: -1px;
@@ -1018,7 +1018,7 @@ ul.slick-dots li.slick-active {
   content: '';
   width: 0;
   height: 2px;
-  background-color: #c32026;
+  background-color: #facf07;
   position: absolute;
   bottom: -1px;
   right: 0;
@@ -1028,7 +1028,7 @@ ul.slick-dots li.slick-active {
   content: '';
   width: 2px;
   height: 0;
-  background-color: #c32026;
+  background-color: #facf07;
   position: absolute;
   bottom: 0;
   right: -1px;
@@ -1091,13 +1091,13 @@ ul.slick-dots li.slick-active {
   position: static;
 }
 .box-media.layout-5 .box-info .title:hover {
-  color: #00acee;
+  color: #facf07;
 }
 .box-media.layout-5:before {
   content: '';
   width: 0px;
   height: 2px;
-  background-color: #00acee;
+  background-color: #facf07;
   position: absolute;
   top: -1px;
   left: 0;
@@ -1110,7 +1110,7 @@ ul.slick-dots li.slick-active {
   content: '';
   width: 2px;
   height: 0px;
-  background-color: #00acee;
+  background-color: #facf07;
   position: absolute;
   top: 0;
   left: -1px;
@@ -1123,7 +1123,7 @@ ul.slick-dots li.slick-active {
   content: '';
   width: 0px;
   height: 2px;
-  background-color: #00acee;
+  background-color: #facf07;
   position: absolute;
   bottom: -1px;
   right: 0;
@@ -1136,7 +1136,7 @@ ul.slick-dots li.slick-active {
   content: '';
   width: 2px;
   height: 0;
-  background-color: #00acee;
+  background-color: #facf07;
   position: absolute;
   bottom: 0;
   right: -1px;
@@ -1257,7 +1257,7 @@ ss .box-media.layout-6:hover .box-img img {
   content: '';
   width: 0;
   height: 2px;
-  background-color: #c32026;
+  background-color: #facf07;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1267,7 +1267,7 @@ ss .box-media.layout-6:hover .box-img img {
   content: '';
   width: 2px;
   height: 0;
-  background-color: #c32026;
+  background-color: #facf07;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1337,7 +1337,7 @@ ss .box-media.layout-6:hover .box-img img {
   content: '';
   width: 0;
   height: 2px;
-  background-color: #c32026;
+  background-color: #facf07;
   position: absolute;
   top: 0px;
   left: 0;
@@ -1347,7 +1347,7 @@ ss .box-media.layout-6:hover .box-img img {
   content: '';
   width: 2px;
   height: 0;
-  background-color: #c32026;
+  background-color: #facf07;
   position: absolute;
   top: 0;
   left: 0;
@@ -1427,7 +1427,7 @@ ss .box-media.layout-6:hover .box-img img {
 .our-subscribe {
   position: relative;
   overflow: hidden;
-  background-color: #c32026;
+  background-color: #facf07;
   color: #ffffff;
 }
 .our-subscribe .heading {
@@ -1536,16 +1536,16 @@ ss .box-media.layout-6:hover .box-img img {
   display: block;
   position: absolute;
   top: 100%;
-  background-color: #c32026;
+  background-color: #facf07;
 }
 .preload.homepage-advertising .logo-container .logo-curtain div {
-  background-color: #ff6000;
+  background-color: #facf07;
 }
 .preload.homepage-artist .logo-container .logo-curtain div {
   background-color: #5fac75;
 }
 .preload.homepage-branding .logo-container .logo-curtain div {
-  background-color: #00acee;
+  background-color: #facf07;
 }
 .preload.homepage-game .logo-container .logo-curtain div {
   background-color: #facf07;
@@ -1586,7 +1586,7 @@ ss .box-media.layout-6:hover .box-img img {
   -o-transition: all 0.6s ease;
 }
 .contact-us-widget .info-list ul li .link:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .contact-us-widget .text {
   margin-bottom: 10px;
@@ -1672,7 +1672,7 @@ ss .box-media.layout-6:hover .box-img img {
   color: #c3bec7;
 }
 .twitter-widget .recent-list ul li a:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .twitter-widget .recent-list ul li .date {
   font-size: 0.786em;
@@ -1775,11 +1775,11 @@ ss .box-media.layout-6:hover .box-img img {
   font-size: 0.857em;
 }
 .homepage-banner-warpper .banner-info .btn-play-video:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .homepage-banner-warpper .banner-info .btn-play-video:hover:before {
-  background-color: #c32026;
-  border-color: #c32026;
+  background-color: #facf07;
+  border-color: #facf07;
   color: #ffffff;
 }
 .homepage-banner-warpper .banner-info .btn-play-video:before {
@@ -1795,7 +1795,7 @@ ss .box-media.layout-6:hover .box-img img {
   font-family: "fontawesome";
   font-size: 16px;
   content: "\f04b";
-  color: #c32026;
+  color: #facf07;
   margin-right: 10px;
   padding-left: 5px;
   transition: 0.3s;
@@ -1809,10 +1809,10 @@ ss .box-media.layout-6:hover .box-img img {
 }
 .homepage-banner-warpper .banner-info .group-title .line-diamond {
   left: -30px;
-  border-bottom-color: #c32026;
+  border-bottom-color: #facf07;
 }
 .homepage-banner-warpper .banner-info .group-title .line-diamond:after {
-  border-top-color: #c32026;
+  border-top-color: #facf07;
 }
 .homepage-banner-warpper .banner-info .group-title .line-diamond span {
   background-color: #1e1e25;
@@ -1825,7 +1825,7 @@ ss .box-media.layout-6:hover .box-img img {
   margin-right: 15px;
 }
 .homepage-banner-warpper .banner-info .group-title a:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .about-us {
   position: relative;
@@ -1944,7 +1944,7 @@ ss .box-media.layout-6:hover .box-img img {
 }
 .about-us.layout-2.bg-dark .btn-main:before {
   border-color: #ffffff;
-  color: #c32026;
+  color: #facf07;
 }
 .about-us.layout-2.bg-dark .btn-main:after {
   border-bottom-color: #ffffff;
@@ -2004,7 +2004,7 @@ ss .box-media.layout-6:hover .box-img img {
 }
 .about-us.layout-3.bg-dark .btn-main:before {
   border-color: #ffffff;
-  color: #c32026;
+  color: #facf07;
 }
 .about-us.layout-3.bg-dark .btn-main:after {
   border-bottom-color: #fff;
@@ -2056,7 +2056,7 @@ ss .box-media.layout-6:hover .box-img img {
   top: -1px;
   left: 0;
   font-size: 1em;
-  color: #ff6000;
+  color: #facf07;
 }
 .what-we-do {
   position: relative;
@@ -2175,7 +2175,7 @@ Yanone Kaffeesatz
   text-transform: uppercase;
 }
 .banner-adv .box-description .main-title span {
-  color: #c32026;
+  color: #facf07;
 }
 .banner-adv .box-purchase {
   position: absolute;
@@ -2269,7 +2269,7 @@ Yanone Kaffeesatz
 }
 .banner-adv .btn:hover {
   color: #1e1e25;
-  background-color: #c32026;
+  background-color: #facf07;
   border-color: #fff;
 }
 .banner-adv .btn:hover:before {
@@ -2277,7 +2277,7 @@ Yanone Kaffeesatz
 }
 .banner-adv.layout-2 {
   padding: 120px 0;
-  background-color: #c32026;
+  background-color: #facf07;
   overflow: initial;
 }
 .banner-adv.layout-2 .box-content-inner {
@@ -2366,7 +2366,7 @@ Yanone Kaffeesatz
 }
 .banner-adv.layout-3 .title-1 .title-inner,
 .banner-adv.layout-3 .title-2 .title-inner {
-  color: #c32026;
+  color: #facf07;
 }
 .banner-adv.layout-3 .title-2 {
   margin-top: 2px;
@@ -2445,7 +2445,7 @@ Yanone Kaffeesatz
   -o-transition: right 0.3s;
 }
 .our-latest-work.layout-1 .box-media:hover .box-icon .title {
-  color: #c32026;
+  color: #facf07;
 }
 .our-latest-work.layout-1 .box-media:hover .box-icon .title:before {
   width: auto;
@@ -2601,7 +2601,7 @@ Yanone Kaffeesatz
   -o-transition: right 0.3s;
 }
 .our-latest-work.layout-2 .box-media:hover .box-icon .title {
-  color: #c32026;
+  color: #facf07;
 }
 .our-latest-work.layout-2 .box-media:hover .box-icon .title:before {
   width: auto;
@@ -2714,15 +2714,15 @@ Yanone Kaffeesatz
   transition: all 0.3s ease;
 }
 .our-portfolio.layout-1 .group-filter .filter-item:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .our-portfolio.layout-1 .group-filter .filter-item:hover:before {
   height: 100%;
-  background-color: #c32026;
+  background-color: #facf07;
 }
 .our-portfolio.layout-1 .group-filter .filter-item:hover:after {
   width: 100%;
-  background-color: #c32026;
+  background-color: #facf07;
 }
 .our-portfolio.layout-1 .group-filter .filter-item.active {
   color: #ffffff;
@@ -2734,15 +2734,15 @@ Yanone Kaffeesatz
   width: 100%;
 }
 .our-portfolio.layout-1 .group-filter .filter-item.active:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .our-portfolio.layout-1 .group-filter .filter-item.active:hover:before {
   height: 100%;
-  background-color: #c32026;
+  background-color: #facf07;
 }
 .our-portfolio.layout-1 .group-filter .filter-item.active:hover:after {
   width: 100%;
-  background-color: #c32026;
+  background-color: #facf07;
 }
 .our-portfolio.layout-2 {
   color: #c3bec7;
@@ -2977,7 +2977,7 @@ Yanone Kaffeesatz
   left: 100%;
   bottom: -100%;
   width: 300%;
-  background-color: #c32026;
+  background-color: #facf07;
 }
 .our-client.layout-1 .group-title .line-diamond {
   border-bottom-color: #1e1e25;
@@ -3118,7 +3118,7 @@ Yanone Kaffeesatz
   background-color: #1e1e25;
 }
 .our-client.layout-3 {
-  background-color: #c32026;
+  background-color: #facf07;
   overflow: visible;
   position: relative;
   z-index: 1;
@@ -3319,7 +3319,7 @@ Yanone Kaffeesatz
   -o-transform: translate(-50%, -50%);
 }
 .blog-news .list-blog-news li .box-img.video-control:hover .video-button-play i {
-  color: #c32026;
+  color: #facf07;
 }
 .blog-news .list-blog-news li .box-img a {
   display: inline-block;
@@ -3364,7 +3364,7 @@ Yanone Kaffeesatz
   color: #555e69;
 }
 .blog-news .list-blog-news li .box-content .info .author a:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .blog-news .list-blog-news li .box-content .info .comments {
   text-align: right;
@@ -3378,7 +3378,7 @@ Yanone Kaffeesatz
   color: #1e1e25;
 }
 .blog-news .list-blog-news li .box-content .title:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .blog-news .list-blog-news li .box-content .text {
   margin-bottom: 15px;
@@ -3426,7 +3426,7 @@ Yanone Kaffeesatz
   right: 0;
   bottom: -100px;
   width: 300%;
-  background-color: #29abe2;
+  background-color: #facf07;
 }
 .contact.layout-1 .banner .banner-left:after {
   content: '';
@@ -3534,11 +3534,11 @@ Yanone Kaffeesatz
   font-weight: 500;
 }
 .intro-video .btn-play-video:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .intro-video .btn-play-video:hover:before {
-  background-color: #c32026;
-  border-color: #c32026;
+  background-color: #facf07;
+  border-color: #facf07;
   color: #ffffff;
 }
 .intro-video .btn-play-video:before {
@@ -3569,7 +3569,7 @@ Yanone Kaffeesatz
   -webkit-background-size: cover;
 }
 .fun-fact.layout-1 {
-  background-color: #c32026;
+  background-color: #facf07;
 }
 .fun-fact.layout-1 .box-content-right {
   width: 27%;
@@ -3603,10 +3603,10 @@ Yanone Kaffeesatz
   color: #ffffff;
 }
 .fun-fact.layout-2 .group-title .main-title span {
-  color: #c32026;
+  color: #facf07;
 }
 .fun-fact.layout-2 .box-item .box-icon {
-  color: #c32026;
+  color: #facf07;
 }
 .fun-fact.layout-2 .box-item .box-info {
   color: #ffffff;
@@ -3672,7 +3672,7 @@ Yanone Kaffeesatz
   border-color: #fff;
 }
 .fun-fact.layout-3 .box-item:hover .box-info {
-  color: #c32026;
+  color: #facf07;
 }
 .fun-fact.layout-3 .box-item:hover .box-info .title {
   color: #fff;
@@ -3738,7 +3738,7 @@ Yanone Kaffeesatz
   color: #1e1e25;
 }
 .fun-fact.layout-4.bg-light .main-title {
-  color: #ff6000;
+  color: #facf07;
 }
 .fun-fact.layout-4.bg-light .main-title:after {
   background-color: #1e1e25;
@@ -3842,7 +3842,7 @@ Yanone Kaffeesatz
   color: #1e1e25;
 }
 .homepage-02 .banner-info .group-title .text span {
-  color: #c32026;
+  color: #facf07;
   font-size: 1.571em;
   font-weight: bold;
 }
@@ -3919,10 +3919,10 @@ Yanone Kaffeesatz
 .homepage-03 .banner-info .group-title .line-diamond {
   top: 10px;
   left: 100px;
-  border-bottom-color: #c32026;
+  border-bottom-color: #facf07;
 }
 .homepage-03 .banner-info .group-title .line-diamond:after {
-  border-top-color: #c32026;
+  border-top-color: #facf07;
 }
 .homepage-03 .banner-info .group-title .line-diamond span {
   background-color: #ffffff;
@@ -3937,7 +3937,7 @@ Yanone Kaffeesatz
   display: inline-block;
 }
 .homepage-03 .banner-info .group-title .text span {
-  color: #c32026;
+  color: #facf07;
   font-size: 175%;
   font-weight: bold;
   margin-left: 20px;
@@ -4027,7 +4027,7 @@ Yanone Kaffeesatz
   overflow: hidden;
 }
 .why-us.layout-1 {
-  background-color: #c32026;
+  background-color: #facf07;
 }
 .why-us.layout-1 .group-wrapper {
   margin-bottom: -50px;
@@ -4211,7 +4211,7 @@ Yanone Kaffeesatz
   color: #fff;
 }
 .service-provide-widget:hover .title {
-  color: #c32026;
+  color: #facf07;
 }
 .service-provide-widget:hover .text {
   color: #e7e7f0;
@@ -4260,7 +4260,7 @@ Yanone Kaffeesatz
   left: -60px;
   right: 100%;
   height: 1px;
-  background-color: #c32026;
+  background-color: #facf07;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -4312,7 +4312,7 @@ Yanone Kaffeesatz
   -o-transition: opacity 0.3s 0.5s;
 }
 .pricing-widget .title-hover {
-  background-color: #c32026;
+  background-color: #facf07;
   color: #fff;
   font-size: 1.143em;
   text-transform: uppercase;
@@ -4377,7 +4377,7 @@ Yanone Kaffeesatz
 .pricing-widget .price {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 4.286em;
-  color: #c32026;
+  color: #facf07;
   font-weight: bold;
   line-height: 1;
   margin: 12px 0 7px;
@@ -4405,8 +4405,8 @@ Yanone Kaffeesatz
 }
 .pricing-widget .btn:hover {
   color: #fff;
-  border-color: #c32026;
-  background-color: #c32026;
+  border-color: #facf07;
+  background-color: #facf07;
 }
 .pricing-widget .description {
   margin-top: 22px;
@@ -4696,10 +4696,10 @@ Yanone Kaffeesatz
   -o-transform: scale(1);
 }
 .team-folio .group-filter .filter-item:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .team-folio .group-filter .filter-item:hover:before {
-  border-color: #c32026;
+  border-color: #facf07;
   transform: scale(1);
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
@@ -4793,7 +4793,7 @@ Yanone Kaffeesatz
   border-left: 0;
   border-right: 0;
   border-bottom: 0;
-  color: #c32026;
+  color: #facf07;
   border-radius: 0;
   -webkit-border-radius: 0;
 }
@@ -4822,7 +4822,7 @@ Yanone Kaffeesatz
 .open-position-inner .nav-tabs li:hover a {
   padding-left: 15px;
   background-color: transparent;
-  color: #c32026;
+  color: #facf07;
 }
 .open-position-inner .tab-content {
   width: 66.6667%;
@@ -4889,8 +4889,8 @@ Yanone Kaffeesatz
   left: 0;
   width: 50%;
   height: 50%;
-  border-left: 1px solid #c32026;
-  border-top: 1px solid #c32026;
+  border-left: 1px solid #facf07;
+  border-top: 1px solid #facf07;
   transform: scale(0);
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
@@ -4911,8 +4911,8 @@ Yanone Kaffeesatz
   bottom: 0;
   width: 50%;
   height: 50%;
-  border-right: 1px solid #c32026;
-  border-bottom: 1px solid #c32026;
+  border-right: 1px solid #facf07;
+  border-bottom: 1px solid #facf07;
   transform: scale(0);
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
@@ -4931,7 +4931,7 @@ Yanone Kaffeesatz
   -ms-transform: translateX(15px);
   -o-transform: translateX(15px);
   background-color: transparent;
-  color: #c32026;
+  color: #facf07;
 }
 .img-and-share .list-share a:hover:before,
 .img-and-share .list-share a:hover:after {
@@ -4962,7 +4962,7 @@ Yanone Kaffeesatz
   right: -10px;
   top: 50%;
   height: 1px;
-  background-color: #c32026;
+  background-color: #facf07;
   transform-origin: left;
   transform: translateY(-50%) scale(0, 1);
   -webkit-transform: translateY(-50%) scale(0, 1);
@@ -4975,7 +4975,7 @@ Yanone Kaffeesatz
   -o-transition: transform 0.3s;
 }
 .title-open-position:hover a {
-  color: #c32026;
+  color: #facf07;
 }
 .title-open-position:hover a:before {
   transform: translateY(-50%) scale(1);
@@ -5065,10 +5065,10 @@ Yanone Kaffeesatz
   -o-transition: 0.3s;
 }
 .gallery-case-study .group-filter a:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .gallery-case-study .group-filter a:hover:before {
-  border-color: #c32026;
+  border-color: #facf07;
 }
 .gallery-case-study .group-filter a:hover:before,
 .gallery-case-study .group-filter a.active:before {
@@ -5169,7 +5169,7 @@ Yanone Kaffeesatz
   margin-top: 4px;
 }
 .about-project .about-project-left .text a {
-  color: #c32026;
+  color: #facf07;
   position: relative;
 }
 .about-project .about-project-left .text a:before,
@@ -5191,13 +5191,13 @@ Yanone Kaffeesatz
   -o-transition: transform 0.3s;
 }
 .about-project .about-project-left .text a:before {
-  border-left: 1px solid #c32026;
-  border-top: 1px solid #c32026;
+  border-left: 1px solid #facf07;
+  border-top: 1px solid #facf07;
   transform-origin: top left;
 }
 .about-project .about-project-left .text a:after {
-  border-right: 1px solid #c32026;
-  border-bottom: 1px solid #c32026;
+  border-right: 1px solid #facf07;
+  border-bottom: 1px solid #facf07;
   top: auto;
   left: auto;
   right: -5px;
@@ -5326,7 +5326,7 @@ Yanone Kaffeesatz
   content: "";
   width: 8px;
   height: 8px;
-  background-color: #c32026;
+  background-color: #facf07;
   -webkit-transform: rotate(45deg) translate(100%, 100%);
   transform: rotate(45deg) translate(100%, 100%);
   display: inline-block;
@@ -5373,7 +5373,7 @@ Yanone Kaffeesatz
   color: #696972;
 }
 .recent-post-widget .meta-info a:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .recent-post-widget .meta-info i {
   margin-right: 3px;
@@ -5383,7 +5383,7 @@ Yanone Kaffeesatz
   color: #3f3f50;
 }
 .recent-post-widget .text:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .categories-list-inner {
   padding: 13px 0;
@@ -5411,11 +5411,11 @@ Yanone Kaffeesatz
   padding-bottom: 0;
 }
 .categories-list-inner:hover {
-  color: #c32026;
+  color: #facf07;
   padding-left: 10px;
 }
 .categories-list-inner:hover i {
-  color: #c32026;
+  color: #facf07;
 }
 .tag-widget {
   margin: -10px -5px 0;
@@ -5480,8 +5480,8 @@ Yanone Kaffeesatz
 }
 .tag:hover:before,
 .tag:hover:after {
-  background-color: #c32026;
-  border-color: #c32026;
+  background-color: #facf07;
+  border-color: #facf07;
 }
 .calendar-widget {
   margin-top: -8px;
@@ -5545,7 +5545,7 @@ Yanone Kaffeesatz
 .calendar-widget .table-condensed > tbody > tr .day.active,
 .calendar-widget .table-condensed > tbody > tr .day.today {
   background-image: none;
-  background-color: #c32026;
+  background-color: #facf07;
   color: #fff;
   font-weight: 900;
 }
@@ -5585,7 +5585,7 @@ Yanone Kaffeesatz
 .calendar-widget .datepicker .next:hover:before,
 .calendar-widget .datepicker .prev:hover:before,
 .calendar-widget .datepicker tfoot tr th:hover:before {
-  color: #c32026;
+  color: #facf07;
 }
 .pagination-wrapper {
   text-align: center;
@@ -5602,8 +5602,8 @@ Yanone Kaffeesatz
 .pagination .pagi-inner.active .pagi-link,
 .pagination .pagi-inner:focus .pagi-link,
 .pagination .pagi-inner:hover .pagi-link {
-  border-color: #c32026;
-  background-color: #c32026;
+  border-color: #facf07;
+  background-color: #facf07;
   color: #fff;
 }
 .pagination li .pagi-link {
@@ -5620,7 +5620,7 @@ Yanone Kaffeesatz
   font-size: 12px;
 }
 .pagination li:first-child > .pagi-link:hover {
-  color: #c32026;
+  color: #facf07;
   background-color: transparent;
 }
 .pagination li:last-child > .pagi-link {
@@ -5633,7 +5633,7 @@ Yanone Kaffeesatz
   font-size: 12px;
 }
 .pagination li:last-child > .pagi-link:hover {
-  color: #c32026;
+  color: #facf07;
   background-color: transparent;
 }
 .audio-control {
@@ -5676,7 +5676,7 @@ Yanone Kaffeesatz
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  background: #c32026;
+  background: #facf07;
 }
 .audio-thumbnails .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
   position: absolute;
@@ -5709,7 +5709,7 @@ Yanone Kaffeesatz
 .audio-thumbnails .mejs-container .mejs-controls .mejs-time-rail .mejs-time-float-corner {
   top: 15px;
   border-radius: 0;
-  border-color: #c32026 transparent transparent transparent;
+  border-color: #facf07 transparent transparent transparent;
 }
 .audio-thumbnails .mejs-container .mejs-controls .mejs-time-rail .mejs-time-float-corner:after {
   content: '';
@@ -5718,7 +5718,7 @@ Yanone Kaffeesatz
   left: -1px;
   width: 2px;
   height: 13px;
-  background: #c32026;
+  background: #facf07;
 }
 .audio-thumbnails .mejs-container .mejs-controls .mejs-time-rail span {
   height: 9px;
@@ -5914,7 +5914,7 @@ Yanone Kaffeesatz
   top: 2px;
 }
 .blog-entry .comments .comment-content .url:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .blog-entry .comments .comment-content .info {
   color: #737a83;
@@ -5922,7 +5922,7 @@ Yanone Kaffeesatz
   font-style: italic;
 }
 .blog-entry .comments .comment-content .info:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .blog-entry .comments .comment-content .info i {
   margin-right: 8px;
@@ -6008,7 +6008,7 @@ Yanone Kaffeesatz
   color: #3b3b58;
 }
 .blog-entry .panel-default .panel-title a:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .blog-entry .panel-default .panel-title span {
   font-size: 1em;
@@ -6146,7 +6146,7 @@ Yanone Kaffeesatz
   margin-left: 3px;
 }
 .meta-tag .info .item a:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .list-tag .tag-widget {
   margin: -11px -10px 0;
@@ -6334,7 +6334,7 @@ Yanone Kaffeesatz
 .wrapper-map .over-map .heading .dot {
   width: 10px;
   height: 10px;
-  background-color: #c32026;
+  background-color: #facf07;
   transform: rotate(45deg) translate(100%, 100%);
   transform-origin: 100% 100%;
   display: inline-block;
@@ -6371,8 +6371,8 @@ Yanone Kaffeesatz
   border-color: #000000;
 }
 .wrapper-map .branch .btn:hover {
-  background-color: #c32026;
-  border-color: #c32026;
+  background-color: #facf07;
+  border-color: #facf07;
 }
 .wrapper-map .branch i {
   margin-left: 5px;
@@ -6399,8 +6399,8 @@ Yanone Kaffeesatz
   right: -10px;
   top: -5px;
   bottom: -10px;
-  border-left: 1px solid #c32026;
-  border-bottom: 1px solid #c32026;
+  border-left: 1px solid #facf07;
+  border-bottom: 1px solid #facf07;
 }
 .contact .box-media .box-icon i {
   color: #c2c2cd;
@@ -6410,7 +6410,7 @@ Yanone Kaffeesatz
   -o-transition: color 0.3s;
 }
 .contact .box-media:hover .box-icon .icons i {
-  color: #c32026;
+  color: #facf07;
 }
 .contact .box-media:hover .box-icon .icons:before {
   -webkit-transform: scale(1);
@@ -6429,10 +6429,10 @@ Yanone Kaffeesatz
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 .box-contact .title:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .box-contact .border-box-contact {
-  background-color: #c32026;
+  background-color: #facf07;
   width: 30px;
   height: 3px;
   margin: 10px auto;
@@ -6503,12 +6503,12 @@ Yanone Kaffeesatz
 .our-portfolio.layout-4 .group-filter a:hover,
 .our-portfolio.layout-5 .group-filter a:hover,
 .our-portfolio.layout-6 .group-filter a:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .our-portfolio.layout-4 .group-filter a:hover:before,
 .our-portfolio.layout-5 .group-filter a:hover:before,
 .our-portfolio.layout-6 .group-filter a:hover:before {
-  border-color: #c32026;
+  border-color: #facf07;
 }
 .our-portfolio.layout-4 .group-filter a:hover:before,
 .our-portfolio.layout-5 .group-filter a:hover:before,
@@ -6805,10 +6805,12 @@ Yanone Kaffeesatz
 .post-titles h3,
 .post-titles h4,
 .post-titles h5 {
-  margin: 0 0 40px;
-  font-family: "Yanone Kaffeesatz", sans-serif;
-  font-weight: 700;
-  color: #5dade2;
+    border-bottom: 1px #facf07 dashed;
+    margin: 0 0 40px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-weight: 700;
+    color: #facf07;
+}
 }
 .post-titles h1 {
   font-size: 4.286em;
@@ -7252,7 +7254,7 @@ Yanone Kaffeesatz
   margin-top: 42px;
 }
 .page-banner-4 .homepage-banner-warpper .banner-info .text span {
-  color: #c32026;
+  color: #facf07;
 }
 .page-banner-4 .homepage-banner-warpper .banner-info .group-actions {
   margin-left: -10px;
@@ -7433,11 +7435,11 @@ Yanone Kaffeesatz
   font-size: 0.857em;
 }
 .page-banner-7 .banner-info .btn-play-video:hover {
-  color: #c32026;
+  color: #facf07;
 }
 .page-banner-7 .banner-info .btn-play-video:hover:before {
-  background-color: #c32026;
-  border-color: #c32026;
+  background-color: #facf07;
+  border-color: #facf07;
   color: #fff;
 }
 .page-banner-7 .banner-info .btn-play-video:before {
@@ -7453,7 +7455,7 @@ Yanone Kaffeesatz
   font-family: "fontawesome";
   font-size: 16px;
   content: "\f04b";
-  color: #c32026;
+  color: #facf07;
   margin-right: 10px;
   padding-left: 5px;
   transition: 0.3s;
@@ -7470,10 +7472,10 @@ Yanone Kaffeesatz
 }
 .page-banner-7 .banner-info .group-title .line-diamond {
   left: -30px;
-  border-bottom-color: #c32026;
+  border-bottom-color: #facf07;
 }
 .page-banner-7 .banner-info .group-title .line-diamond:after {
-  border-top-color: #c32026;
+  border-top-color: #facf07;
 }
 .page-banner-7 .banner-info .group-title .line-diamond span {
   background-color: #fff;
@@ -7491,7 +7493,7 @@ Yanone Kaffeesatz
   margin-right: 15px;
 }
 .page-banner-7 .banner-info .group-title a:hover {
-  color: #c32026;
+  color: #facf07;
 }
 /*----------  3.18. Page Banner 8  ----------*/
 .page-banner-8 {
@@ -7615,7 +7617,7 @@ Yanone Kaffeesatz
 .page-banner-9 .homepage-banner-warpper .banner-info .group-title .line-diamond {
   left: 50%;
   top: -55px;
-  border-bottom-color: #00acee;
+  border-bottom-color: #facf07;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -7623,7 +7625,7 @@ Yanone Kaffeesatz
   -o-transform: translateX(-50%);
 }
 .page-banner-9 .homepage-banner-warpper .banner-info .group-title .line-diamond:after {
-  border-top-color: #00acee;
+  border-top-color: #facf07;
 }
 .page-banner-9 .homepage-banner-warpper .banner-info .group-title .line-diamond span {
   background-color: #fff;
@@ -7653,12 +7655,12 @@ Yanone Kaffeesatz
   -moz-osx-font-smoothing: grayscale;
 }
 .page-banner-9 .homepage-banner-warpper .banner-info .group-actions .btn.btn-primary {
-  background-color: #00acee;
-  border-color: #00acee;
+  background-color: #facf07;
+  border-color: #facf07;
 }
 .page-banner-9 .homepage-banner-warpper .banner-info .group-actions .btn:hover {
   border-color: #fff;
-  color: #00acee;
+  color: #facf07;
 }
 /*----------  3.20. Page Banner 10-----*/
 .page-banner-10 {
@@ -7729,11 +7731,11 @@ Yanone Kaffeesatz
   font-size: 0.857em;
 }
 .page-banner-10 .banner-info .btn-play-video:hover {
-  color: #ff6000;
+  color: #facf07;
 }
 .page-banner-10 .banner-info .btn-play-video:hover:before {
-  background-color: #ff6000;
-  border-color: #ff6000;
+  background-color: #facf07;
+  border-color: #facf07;
   color: #fff;
 }
 .page-banner-10 .banner-info .btn-play-video:before {
@@ -7749,7 +7751,7 @@ Yanone Kaffeesatz
   font-family: "fontawesome";
   font-size: 16px;
   content: "\f04b";
-  color: #ff6000;
+  color: #facf07;
   margin-right: 10px;
   padding-left: 5px;
   transition: 0.3s;
@@ -7766,10 +7768,10 @@ Yanone Kaffeesatz
 }
 .page-banner-10 .banner-info .group-title .line-diamond {
   left: -30px;
-  border-bottom-color: #ff6000;
+  border-bottom-color: #facf07;
 }
 .page-banner-10 .banner-info .group-title .line-diamond:after {
-  border-top-color: #ff6000;
+  border-top-color: #facf07;
 }
 .page-banner-10 .banner-info .group-title .line-diamond span {
   width: 900px;
@@ -7814,27 +7816,27 @@ Yanone Kaffeesatz
 }
 /*----------  3.21. Homepage Branding-----*/
 .page-branding .btn.btn-main:hover {
-  color: #00acee;
+  color: #facf07;
 }
 .page-branding .btn.btn-main:hover:before {
-  border-color: #00acee;
-  color: #00acee;
+  border-color: #facf07;
+  color: #facf07;
 }
 .page-branding .btn.btn-main:hover:after {
-  border-color: #00acee;
+  border-color: #facf07;
 }
 .page-branding.page-banner-4 .homepage-banner-warpper .banner-info .text span {
-  color: #00acee;
+  color: #facf07;
 }
 .page-branding.page-banner-4 .banner-info .group-title .line-diamond {
-  border-bottom-color: #00acee;
+  border-bottom-color: #facf07;
 }
 .page-branding.page-banner-4 .banner-info .group-title .line-diamond:after {
-  border-top-color: #00acee;
+  border-top-color: #facf07;
 }
 .page-branding.page-banner-4 .btn.btn-primary {
-  background-color: #00acee;
-  border-color: #00acee;
+  background-color: #facf07;
+  border-color: #facf07;
 }
 .page-branding.about-us .about-us-wrapper .text {
   color: #545461;
@@ -7849,7 +7851,7 @@ Yanone Kaffeesatz
 }
 .page-branding.our-portfolio.layout-4 .group-filter a.filter-item.active,
 .page-branding.our-portfolio.layout-4 .group-filter a.filter-item:hover {
-  color: #00acee;
+  color: #facf07;
 }
 .page-branding.our-portfolio.layout-4 .group-filter a.filter-item.active:before,
 .page-branding.our-portfolio.layout-4 .group-filter a.filter-item:hover:before {
@@ -7874,13 +7876,13 @@ Yanone Kaffeesatz
   padding-left: 5px;
 }
 .page-branding.our-portfolio.layout-4 .more-info .sub-title a:hover {
-  color: #00acee;
+  color: #facf07;
 }
 .page-branding.what-we-do .box-media .box-info .title:hover {
-  color: #00acee;
+  color: #facf07;
 }
 .page-branding.what-we-do .box-media:hover .box-icon .icons i {
-  color: #00acee;
+  color: #facf07;
 }
 .page-branding.our-latest-work .box-content-wrap .group-content {
   margin-top: 0;
@@ -7908,43 +7910,43 @@ Yanone Kaffeesatz
   font-size: 14px;
 }
 .page-branding.our-latest-work .box-media:hover .icons {
-  color: #029ad4;
+  color: #facf07;
   transition: 0.5s;
   transform: rotateX(180deg);
 }
 .page-branding.our-latest-work .box-media:hover .box-icon .title {
-  color: #00acee;
+  color: #facf07;
 }
 .page-branding.our-team.layout-1 .item-member:hover .member-line-1,
 .page-branding.our-team.layout-1 .item-member:hover .member-line-2 {
-  border-color: #00acee;
+  border-color: #facf07;
 }
 .page-branding.our-team.layout-1 .item-member .member-line-2 .member-social ul li a:hover {
-  background-color: #00acee;
+  background-color: #facf07;
 }
 .page-branding.our-team.layout-1 .item-member .member-info:hover {
-  background-color: #00acee;
+  background-color: #facf07;
 }
 .page-branding.our-team.layout-1 ul.slick-dots li.slick-active {
-  background-color: #00acee;
-  border-color: #00acee;
+  background-color: #facf07;
+  border-color: #facf07;
 }
 .page-branding.blog-news .btn.btn-second:hover {
-  color: #00acee;
+  color: #facf07;
 }
 .page-branding.blog-news .btn.btn-second:hover:before {
-  border-color: #00acee;
-  color: #00acee;
+  border-color: #facf07;
+  color: #facf07;
 }
 .page-branding.blog-news .btn.btn-second:hover:after {
-  border-color: #00acee;
+  border-color: #facf07;
 }
 .page-branding.blog-news .list-blog-news li .box-content .title:hover {
-  color: #00acee;
+  color: #facf07;
 }
 .page-branding.blog-news .list-blog-news li .box-content .info .author a:hover,
 .page-branding.blog-news .list-blog-news li .box-content .info .author a:focus {
-  color: #00acee;
+  color: #facf07;
 }
 .page-branding.contact.layout-1 {
   overflow: initial;
@@ -7968,7 +7970,7 @@ Yanone Kaffeesatz
   bottom: 0;
 }
 .page-branding.contact.layout-1 .group-title.group-title-3 span {
-  color: #00acee;
+  color: #facf07;
 }
 .page-branding.contact.layout-1 .group-title.group-title-3 .dot {
   display: none;
@@ -8124,7 +8126,7 @@ Yanone Kaffeesatz
 .banner-homepage.layout-2 .box-purchase .box-purchase-main .main-title span {
   font-size: 48px;
   font-weight: bold;
-  color: #029ad4;
+  color: #facf07;
 }
 .banner-homepage.layout-2 .box-purchase .box-purchase-main .mute-title {
   position: absolute;
@@ -8156,8 +8158,8 @@ Yanone Kaffeesatz
   -o-transition: 0.3s;
 }
 .banner-homepage.layout-2 .box-purchase .box-purchase-main .btn.btn-primary {
-  background-color: #029ad4;
-  border-color: #029ad4;
+  background-color: #facf07;
+  border-color: #facf07;
   color: #fff;
 }
 .banner-homepage.layout-2 .box-purchase .box-purchase-main .btn:before {
@@ -8179,7 +8181,7 @@ Yanone Kaffeesatz
   -webkit-backface-visibility: hidden;
 }
 .banner-homepage.layout-2 .box-purchase .box-purchase-main .btn:hover {
-  color: #029ad4;
+  color: #facf07;
   background-color: #fff;
   border-color: #fff;
 }
@@ -8238,7 +8240,7 @@ Yanone Kaffeesatz
 .partner-homepage.layout-1 .box-purchase .box-purchase-main .main-title span {
   font-size: 30px;
   font-weight: bold;
-  color: #029ad4;
+  color: #facf07;
 }
 .partner-homepage.layout-1 .box-purchase .box-purchase-main .sub-title {
   font-size: 14px;
@@ -8262,8 +8264,8 @@ Yanone Kaffeesatz
   -o-transition: 0.3s;
 }
 .partner-homepage.layout-1 .box-purchase .box-purchase-main .btn.btn-primary {
-  background-color: #029ad4;
-  border-color: #029ad4;
+  background-color: #facf07;
+  border-color: #facf07;
   color: #fff;
 }
 .partner-homepage.layout-1 .box-purchase .box-purchase-main .btn:before {
@@ -8285,7 +8287,7 @@ Yanone Kaffeesatz
   -webkit-backface-visibility: hidden;
 }
 .partner-homepage.layout-1 .box-purchase .box-purchase-main .btn:hover {
-  color: #029ad4;
+  color: #facf07;
   background-color: #fff;
   border-color: #fff;
 }
@@ -8387,34 +8389,34 @@ Yanone Kaffeesatz
 }
 /*----------  3.23. Page advertising-----*/
 .page-advertising .btn.btn-main:hover {
-  color: #ff6000;
+  color: #facf07;
 }
 .page-advertising .btn.btn-main:hover:before {
-  border-color: #ff6000;
-  color: #ff6000;
+  border-color: #facf07;
+  color: #facf07;
 }
 .page-advertising .btn.btn-main:hover:after {
-  border-color: #ff6000;
+  border-color: #facf07;
 }
 .page-advertising .group-progress-bar-list .progress-item .progress .progress-bar:after {
-  background-color: #ff6000;
+  background-color: #facf07;
 }
 .page-advertising .group-list ul li .text:after {
-  color: #ff6000;
+  color: #facf07;
 }
 .page-advertising.what-we-do .box-media .box-icon .icon-2:before {
-  border-left-color: #ff6000;
-  border-bottom-color: #ff6000;
+  border-left-color: #facf07;
+  border-bottom-color: #facf07;
 }
 .page-advertising.what-we-do .box-media:hover .box-icon .icon-2:before {
-  border-left-color: #ff6000;
-  border-bottom-color: #ff6000;
+  border-left-color: #facf07;
+  border-bottom-color: #facf07;
 }
 .page-advertising.what-we-do .box-media:hover .box-icon .icon-2 i {
-  color: #ff6000;
+  color: #facf07;
 }
 .page-advertising.what-we-do .box-media .box-info .title:hover {
-  color: #ff6000;
+  color: #facf07;
 }
 .page-advertising.our-portfolio .group-filter {
   margin-bottom: 30px;
@@ -8424,7 +8426,7 @@ Yanone Kaffeesatz
 }
 .page-advertising.our-portfolio .group-filter a.filter-item.active,
 .page-advertising.our-portfolio .group-filter a.filter-item:hover {
-  color: #ff6000;
+  color: #facf07;
 }
 .page-advertising.our-portfolio .group-filter a.filter-item.active:before,
 .page-advertising.our-portfolio .group-filter a.filter-item:hover:before {
@@ -8432,17 +8434,17 @@ Yanone Kaffeesatz
 }
 .page-advertising.our-team .item-member:hover .member-line-1,
 .page-advertising.our-team .item-member:hover .member-line-2 {
-  border-color: #ff6000;
+  border-color: #facf07;
 }
 .page-advertising.our-team .item-member .member-line-2 .member-social ul li a:hover {
-  background-color: #ff6000;
+  background-color: #facf07;
 }
 .page-advertising.our-team .item-member .member-info:hover {
-  background-color: #ff6000;
+  background-color: #facf07;
 }
 .page-advertising.our-team ul.slick-dots li.slick-active {
-  background-color: #ff6000;
-  border-color: #ff6000;
+  background-color: #facf07;
+  border-color: #facf07;
 }
 .page-advertising.our-latest-work .box-content-wrap .box-content {
   width: 100%;
@@ -8507,7 +8509,7 @@ Yanone Kaffeesatz
   -o-transition: right 0.3s;
 }
 .page-advertising.our-latest-work .box-media:hover .box-icon .title {
-  color: #ff6000;
+  color: #facf07;
 }
 .page-advertising.our-latest-work .box-media:hover .box-icon .title:before {
   width: auto;
@@ -8521,8 +8523,8 @@ Yanone Kaffeesatz
   bottom: -35px;
 }
 .page-advertising.our-latest-work ul.slick-dots li.slick-active {
-  background-color: #ff6000;
-  border-color: #ff6000;
+  background-color: #facf07;
+  border-color: #facf07;
 }
 .page-advertising.our-client {
   background-image: url("../img/homepage/client-3.jpg");
@@ -8575,21 +8577,21 @@ Yanone Kaffeesatz
   opacity: 0.25;
 }
 .page-advertising.blog-news .btn.btn-second:hover {
-  color: #ff6000;
+  color: #facf07;
 }
 .page-advertising.blog-news .btn.btn-second:hover:before {
-  border-color: #ff6000;
-  color: #ff6000;
+  border-color: #facf07;
+  color: #facf07;
 }
 .page-advertising.blog-news .btn.btn-second:hover:after {
-  border-color: #ff6000;
+  border-color: #facf07;
 }
 .page-advertising.blog-news .list-blog-news li .box-content .title:hover {
-  color: #ff6000;
+  color: #facf07;
 }
 .page-advertising.blog-news .list-blog-news li .box-content .info .author a:hover,
 .page-advertising.blog-news .list-blog-news li .box-content .info .author a:focus {
-  color: #ff6000;
+  color: #facf07;
 }
 /*----------  3.24. Page artist-----*/
 .page-artist .btn.btn-main {
@@ -9647,8 +9649,8 @@ Yanone Kaffeesatz
   color: #c9363b;
 }
 .page-interior.our-client .group-title.group-title-1 .main-title .dot {
-  border: 1px solid #c32026;
-  background-color: #c32026;
+  border: 1px solid #facf07;
+  background-color: #facf07;
 }
 .page-interior.blog-news .btn.btn-main:hover,
 .page-interior.blog-news .btn.btn-second:hover {
@@ -9712,7 +9714,7 @@ Yanone Kaffeesatz
 }
 #win h3 {
 	text-align: center;
-	color: #555;
+	color: #facf07;
 }
 .content-modal {
 	padding: 0 1.4em;
@@ -9759,7 +9761,7 @@ Yanone Kaffeesatz
     font-size: 14px;
     font-weight: 600;
     padding: 2px 21px 2px 21px;
-    color: #29abe2;
+    color: #facf07;
     border: 1px solid #e4e4e4;
     display: inline-block;
     border-radius: 15px;
@@ -9784,7 +9786,7 @@ Yanone Kaffeesatz
     font-family: "FontAwesome";
     content: "\f00c";
     font-size: 1.3rem;
-    color: #00acee;
+    color: #facf07;
     margin-right: 3px;
 }
 .brilliant {
@@ -9812,7 +9814,19 @@ Yanone Kaffeesatz
   text-shadow: 0 0 2px #37c5b6;
   font-size: 1.4rem;
 }
-
+h4.main-header {
+    padding: 9px 5px 5px 5px;
+    background: #facf07;
+    border-bottom: 1px #facf07 dashed;
+    margin: 0 0 40px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+}
+.sales-on-site .info p {
+    margin-top: 100px;
+    font-size: 26px;
+}
 /*
 =====  End of PAGE  ======
 */

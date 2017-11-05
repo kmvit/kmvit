@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% load static %}
+{% block title %}Успешная отправка{% endblock %}
+{% block meta %}{{page.description}}{% endblock %}
+{% block content %}
+<section class="page-title layout-7 page-sourcecode">
+   <div class="page-title-wrapper">
+      <div class="page-title-content">
+         <div class="container">
+            <div class="box-content">
+               <div class="box-img"><img src="{{page.img.url}}" alt="" class="img-responsive"></div>
+            </div>
+            <div class="group-content">
+               <div class="group-title group-title-1 group-heading">
+                  <h1 class="main-title">{{page.title}} <span class="dot"></span></h1>
+                  <ol class="breadcrumb">
+                     <li><a href="/">Главная</a></li>
+                     <li class="active">Успешная отправка письма</li>
+                  </ol>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="source-code padding-top-100 padding-bottom-100">
+   <div class="container">
+      <div class="block-header-wrapper">
+         <div class="row">
+            <div class="col-sm-12">
+               <div class="block-header-inner padding-bottom-100">
+                  <div class="post-titles">
+                  </div>
+                  <div class="text">Ваше письмо успешно отправлено! Наш менеджер свяжется с вами в ближайшее время. Хотите перейти на <a href="/">главную страницу</a> или может быть посмотреть наши <a href="/portfolio">работы</a>?</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+{%endblock%}

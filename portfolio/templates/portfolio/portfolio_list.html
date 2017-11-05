@@ -27,8 +27,8 @@
    <div class="gallery-masonry-isotope" style="position: relative; height: 595px;">
       <div class="grid-sizer"></div>
       <div class="grid-item">
-         {% for item in portfolio_list %}
-         <div class="content-grid-item item-width-50-responsive item-width-{{item.width}} item-height-{{item.height}} print-ads {{item.position}}" >
+         {% for item in portfolio_list reversed %}
+         <div class="content-grid-item item-width-50-responsive item-width-16 item-height-97 print-ads {{item.position}}" >
             <div class="inner">
                <div class="pic">
                   <a href="{% url 'portfolio:portfolio_detail' slug=item.slug %}" data-fancybox-group="gallery" class="fancybox"><img src="{{item.thumb.url}}" alt="{{item.title}}" class="img-responsive"><span class="dh-overlay"></span></a>

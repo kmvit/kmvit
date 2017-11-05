@@ -799,6 +799,7 @@
   }
   .header .header-main .logo {
     line-height: 1;
+    display:none;
   }
   .drawer-open .navigation-all {
     -webkit-transform: translate(0, 0);

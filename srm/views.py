@@ -55,7 +55,8 @@ class OrderDetail(DetailView):
 class OrderAdd(CreateView):
     model = Deal
     form_class = OrderAddForm
-
+    def get_success_url(self):
+        return reverse('orders:order_list')
 
 @method_decorator(login_required, name='dispatch')
 class OrderEdit(UpdateView):
@@ -77,9 +78,9 @@ class OrderDelete(DeleteView):
 def order_filter(request):
     """Фильтр заказов"""
     if 'select' in request.GET and request.GET['select']=='all':
-        order_list = Order.objects.all()
+        order_list = Deal.objects.all()
     else:
-        order_list = Order.objects.filter(status = request.GET.get('select'))
-    context = {'order_list':order_list}
+        order_list = Deal.objects.filter(stage__title = request.GET.get('select'))
+    context = {'deal_list':order_list}
     return render(request, 'srm/deal_list.html', context)
 

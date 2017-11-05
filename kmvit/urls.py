@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^blog/', include('blog.urls', namespace='blog')),
     url(r'^portfolio/', include('portfolio.urls', namespace='portfolio')),
     url(r'^feedback/', FeedBack.as_view(), name='feedback'),
+    url(r'^success/', success, name='success'),
     url(r'^srm/', include('srm.urls', namespace='orders', app_name='orders')),
     url(r'^logout$', logout_view, name='logout'),
     url(r'^(?P<slug>[\w-]+)/$', PageDetail.as_view(), name='page'),

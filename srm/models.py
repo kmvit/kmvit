@@ -23,7 +23,7 @@ class City(models.Model):
 
 class Deal(models.Model):
     title = models.CharField(max_length=300, verbose_name='Название')
-    born = models.DateField(verbose_name='Дата')
+    born = models.DateField(verbose_name='Дата', default=datetime.now)
     name = models.CharField(max_length=300, verbose_name='Имя')
     phone = models.CharField(max_length=13, verbose_name='Телефон')
     company = models.CharField(max_length=300, verbose_name='Компания')
@@ -33,6 +33,7 @@ class Deal(models.Model):
     prepayment = models.IntegerField(verbose_name='Предоплата', blank=True, null=True)
     prepayment_date = models.DateField(verbose_name='Дата предоплаты', null=True, blank=True)
     budget = models.IntegerField(verbose_name='Бюджет')
+    description = models.TextField(verbose_name='Примечания', blank=True)
     
     
     class Meta:

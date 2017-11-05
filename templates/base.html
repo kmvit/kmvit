@@ -3,10 +3,10 @@
 {%load static%}
 <head>
 
-    <title>{% block title %}ITkiTchen – разработка, создание и продвиежние сайтов{% endblock %}</title>
+    <title>{% block title %}Kmv-it – разработка, создание и продвиежние сайтов{% endblock %}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{% block meta %} ITkiTcheN {% endblock %}">
+    <meta name="description" content="{% block meta %} Веб студия Kmv-it, мы занимаемся разработкой, доработкой, созданием и продвижением сайтов любой сложности.  {% endblock %}">
     <link rel="shortcut icon" href="{% static 'assets/favicon.ico' %}" />
 
     <!-- FONT CSS-->
@@ -31,7 +31,7 @@
     <div class="body-wrapper">
         <!-- PAGE LOADER-->
         <div class="preload homepage-branding">
-            <div class="logo-container"><img src="{% static 'assets/img/logo/logo-transparent.png' %}" alt="веб студия ITkiTcheN" class="logo">
+            <div class="logo-container">
                 <div class="logo-curtain">
                     <div></div>
                 </div>
@@ -63,6 +63,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="top-menu">
                         <div class="container">
                             <div class="header-main-wrapper">
                                 <div class="hamburger-menu">
@@ -72,7 +73,7 @@
                                 </div>
                                 <div class="navbar-header">
                                     <div class="logo">
-                                        <a href="/" class="header-logo"><img src="{% static 'assets/img/logo/logo-header-branding.png'%}" alt="Веб студия в Пятигорске" /></a>
+                                        <a href="/" class="header-logo"><img src="{% static 'assets/img/logo/kmvit_logo.png'%}" alt="Веб студия в Пятигорске" /></a>
                                     </div>
                                 </div>
                                 <nav class="navigation">
@@ -91,23 +92,13 @@
                                             </div>
                                             <ul class="nav-links nav navbar-nav is-hidden">
                                                 <li class="dropdown active"><a href="javascript:void(0)" class="main-menu"><span class="text">Главная</span><span class="icons-dropdown"><i class="fa fa-angle-right"></i></span></a>
-                                                    <ul class="dropdown-menu dropdown-menu-1 is-hidden">
-                                                        <li class="goback"><a href="#0" class="link-page"><i class="fa fa-angle-left"></i></a></li>
-                                                        <li><a href="/" class="link-page">Главная</a></li>
-                                                    </ul>
                                                 </li>
                                                  <li class="dropdown"><a href="javascript:void(0)" class="main-menu"><span class="text">Услуги</span><span class="icons-dropdown"><i class="fa fa-angle-right"></i></span></a>
                                                     <ul class="dropdown-menu dropdown-menu-1 is-hidden">
                                                         <li><a href="/razrabotka-saita" class="link-page"><span class="icons-dropdown"><i class="fa fa-asterisk"></i></span>Разработка сайта</a></li>
-                                                    <li><a href="/razrabotka-saita-visitki" class="link-page"><span class="icons-dropdown"><i class="fa fa-header"></i></span>Сайт визитка</a></li>
-                                                    <li><a href="/razrabotka-corporativnogo-saita" class="link-page"><span class="icons-dropdown"><i class="fa fa-filter"></i></span>Корпоративный сайт</a></li>
-                                                    <li><a href="/razrabotka-internet-magazina/" class="link-page"><span class="icons-dropdown"><i class="fa fa-chevron-circle-down"></i></span>Интернет магазин</a></li>
-                                                    <li><a href="/dizajn-sajta" class="link-page"><span class="icons-dropdown"><i class="fa fa-sliders"></i></span>Дизайн сайта</a></li>
-                                                    <li><a href="/verstka-sajta" class="link-page"><span class="icons-dropdown"><i class="fa fa-keyboard-o"></i></span>Верстка сайта</a></li>
                                                     <li><a href="/prodvijenie-saitov" class="link-page"><span class="icons-dropdown"><i class="fa fa-exclamation-circle"></i></span>Продвижение сайта</a></li>
-                                                    <li><a href="/optimizacija-sajta" class="link-page"><span class="icons-dropdown"><i class="fa fa-sliders"></i></span>Оптимизация сайта</a></li>
                                                     <li><a href="/kontekstnaja-reklama" class="link-page"><span class="icons-dropdown"><i class="fa fa-keyboard-o"></i></span>Контекстная реклама</a></li>
-                                                    <li><a href="/landing-page" class="link-page"><span class="icons-dropdown"><i class="fa fa-exclamation-circle"></i></span>Landing Page (лендинг пейдж)</a></li>
+                                                    <li><a href="/landing-page" class="link-page"><span class="icons-dropdown"><i class="fa fa-chevron-circle-down"></i></span>Landing Page (лендинг пейдж)</a></li>
                                                     </ul>
                                                 </li>
 
@@ -120,7 +111,7 @@
                                     <div class="navigation-pc">
                                         <a href="/" class="logo-brand-menu hidden-lg hidden-md"><img src="{% static 'assets/img/logo/logo.png' %}" alt="" class="img-responsive" /></a>
                                         <div class="group-title group-title-1 hidden-lg hidden-md">
-                                            <h2 class="main-title"><span class="mute-title">Menu</span></h2></div>
+                                            <h2 class="main-title"><span class="mute-title">Меню</span></h2></div>
                                         <ul class="nav-links nav navbar-nav">
                                             {% with request.resolver_match.url_name as url_name %}
                                             <li class="dropdown"><a href="/" class="main-menu"><span class="text">Главная</span></a>
@@ -128,13 +119,7 @@
                                             <li class="dropdown"><a href="javascript:void(0)" class="main-menu"><span class="text">Услуги</span><span class="icons-dropdown"><i class="fa fa-angle-down"></i></span></a>
                                                 <ul class="dropdown-menu dropdown-menu-1">
                                                     <li><a href="/razrabotka-saita" class="link-page"><span class="icons-dropdown"><i class="fa fa-asterisk"></i></span>Разработка сайта</a></li>
-                                                    <li><a href="/razrabotka-saita-visitki" class="link-page"><span class="icons-dropdown"><i class="fa fa-header"></i></span>Сайт визитка</a></li>
-                                                    <li><a href="/razrabotka-corporativnogo-saita" class="link-page"><span class="icons-dropdown"><i class="fa fa-filter"></i></span>Корпоративный сайт</a></li>
-                                                    <li><a href="/razrabotka-internet-magazina/" class="link-page"><span class="icons-dropdown"><i class="fa fa-chevron-circle-down"></i></span>Интернет магазин</a></li>
-                                                    <li><a href="/dizajn-sajta" class="link-page"><span class="icons-dropdown"><i class="fa fa-sliders"></i></span>Дизайн сайта</a></li>
-                                                    <li><a href="/verstka-sajta" class="link-page"><span class="icons-dropdown"><i class="fa fa-keyboard-o"></i></span>Верстка сайта</a></li>
                                                     <li><a href="/prodvijenie-saitov" class="link-page"><span class="icons-dropdown"><i class="fa fa-exclamation-circle"></i></span>Продвижение сайта</a></li>
-                                                    <li><a href="/optimizacija-sajta" class="link-page"><span class="icons-dropdown"><i class="fa fa-sliders"></i></span>Оптимизация сайта</a></li>
                                                     <li><a href="/kontekstnaja-reklama" class="link-page"><span class="icons-dropdown"><i class="fa fa-keyboard-o"></i></span>Контекстная реклама</a></li>
                                                     <li><a href="/landing-page" class="link-page"><span class="icons-dropdown"><i class="fa fa-exclamation-circle"></i></span>Landing Page (лендинг пейдж)</a></li>
                                                 </ul>
@@ -155,6 +140,7 @@
                                     </div>
                                 </nav>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -178,8 +164,8 @@
                             <div class="footer-main-wrapper">
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <div class="footer-logo"><img src="{% static 'assets/img/logo/logo-footer-branding.png' %}" alt="" />
-                                            <div class="text">Студия ITkitcheN</div>
+                                        <div class="footer-logo">
+                                            <div class="text">Студия kmv-it</div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
@@ -230,7 +216,7 @@
                         </div>
                     </div>
                     <div class="footer-copyright">
-                        <div class="text">&copy; Design by ITkitcheN.</div>
+                        <div class="text">&copy; Design by kmv-it.</div>
                     </div>
                 </div>
             </footer>
@@ -251,8 +237,12 @@
     <script src="{% static 'assets/libs/isotope/isotope.pkgd.min.js' %}"></script>
     <script src="{% static 'assets/libs/CountTo/jquery-countTo.js' %}"></script>
     <script src="{% static 'assets/js/pages/portfolio-2.js' %}"></script>
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <!-- MAIN JS-->
     <script src="{% static 'assets/js/main.js' %}"></script>
+    
     <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {

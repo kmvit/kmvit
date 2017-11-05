@@ -21,7 +21,7 @@
                            <div class="text fadeInDown animated delay-04">{{item.title|safe|linebreaks}}</div>
                         </div>
                         <div class="description fadeInUp animated delay-04">{{item.body}}</div>
-                        <div class="group-actions fadeInUp animated delay-05"><a href="{{item.link}}" class="btn btn-primary btn-read-more" tabindex="0">Подробнее...</a></a><a href="#feedback" class="btn btn-white btn-outline btn-purchase-now" tabindex="0">Заказать сайт</a></div>
+                        <div class="group-actions fadeInUp animated delay-05"><a href="{{item.link}}" class="btn btn-white btn-outline btn-purchase-now" tabindex="0">Подробнее...</a></a><button onClick="getElementById('win').removeAttribute('style');" class='btn btn-primary btn-read-more' type="button">Узнать цену</button></div>
                      </div>
                   </div>
                </div>
@@ -61,23 +61,7 @@
 <section class="about-us padding-top-100 page-branding">
    <div class="box-content-wrap">
       <div class="container">
-         <div class="row">
-            <div class="col-sm-6">
-               <div class="group-content">
-                  <div class="group-title group-title-1 style-3">
-                     <h2 class="main-title">Коротко <span>о нас</span> <span class="dot"></span> <span class="mute-title">Кто мы??</span></h2>
-                  </div>
-                  <div class="about-us-wrapper">
-                     <div class="text"> {{whoweare.body|safe}}</div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-6">
-               <div data-wow-delay="0.2s" class="box-content wow fadeIn">
-                  <div class="box-img about-us-img"><img src="{% thumbnail whoweare.img 613x443 crop %}" alt="Разработка сайтов в Пятигорске" class="img-responsive"></div>
-               </div>
-            </div>
-         </div>
+             {{whoweare.body|safe}}
       </div>
       <div class="clearfix"></div>
    </div>
@@ -85,7 +69,7 @@
 {% endblock %}
 {% endif %}
 {% if page.body %}
-<section class="source-code padding-top-100 padding-bottom-100">
+<section class="source-code padding-top-100">
    <div class="container">
       <div class="block-header-wrapper">
          <div class="row">
@@ -153,8 +137,8 @@
          <div class="box-purchase-main">
             <div class="purchase-wrapper">
                <h1 class="mute-title">Качественный и профессиональный</h1>
-               <h4 class="main-title">Закажите разработку сайта у нас <span>ITkiTcheN</span></h4>
-               <button onClick="getElementById('win').removeAttribute('style');" class='btn btn-primary' type="button">Заказать</button>
+               <h4 class="main-title">Хотите сайт на выгодных условиях?</h4>
+               <button onClick="getElementById('win').removeAttribute('style');" class='btn btn-primary' type="button">Узнать цену</button>
             </div>
          </div>
       </div>
@@ -163,7 +147,7 @@
    <div id="win" style="display: none;">
       <div class="overlay"></div>
       <div class="visible">
-         <h3>Напишите нам</h3>
+         <h3>Узнать цену</h3>
          <div class="content-modal">
             <form action="/feedback/" class="form-contact" method="post" enctype="multipart/form-data">
                {% csrf_token %}
@@ -171,7 +155,7 @@
                   <input type="text" placeholder="Имя" name="name" maxlength="200" required id="id_name" class="form-control">
                </div>
                <div class="form-group">
-                  <input type="email" placeholder="Email" name="email" maxlength="254" required id="id_email"  class="form-control">
+                  <input type="phone" placeholder="Телефон, например:+79281112233" name="phone" maxlength="12" required id="id_phone"  class="form-control">
                </div>
                <div class="form-group">
                   <textarea rows="5" placeholder="Комментарий" name="message" cols="40" required id="id_message"  class="form-control"></textarea>
@@ -202,7 +186,7 @@
             <div class="col-md-12">
                <div class="group-content">
                   <div class="group-title group-title-4">
-                     <h2 class="main-title">Несколько интересных <span>фактов</span> <span class="dot"></span></h2>
+                     <h2 class="main-title">Просто оставим это <span>здесь</span> <span class="dot"></span></h2>
                   </div>
                   <div class="group-wrapper">
                      <div class="row">
@@ -328,8 +312,8 @@
    <div class="gallery-masonry-isotope" style="position: relative; height: 595px;">
       <div class="grid-sizer"></div>
       <div class="grid-item">
-         {% for item in portfolio|slice:":7" %}
-         <div class="content-grid-item item-width-50-responsive item-width-{{item.width}} item-height-{{item.height}} print-ads {{item.position}}" >
+         {% for item in portfolio|slice:":12" reversed%}
+         <div class="content-grid-item item-width-50-responsive item-width-16 item-height-97 print-ads {{item.position}}" >
             <div class="inner">
                <div class="pic">
                   <a href="{% url 'portfolio:portfolio_detail' slug=item.slug %}" data-fancybox-group="gallery" class="fancybox"><img src="{{item.thumb.url}}" alt="{{item.title}}" class="img-responsive"><span class="dh-overlay"></span></a>
@@ -594,7 +578,7 @@
 </section>
 {% endblock %}
 {% endif %}
-<section class="what-we-do layout-5 padding-top-100 padding-bottom-100 page-branding">
+<!--<section class="what-we-do layout-5 padding-top-100 padding-bottom-100 page-branding">
    <div class="container">
       <div class="row">
          <div class="col-sm-12">
@@ -605,7 +589,7 @@
                  <div class="col-sm-3">
                <div class='package'>
                   <div class='name'><a href="/razrabotka-saita-visitki">Сайт-визитка</a></div>
-                  <div class='price'>от 10000 руб.</div>
+                  <div class='price'>от 15000 руб.</div>
                   <div class='trial'>4-5 дней</div>
                   <hr>
                   <ul>
@@ -627,7 +611,7 @@
                 <div class="col-sm-3">
                <div class='package'>
                   <div class='name'><a href="/razrabotka-internet-magazina/">Интернет-магазин</a></div>
-                  <div class='price'>от 20000 руб.</div>
+                  <div class='price'>от 35000 руб.</div>
                   <div class='trial'>12-30 дней</div>
                   <hr>
                   <ul>
@@ -649,7 +633,7 @@
                <div class="col-sm-3">
                <div class='package'>
                   <div class='name'><a href="/razrabotka-corporativnogo-saita">Корпоративный сайт</a></div>
-                  <div class='price'>от 17000 руб.</div>
+                  <div class='price'>от 25000 руб.</div>
                   <div class='trial'>10-20 дней</div>
                   <hr>
                   <ul>
@@ -671,7 +655,7 @@
                <div class="col-sm-3">
                <div class='package'>
                   <div class='name'><a href="/landing-page">Landing Page</a></div>
-                  <div class='price'>от 10000 руб.</div>
+                  <div class='price'>от 15000 руб.</div>
                   <div class='trial'>от 5 дней</div>
                   <hr>
                   <ul>
@@ -694,7 +678,7 @@
          </div>
       </div>
    </div>
-</section>
+</section> -->
 <!-- Get In Touch - 2-->
 {% include 'page/feedback_form.html'%}
 {%endblock%}

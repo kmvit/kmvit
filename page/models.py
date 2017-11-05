@@ -110,8 +110,8 @@ class Section(models.Model):
 
 class FeedBack(models.Model):
 	name = models.CharField(max_length=200, verbose_name='Имя')
-	email = models.EmailField(verbose_name='Email')
-	message = models.TextField(verbose_name='Письмо')
+	phone = models.CharField(max_length=12, default='12', verbose_name='Телефон')
+	message = models.TextField(verbose_name='Комментарий')
 	class Meta:
 		verbose_name='Обратная связь'
 		verbose_name_plural='Письма от пользователей'
