@@ -39,7 +39,7 @@
       <div class="page-title-content">
          <div class="container">
             <div class="box-content">
-               <div class="box-img"><img src="{{page.img.url}}" alt="" class="img-responsive"></div>
+               <div class="box-img"><img src="{{page.img.url}}" alt="{{page.title}}" title="{{page.title}}" class="img-responsive"></div>
             </div>
             <div class="group-content">
                <div class="group-title group-title-1 group-heading">
@@ -176,10 +176,10 @@
 <section class="fun-fact layout-4 padding-bottom-100 bg-light page-advertising">
    <div class="box-content-wrap">
       <div class="box-content box-content-left">
-         <div class="box-img"><img src="{% static 'assets/img/homepage/fun-fact-4.png' %}" alt="" class="img-responsive"></div>
+         <div class="box-img"><img src="{% static 'assets/img/homepage/fun-fact-4.png' %}" alt="{{page.title}}" title="{{page.title}}" class="img-responsive"></div>
       </div>
       <div class="box-content box-content-right">
-         <div class="box-img"><img src="{% static 'assets/img/homepage/fun-fact-5.png' %}" alt="" class="img-responsive"></div>
+         <div class="box-img"><img src="{% static 'assets/img/homepage/fun-fact-5.png' %}" alt="{{page.title}}" title="{{page.title}}" class="img-responsive"></div>
       </div>
       <div class="container">
          <div class="row">
@@ -222,16 +222,16 @@
             <div class="col-sm-12 col-xs-12 pull-right">
                <div class="group-content">
                   <div class="group-title group-title-1 style-3">
-                     <h2 class="main-title">Основные этапы <span>работы</span> <span class="dot"></span> <span class="mute-title">Смотрите</span></h2>
+                     <h2 class="main-title">Создание сайтов <span>Основные этапы</span> <span class="dot"></span> <span class="mute-title">Смотрите</span></h2>
                   </div>
                   <div data-wow-delay="0.2s" class="group-wrapper wow fadeInRight">
-                     <div class="text">ТЗ составляется совместно с клиентом. Разработка сайтов требует грамотно составленного ТЗ, иначе можно затянуть создание сайта на долго. </div>
+                     <div class="text">ТЗ составляется совместно с клиентом. Процесс работы над сайтом требует грамотно составленного ТЗ, иначе можно затянуть создание сайта на долго. </div>
                      <div class="row group-list">
                         <div class="col-sm-6">
                            <div class="box-media">
                               <div class="box-icon"><a href="#" class="title">Разработка ТЗ</a></div>
                               <div class="box-info">
-                                 <div class="text">Самым важным моментом в создании сайтов является правильное составление ТЗ.</div>
+                                 <div class="text">Самым важным моментом в создание сайта является правильное составление ТЗ.</div>
                               </div>
                            </div>
                         </div>
@@ -316,7 +316,7 @@
          <div class="content-grid-item item-width-50-responsive item-width-16 item-height-97 print-ads {{item.position}}" >
             <div class="inner">
                <div class="pic">
-                  <a href="{% url 'portfolio:portfolio_detail' slug=item.slug %}" data-fancybox-group="gallery" class="fancybox"><img src="{{item.thumb.url}}" alt="{{item.title}}" class="img-responsive"><span class="dh-overlay"></span></a>
+                  <a href="{% url 'portfolio:portfolio_detail' slug=item.slug %}" data-fancybox-group="gallery" class="fancybox"><img src="{{item.thumb.url}}" alt="{{item.title}}" title="{{item.title}}" class="img-responsive"><span class="dh-overlay"></span></a>
                </div>
             </div>
          </div>
@@ -454,7 +454,7 @@
                            </div>
                         </div>
                         <div class="member-wrapper">
-                           <div class="member-img"><img src="{% static 'assets/img/homepage/team-1.png' %}" alt="" class="img-responsive"></div>
+                           <div class="member-img"><img src="{% static 'assets/img/homepage/team-1.png' %}" alt="{{page.title}}" title="{{page.title}}" class="img-responsive"></div>
                         </div>
                      </div>
                      <div class="item item-member">
@@ -475,7 +475,7 @@
                            </div>
                         </div>
                         <div class="member-wrapper">
-                           <div class="member-img"><img src="{% static 'assets/img/homepage/team-2.png' %}" alt="" class="img-responsive"></div>
+                           <div class="member-img"><img src="{% static 'assets/img/homepage/team-2.png' %}" alt="{{page.title}}" title="{{page.title}}" class="img-responsive"></div>
                         </div>
                      </div>
                      <div class="item item-member">
@@ -498,7 +498,7 @@
                            </div>
                         </div>
                         <div class="member-wrapper">
-                           <div class="member-img"><img src="{% static 'assets/img/homepage/anastasia.png' %}" alt="" class="img-responsive"></div>
+                           <div class="member-img"><img src="{% static 'assets/img/homepage/anastasia.png' %}" alt="{{page.title}}" title="{{page.title}}" class="img-responsive"></div>
                         </div>
                      </div>
                   </div>
@@ -519,7 +519,7 @@
          <div class="client-slick">
             {% for item in review%}
             <div class="item">
-               <div class="avatar"><img src="{{item.img.url}}" alt="" class="img-responsive"></div>
+               <div class="avatar"><img src="{{item.img.url}}" alt="{{page.title}}" title="{{page.title}}" class="img-responsive"></div>
                <div class="name">{{item.name}}</div>
                <div class="position">{{item.position}}</div>
                <div class="description">
@@ -555,7 +555,7 @@
                               <div class="month">{{ item.born|date:"M" }}</div>
                            </div>
                            <div class="box-img">
-                              <a href="{% url 'blog:blog_detail' slug=item.slug%}"><img src="{% thumbnail item.img 514x130 %}" alt="{{item.description}}" class="img-responsive"></a>
+                              <a href="{% url 'blog:blog_detail' slug=item.slug%}"><img src="{% thumbnail item.img 514x130 %}" alt="{{item.description}}" alt="{{item.title}}" title="{{item.title}}" class="img-responsive"></a>
                            </div>
                            <div class="box-content">
                               <div class="info">

@@ -4,6 +4,7 @@ Disallow: /static
 Disallow: /manager
 Disallow: /assets
 Disallow: /srm
+Disallow: /*?
 
 User-agent: Yandex
 Disallow: /admin
@@ -11,6 +12,7 @@ Disallow: /static
 Disallow: /manager
 Disallow: /assets
 Disallow: /srm
+Disallow: /*?
 Host: kmv-it.ru
 
 User-agent: Googlebot
@@ -19,5 +21,6 @@ Disallow: /static
 Disallow: /manager
 Disallow: /assets
 Disallow: /srm
+Disallow: /*?
 
 Sitemap: http://kmv-it.ru/sitemap.xml
