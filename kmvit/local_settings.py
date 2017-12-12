@@ -14,7 +14,7 @@ DATABASES = {
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-STATIC_ROOT = '/srv/django/kmvit/static/'
+STATIC_ROOT = '/var/www/django/kmvit/static/'
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 STATICFILES_DIRS = (

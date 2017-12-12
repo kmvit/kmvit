@@ -686,6 +686,9 @@ a:hover {
   right: 0;
   margin: auto;
 }
+.row.home-top-text {
+    margin-bottom: 20px;
+}
 .group-title.group-title-1.style-4 .main-title .mute-title {
   -webkit-transform: rotate(0deg) translate(-50%, -50%);
   transform: rotate(0deg) translate(-50%, -50%);

@@ -6,9 +6,12 @@ from page.views import *
 from srm.views import *
 from django.contrib.auth import views as auth_views
 
+
 urlpatterns = [
     url(r'^$', Home.as_view(), name='home'),
     url(r'^admin/', admin.site.urls),
+    url(r'^filer/', include('filer.urls')),
+    url(r'^filebrowser_filer/', include('ckeditor_filebrowser_filer.urls')),   
     url(r'^accounts/login/$', auth_views.login),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^blog/', include('blog.urls', namespace='blog')),
