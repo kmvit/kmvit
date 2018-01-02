@@ -22,6 +22,6 @@ class Portfolio(models.Model):
 	class Meta:
 		verbose_name='Портфолио'
 		verbose_name_plural = 'Портфолио'
-
+		ordering=['-id']
 	def __str__(self):
 		return self.title

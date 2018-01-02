@@ -87,14 +87,16 @@ html {
   overflow-x: hidden;
 }
 body {
-  font-family: 'Ubuntu Condensed', sans-serif;
-  font-size: 15px;
+  font-family: 'Ubuntu Condensed', sans-serif !important;
+  font-size: 15px !important;
   line-height: 1.714em;
   font-weight: 400;
-  color: #555e69;
+  color:#79808a !important;
   background-color: #fff;
 }
-
+h3{
+  font-family: "Yanone Kaffeesatz", sans-serif !important;
+}
 label,
 p,
 span {
@@ -687,7 +689,7 @@ a:hover {
   margin: auto;
 }
 .row.home-top-text {
-    margin-bottom: 20px;
+    margin:0 20px;
 }
 .group-title.group-title-1.style-4 .main-title .mute-title {
   -webkit-transform: rotate(0deg) translate(-50%, -50%);
@@ -1203,7 +1205,7 @@ a:hover {
   line-height: 60px;
 }
 .header.header-fixed .header-main .logo img {
-  width: 40px;
+  width: 120px;
 }
 .header.header-fixed .navigation .nav-links li .main-menu,
 .header.header-fixed .button-search .main-menu {
@@ -1913,8 +1915,9 @@ a:hover {
   line-height: 95px;
 }
 .header-layout-3 .read-more-nav {
-  border-bottom: 1px solid #efefef;
-}
+    background: #f5f5f5;
+        border-bottom: 1px solid #e2e0e0;
+        }
 .header-layout-3 .read-more-nav .info-contact a {
   color: #facf07;
 }
@@ -2121,6 +2124,7 @@ a:hover {
   color: #facf07;
 }
 .header-layout-3.page-branding .read-more-nav .info-contact a span {
+  font-size:19px;
   color: #999;
   transition: color 0.3s;
   -webkit-transition: color 0.3s;
@@ -3771,9 +3775,8 @@ footer .socials .link:last-child,
 }
 .technology {
     margin-top:40px;
-    border-top: 5px solid #161f28;
-    background: #bec6ca;
-    height: 415px;
+    background: #f5f5f5;
+    height: 485px;
 }
 .technology  h3 {
     margin: 0.3em 0 0.9em;
@@ -3810,6 +3813,10 @@ footer .socials .link:last-child,
     height: 200px;
     background: url(../img/page/js_right.png) no-repeat;
 }
+.difference {
+    background: #f5f5f5;
+    padding-bottom:50px;
+}
 @media screen and (max-width: 991px){
 .technology .html,
 .technology .css,
@@ -3823,6 +3830,35 @@ footer .socials .link:last-child,
 h4.post-title {
     border-bottom: 1px dashed #999;
 }
+.main-header h4{
+    padding: 9px 5px 5px 5px;
+    background: #f5f5f5;
+    border-bottom: 1px #ccc dashed;
+    margin: 0 0 40px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-weight: 700;
+    color: #000 !important;
+}
+.post-titles a {
+    border-bottom: 1px #facf07 dashed;
+        margin: 0 0 40px;
+            font-family: "Yanone Kaffeesatz", sans-serif;
+                font-weight: 700;
+                    color: #facf07;
+                        font-size: 22px;
+                            text-align: center;
+
+
+}
+.post-titles{
+text-align:center;}
+.group-title.group-title-1.style-3 h1, h2 {
+    text-align: center;
+        color: #1e1f26;
+        }
+.group-title.group-title-1.style-3 span {
+    color: #f3cf09;
+    }
 /*
 =====  End of Section  ======
 */

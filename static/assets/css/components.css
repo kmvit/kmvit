@@ -3433,7 +3433,7 @@ Yanone Kaffeesatz
   right: 0;
   bottom: -100px;
   width: 300%;
-  background-color: #facf07;
+  background-color: #aaa;
 }
 .contact.layout-1 .banner .banner-left:after {
   content: '';
@@ -7206,8 +7206,8 @@ Yanone Kaffeesatz
   color: #fff;
 }
 .page-banner-4 .homepage-banner-warpper {
-  height: 65vh;
-}
+  height: 95vh;
+  }
 .page-banner-4 .homepage-banner-warpper .banner-info {
   text-align: center;
 }
@@ -7227,17 +7227,23 @@ Yanone Kaffeesatz
   text-transform: uppercase;
   margin: 0;
   color: #fff;
-  font-family: 'Yanone Kaffeesatz-Thin';
+}
+.page-banner-4 .homepage-banner-warpper .banner-info .caption span{
+  color:#facf07;
 }
 .page-banner-4 .homepage-banner-warpper .banner-info .caption b {
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 .page-banner-4 .homepage-banner-warpper .banner-info .group-title {
+  color:#fff;
   position: relative;
   bottom: auto;
   font-weight: 700;
   font-size: 4.286em;
   text-transform: uppercase;
+}
+.group-title span{
+  color:##f3cf09;
 }
 .page-banner-4 .homepage-banner-warpper .banner-info .group-title .line-diamond {
   left: 50%;

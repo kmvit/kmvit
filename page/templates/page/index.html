@@ -1,0 +1,726 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% load static %}
+{% block title %}{{page.pre_title}}{% endblock %}
+{% block meta %}{{page.description}}{% endblock %}
+{% block content %}
+{% if page.banner %}
+{% block banner %}
+                                                                                                                                                                                                                         </section>
+
+<section class="page-banner-4 page-branding">
+   <div class="slider-img-banner">
+
+  {% for item in page.banner.all %}
+      <div style="background-image: url('{{item.img.url}}')" class="slide">
+         <div class="container">
+            <div class="homepage-banner-warpper">
+               <div class="homepage-banner-content">
+                  <div class="banner-info">
+                     <div class="main-title">
+                        <h2 class="caption fadeInDown animated delay-03">{{item.caption|safe|linebreaks}}</h2>
+                        <div class="group-title">
+                           <div class="line-diamond fadeIn animated delay-03"><span></span><span></span></div>
+                           <div class="text fadeInDown animated delay-04">{{item.title|safe|linebreaks}}</div>
+                        </div>
+                    
+                        <div class="group-actions fadeInUp animated delay-05"><a href="{{item.link}}" class="btn btn-white btn-outline btn-purchase-now" tabindex="0">Подробнее...</a></a><button data-toggle="modal" data-target="#exampleModal" class='btn btn-primary btn-read-more' type="button">Узнать цену</button></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% endfor %}
+   </div>
+</section>
+{% endblock %}
+{% endif %}
+{% if page.top %}
+<section class="page-title layout-7 page-sourcecode">
+   <div class="page-title-wrapper">
+      <div class="page-title-content">
+         <div class="container">
+            <div class="box-content">
+               <div class="box-img"><img src="{{page.img.url}}" alt="{{page.title}}" title="{{page.title}}" class="img-responsive"></div>
+            </div>
+            <div class="group-content">
+               <div class="group-title group-title-1 group-heading">
+                  <h1 class="main-title">{{page.title}} <span class="dot"></span></h1>
+                  <ol class="breadcrumb">
+                     <li><a href="/">Главная</a></li>
+                     <li class="active">{{page.title}}</li>
+                  </ol>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{% endif %}
+
+{% if page.body %}
+<section class="source-code padding-top-100">
+   <div class="container">
+      <div class="block-header-wrapper">
+         <div class="row">
+            <div class="col-sm-12">
+               <div class="block-header-inner padding-bottom-100">
+                  <div class="post-titles">
+                  </div>
+                  <div class="text">{{page.body|safe}}</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{% endif %}
+{% for item in page.section_set.all%}
+<section class="{{item.title}}">
+    {{item.body|safe}}
+</section>
+{% endfor%}
+
+{% if page.whatwedo %}
+{% block whatwedo %}
+<!-- What we do (what-we-do-1)-->
+<section class="what-we-do layout-5 padding-top-100 page-branding">
+   <div class="box-content-wrap">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <div class="group-content">
+                  <div class="group-title group-title-1 style-3">
+                     <h2 class="main-title">Что <span>мы можем для</span>  вас сделать <span class="mute-title">Умеем</span></h2>
+                  </div>
+                  <div class="what-we-do-wrapper">
+                     <div class="row group-list">
+                        {% for item in whatwedo %}
+                        <div class="col-sm-4">
+                           <div data-wow-delay="0.2s" class="box-media layout-5 wow fadeIn" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                              <div class="box-media-wrapper">
+                                 <div class="box-icon"><a href="{{item.link}}" class="icons"><i class="{{item.icon}}"></i></a></div>
+                                 <div class="box-info">
+                                    <a href="{{item.link}}" class="title">{{item.title}}</a>
+                                    <div class="text">{{item.body|safe}}</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        {% endfor %}
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="clearfix"></div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+{% endif %}
+
+{% if page.portfolio %}
+{% block portfolio%}
+<!-- Portfolio-->
+<section class="our-portfolio layout-4 padding-top-100 page-branding">
+   <div class="box-content-wrap">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <div class="group-content">
+                  <div class="group-title group-title-1 style-3">
+                     <h2 class="main-title">Посмотрите кейсы ,<span> которые у нас есть</span> <span class="dot"></span> <span class="mute-title">Кейсы</span></h2>
+                  </div>
+                  <div class="group-wrapper">
+                     <div class="group-filter filter-button-group"><a href="javascript:;" data-filter="*" class="filter-item active">Все</a><a href="javascript:;" data-filter=".shop" class="filter-item">Интернет-магазины</a><a href="javascript:;" data-filter=".visit" class="filter-item">Сайт визитка</a><a href="javascript:;" data-filter=".coop" class="filter-item">Корпоративные</a><a href="javascript:;" data-filter=".service" class="filter-item">Сервисы</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="clearfix"></div>
+   </div>
+   <div class="gallery-masonry-isotope" style="position: relative; height: 595px;">
+      <div class="grid-sizer"></div>
+      <div class="grid-item">
+         {% for item in portfolio|slice:":12"%}
+         <div class="content-grid-item item-width-50-responsive item-width-16 item-height-97 print-ads {{item.position}}" >
+            <div class="inner">
+               <div class="pic">
+                  <a href="{% url 'portfolio:portfolio_detail' slug=item.slug %}" data-fancybox-group="gallery" class="fancybox"><img src="{{item.thumb.url}}" alt="{{item.title}}" title="{{item.title}}" class="img-responsive"><span class="dh-overlay"></span></a>
+               </div>
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+   <div class="more-info">
+      <div class="container">
+         <h5 class="sub-title">Хотите посмотреть еще?<a href="/portfolio">Жмите сюда<i class="fa fa-long-arrow-right"></i></a></h5>
+      </div>
+   </div>
+</section>
+{% endblock %}
+{% endif %}
+
+
+
+{% if page.order %}
+<!-- Banner-->
+<!-- Banner-->
+<section class="banner-homepage layout-2 page-branding">
+   <div class="box-content-wrap">
+      <div class="box-purchase">
+         <div class="box-purchase-main">
+            <div class="purchase-wrapper">
+               <h1 class="mute-title">Качественный и профессиональный</h1>
+               <h4 class="main-title">Хотите сайт на выгодных условиях?</h4>
+               <button onClick="getElementById('win').removeAttribute('style');" class='btn btn-primary' type="button">Узнать цену</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="clearfix"></div>
+   <div id="win" style="display: none;">
+      <div class="overlay"></div>
+      <div class="visible">
+         <h3>Узнать цену</h3>
+         <div class="content-modal">
+            <form action="/feedback/" class="form-contact" method="post" enctype="multipart/form-data">
+               {% csrf_token %}
+               <div class="form-group">
+                  <input type="text" placeholder="Имя" name="name" maxlength="200" required id="id_name" class="form-control">
+               </div>
+               <div class="form-group">
+                  <input type="phone" placeholder="Телефон, например:+79281112233" name="phone" maxlength="12" required id="id_phone"  class="form-control">
+               </div>
+               <div class="form-group">
+                  <textarea rows="5" placeholder="Комментарий" name="message" cols="40" required id="id_message"  class="form-control"></textarea>
+               </div>
+               <input type="submit" class="btn btn-primary" value="Отправить">
+            </form>
+         </div>
+         <p>        
+            <button type="button" onclick="getElementById('win').style.display='none';">x</button>
+         </p>
+      </div>
+   </div>
+</section>
+{% endif %}
+{% if page.fact %}
+{% block facts %}
+
+
+<section class="source-code padding-top-100">
+   <div class="container">
+         <div class="block-header-wrapper">
+                  <div class="row">
+                              <div class="col-sm-12">
+                                             <div class="block-header-inner padding-bottom-100">
+                                                               <div class="post-titles">
+                                                                                 </div>
+                                                                                                   <div class="text"><div class="container">
+                                                                                                   <div class="group-title group-title-1 style-3">
+                                                                                                   <h2 class="main-title">Почему <span>вам</span> нужно выбрать нас</h2>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   
+                                                                                                   <div class="col-sm-3">
+                                                                                                   <div class="box-media fadeIn layout-5 wow" style="animation-delay: 0.2s; animation-name: fadeIn; visibility: visible;">
+                                                                                                   <div class="box-media-wrapper">
+                                                                                                   <div class="box-icon"><img alt="Создание сайта" src="/static/assets/img/page/form.png"></div>
+                                                                                                   
+                                                                                                   <div class="box-info">
+                                                                                                   <p class="title">Работаем под ключ</p>
+                                                                                                   
+                                                                                                   <div class="text">
+                                                                                                   <p>Делаем все от создания сайта до вывода в ТОП</p>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   
+                                                                                                   <div class="col-sm-3">
+                                                                                                   <div class="box-media fadeIn layout-5 wow" style="animation-delay: 0.2s; animation-name: fadeIn; visibility: visible;">
+                                                                                                   <div class="box-media-wrapper">
+                                                                                                   <div class="box-icon"><img alt="веб студия" src="/static/assets/img/page/piggy-bank.png"></div>
+                                                                                                   
+                                                                                                   <div class="box-info">
+                                                                                                   <p class="title">Цена и качество</p>
+                                                                                                   
+                                                                                                   <div class="text">
+                                                                                                   <p>Лучшее соотношение цена и качество в регионе</p>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   
+                                                                                                   <div class="col-sm-3">
+                                                                                                   <div class="box-media fadeIn layout-5 wow" style="animation-delay: 0.2s; animation-name: fadeIn; visibility: visible;">
+                                                                                                   <div class="box-media-wrapper">
+                                                                                                   <div class="box-icon"><img alt="web-студия" src="/static/assets/img/page/diagram-1.png"></div>
+                                                                                                   
+                                                                                                   <div class="box-info">
+                                                                                                   <p class="title">Контакт с заказчиком</p>
+                                                                                                   
+                                                                                                   <div class="text">
+                                                                                                   <p>Постоянно на связи с заказчиком.</p>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   
+                                                                                                   <div class="col-sm-3">
+                                                                                                   <div class="box-media fadeIn layout-5 wow" style="animation-delay: 0.2s; animation-name: fadeIn; visibility: visible;">
+                                                                                                   <div class="box-media-wrapper">
+                                                                                                   <div class="box-icon"><img alt="студия веб дизайна" src="/static/assets/img/page/suitcase.png"></div>
+                                                                                                   
+                                                                                                   <div class="box-info">
+                                                                                                   <p class="title">Техподдержка сайтов</p>
+                                                                                                   
+                                                                                                   <div class="text">
+                                                                                                   <p>Дальнейшая поддержка разработанных сайтов</p>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   </div>
+                                                                                                   </div></div>
+                                                                                                                  </div>
+                                                                                                                              </div>
+                                                                                                                                       </div>
+                                                                                                                                             </div>
+                                                                                                                                                </div>
+                                                                                                                                                </section>
+
+
+
+{% endblock %}
+{% endif %}
+
+{% if page.whoweare %}
+{% block aboutus %}
+<!-- About-us-->
+<section class="about-us padding-top-50 page-branding">
+   <div class="box-content-wrap">
+      <div class="container">
+             {{whoweare.body|safe}}
+      </div>
+      <div class="clearfix"></div>
+   </div>
+</section>
+{% endblock %}
+{% endif %}
+
+{%  if page.lastwork %}
+{% block lastwork %}
+<!-- Work (work-2)-->
+<section class="our-latest-work layout-3 padding-top-100 padding-bottom-100 page-branding">
+   <div class="box-content-wrap">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12 col-xs-12 pull-right">
+               <div class="group-content">
+                  <div class="group-title group-title-1 style-3">
+                     <h2 class="main-title">Создание сайтов <span>Основные этапы</span> <span class="dot"></span> <span class="mute-title">Смотрите</span></h2>
+                  </div>
+                  <div data-wow-delay="0.2s" class="group-wrapper wow fadeInRight">
+                     <div class="text"><p>ТЗ составляется совместно с клиентом. Процесс работы над сайтом требует грамотно составленного ТЗ, иначе можно затянуть создание сайта на долго.</p> </div>
+                     <div class="row group-list">
+                        <div class="col-sm-6">
+                           <div class="box-media">
+                              <div class="box-icon"><a href="#" class="title">Разработка ТЗ</a></div>
+                              <div class="box-info">
+                                 <div class="text"><p>Самым важным моментом в создание сайта является правильное составление ТЗ.</p></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-6">
+                           <div class="box-media">
+                              <div class="box-icon"><a href="#" class="title">Анализ целевой аудитории</a></div>
+                              <div class="box-info">
+                                 <div class="text"><p>Наши специалисты проводят детальный анализ вашего сайта и ищут подходящую целевую аудиторию. Исходя из этого и будет строится создаваться дизайн и юзабилити сайта.</p> </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-sm-6">
+                           <div class="box-media">
+                              <div class="box-icon"><a href="#" class="title">Дизайн</a></div>
+                              <div class="box-info">
+                                 <div class="text"><p>Создание дизайна сайта и юзабилити происходит на основе анализа целевой аудитории, фирменного стиля(если таковой есть), так же в учет берется тематика сайта.</p></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-6">
+                           <div class="box-media">
+                              <div class="box-icon"><a href="#" class="title">Верстка</a></div>
+                              <div class="box-info">
+                                 <div class="text"><p>На основе дизайна верстальщики преобразуют макеты сайта в html версию. На этом этапе создаются все скрипты, все эффекты сайта.</p></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-sm-6">
+                           <div class="box-media">
+                              <div class="box-icon"><a href="#" class="title">Программирование</a></div>
+                              <div class="box-info">
+                                 <div class="text"><p>На этом этапе разработки сайта программисты добавляют динамичекую выдачу данных. Верстка адаптируется под систему управления сайтом. Система управления сайтом может быть самописная или на выбор заказчика.</p></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-6">
+                           <div class="box-media">
+                              <div class="box-icon"><a href="#" class="title">Оптимизация и продвижение</a></div>
+                              <div class="box-info">
+                                 <div class="text"><p>Так как создание и продвижение сайтов это одно целое, то этот этап у нас является одним из важнейших. На этом этапе создается seo оптимизация сайта. Специалисты работают с контентом на всех страницах. Ведется подключение систем необходимых для анализа продвижение сайтов.</p></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="clearfix"></div>
+   </div>
+</section>
+{% endblock %}
+{% endif %}
+
+{% if page.expectbest %}
+{% block skills %}
+<!-- Skill (skill-1)-->
+<section class="our-skill layout-1 padding-top-100 page-branding">
+   <div class="box-content-wrap">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <div class="group-content">
+                  <div class="group-title group-title-1 style-3">
+                     <h2 class="main-title">Технологии,<span> которые используются для вашего сайта</span> <span class="dot"></span> <span class="mute-title">Технологии</span></h2>
+                  </div>
+                  <div class="group-wrapper">
+                     <div class="row">
+                        <div class="col-sm-4">
+                           <div class="box-item box-item-1">
+                              <div class="box-heading">Скилы, которыми мы владеем</div>
+                              <div class="box-info">
+                                 <div class="group-progress-bar-list">
+                                    <div class="progress-item">
+                                       <div class="heading">Разработка на Python/Django</div>
+                                       <div class="progress">
+                                          <div data-width="90%" class="progress-bar"></div>
+                                       </div>
+                                    </div>
+                                    <div class="progress-item">
+                                       <div class="heading">Php</div>
+                                       <div class="progress">
+                                          <div data-width="80%" class="progress-bar"></div>
+                                       </div>
+                                    </div>
+                                    <div class="progress-item">
+                                       <div class="heading">Angular.js</div>
+                                       <div class="progress">
+                                          <div data-width="70%" class="progress-bar"></div>
+                                       </div>
+                                    </div>
+                                    <div class="progress-item">
+                                       <div class="heading">Дизайн</div>
+                                       <div class="progress">
+                                          <div data-width="85%" class="progress-bar"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="box-item box-item-1">
+                              <div class="box-heading">Наша миссия</div>
+                              <div class="box-info">
+                                 <div class="text">Основным критерием нашей работы является качество.</div>
+                                 <div class="text">При разработке сайта или продукта мы чтим наше главное кредо "Сделать лучше, чем у остальных!". Это проявляется как в разработке, дизайне, так и в качестве написания кода.</div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="box-item box-item-1">
+                              <div class="box-heading">Наша цель</div>
+                              <div class="box-info">
+                                 <div class="group-list">
+                                    <ul class="list-unstyled">
+                                       <li>
+                                          <div class="text">Довольный клиент</div>
+                                       </li>
+                                       <li>
+                                          <div class="text">Довольная аудитория</div>
+                                       </li>
+                                       <li>
+                                          <div class="text">Качественный продукт</div>
+                                       </li>
+                                       <li>
+                                          <div class="text">Соблюдать соотношение Цена/Качество</div>
+                                       </li>
+                                       <li>
+                                          <div class="text">Соблюдать сроки</div>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="clearfix"></div>
+   </div>
+</section>
+{% endblock %}
+{% endif %}
+{% if page.team %}
+{% block team%}
+<!-- Team (team-1)-->
+<section class="our-team layout-1 padding-top-100 padding-bottom-100 blind re-style page-branding">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <div class="group-content">
+               <div class="group-title group-title-1 style-3">
+                  <h2 class="main-title">Наша <span>команда</span> <span class="dot"></span> <span class="mute-title">Встречайте</span></h2>
+               </div>
+               <div class="group-wrapper">
+                  <div class="team-slick">
+                     <div class="item item-member">
+                        <div class="member-line-1"></div>
+                        <div class="member-line-2">
+                           <div class="member-social member-left">
+                              <ul class="list-unstyled">
+                                 <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                              </ul>
+                           </div>
+                           <div class="member-right"></div>
+                        </div>
+                        <div class="member-info">
+                           <div class="member-info-wrapper">
+                              <a href="#" class="member-name">Галкин Андрей</a>
+                              <div class="member-position">Менеджер проектов</div>
+                           </div>
+                        </div>
+                        <div class="member-wrapper">
+                           <div class="member-img"><img src="{% static 'assets/img/homepage/team-1.png' %}" alt="{{page.title}}" title="{{page.title}}" class="img-responsive"></div>
+                        </div>
+                     </div>
+                     <div class="item item-member">
+                        <div class="member-line-1"></div>
+                        <div class="member-line-2">
+                           <div class="member-social member-left">
+                              <ul class="list-unstyled">
+                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                              </ul>
+                           </div>
+                           <div class="member-right"></div>
+                        </div>
+                        <div class="member-info">
+                           <div class="member-info-wrapper">
+                              <a href="#" class="member-name">Архипов Денис</a>
+                              <div class="member-position">Разработчик</div>
+                           </div>
+                        </div>
+                        <div class="member-wrapper">
+                           <div class="member-img"><img src="{% static 'assets/img/homepage/team-2.png' %}" alt="{{page.title}}" title="{{page.title}}" class="img-responsive"></div>
+                        </div>
+                     </div>
+                     <div class="item item-member">
+                        <div class="member-line-1"></div>
+                        <div class="member-line-2">
+                           <div class="member-social member-left">
+                              <ul class="list-unstyled">
+                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                              </ul>
+                           </div>
+                           <div class="member-right"></div>
+                        </div>
+                        <div class="member-info">
+                           <div class="member-info-wrapper">
+                              <a href="#" class="member-name">Леонова Анастасия</a>
+                              <div class="member-position">Дизайнер</div>
+                           </div>
+                        </div>
+                        <div class="member-wrapper">
+                           <div class="member-img"><img src="{% static 'assets/img/homepage/anastasia.png' %}" alt="{{page.title}}" title="{{page.title}}" class="img-responsive"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+{% endif %}
+{% if page.blog %}
+{% block blog %}
+<!-- Blog News-->
+<section class="blog-news layout-1 padding-top-100 padding-bottom-100 re-style page-branding">
+   <div class="box-content-wrap">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <div class="group-content">
+                  <div class="group-title group-title-1 style-3">
+                     <h2 class="main-title">Возможно вам будут интересны<span> эти статьи</span> <span class="dot"></span> <span class="mute-title">Блог</span></h2>
+                  </div>
+                  <div class="group-wrapper">
+                     <ul class="list-blog-news list-unstyled">
+                        {% for item in blog|slice:":2"%}
+                        <li data-wow-delay="0.2s" class="wow fadeIn">
+                           <div class="box-date">
+                              <div class="date">{{ item.born|date:"d"|slice:":1" }}<span>{{ item.born|date:"d"|slice:"1:2" }}</span></div>
+                              <div class="month">{{ item.born|date:"M" }}</div>
+                           </div>
+                           <div class="box-img">
+                              <a href="{% url 'blog:blog_detail' slug=item.slug%}"><img src="{% thumbnail item.img 514x130 %}" alt="{{item.description}}" alt="{{item.title}}" title="{{item.title}}" class="img-responsive"></a>
+                           </div>
+                           <div class="box-content">
+                              <div class="info">
+                                 <div class="item author">Опубликовано: <a href="#">Андрей Галкин</a></div>
+                              </div>
+                              <a href="{% url 'blog:blog_detail' slug=item.slug%}" class="title">{{item.title}}</a>
+                              <div class="text">{{item.body|slice:":250"|safe}}</div>
+                              <a href="{% url 'blog:blog_detail' slug=item.slug%}" class="btn btn-main">Читать</a>
+                           </div>
+                        </li>
+                        {% endfor %}
+                     </ul>
+                     <div class="group-button"><a href="{% url 'blog:blog_list' %}" class="btn btn-second btn-load-more">Читать блог</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="map">
+    <div id="map">
+	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ak74lwPrSF1GbuvH1MQ6Zuh3nS4MKMN5s&amp;width=100%25&amp;height=393&amp;lang=ru_RU&amp;scroll=false"></script>
+    </div>
+</section>
+{% endblock %}
+{% endif %}
+<!--<section class="what-we-do layout-5 padding-top-100 padding-bottom-100 page-branding">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <div class="group-content">
+                <div class="group-title group-title-1 style-3">
+                     <h2 class="main-title">Цены <span>на</span> <span class="dot">наши</span> <span class="mute-title">Услуги</span></h2>
+                 </div>
+                 <div class="col-sm-3">
+               <div class='package'>
+                  <div class='name'><a href="/razrabotka-saita-visitki">Сайт-визитка</a></div>
+                  <div class='price'>от 15000 руб.</div>
+                  <div class='trial'>4-5 дней</div>
+                  <hr>
+                  <ul>
+                     <li>
+                        
+                        Уникальный дизайн
+                     </li>
+                     <li>
+                        
+                        CMS
+                     </li>
+                     <li>
+                        
+                        Хостинг и домен
+                     </li>
+                  </ul>
+               </div>
+               </div>
+                <div class="col-sm-3">
+               <div class='package'>
+                  <div class='name'><a href="/razrabotka-internet-magazina/">Интернет-магазин</a></div>
+                  <div class='price'>от 35000 руб.</div>
+                  <div class='trial'>12-30 дней</div>
+                  <hr>
+                  <ul>
+                     <li>
+                         Уникальный дизайн
+                     </li>
+                     <li>
+                        Система оплаты
+                     </li>
+                     <li>
+                         Система управления
+                     </li>
+                     <li>
+                         Оптимизайция
+                     </li>
+                  </ul>
+               </div>
+               </div>
+               <div class="col-sm-3">
+               <div class='package'>
+                  <div class='name'><a href="/razrabotka-corporativnogo-saita">Корпоративный сайт</a></div>
+                  <div class='price'>от 25000 руб.</div>
+                  <div class='trial'>10-20 дней</div>
+                  <hr>
+                  <ul>
+                     <li>
+                         Уникальный дизайн
+                     </li>
+                     <li>
+                         Система управления
+                     </li>
+                     <li>
+                         Различные модули
+                     </li>
+                     <li>
+                         Оптимизация
+                     </li>
+                  </ul>
+               </div>
+               </div>
+               <div class="col-sm-3">
+               <div class='package'>
+                  <div class='name'><a href="/landing-page">Landing Page</a></div>
+                  <div class='price'>от 15000 руб.</div>
+                  <div class='trial'>от 5 дней</div>
+                  <hr>
+                  <ul>
+                     <li>
+                        Высокая конверсия
+                     </li>
+                     <li>
+                        Дизайн на аудиторию
+                     </li>
+                     <li>
+                        Система управления
+                     </li>
+                     <li>
+                         Счетчики
+                     </li>
+                  </ul>
+               </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section> -->
+<!-- Get In Touch - 2-->
+{%endblock%}

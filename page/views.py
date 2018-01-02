@@ -10,7 +10,7 @@ from .forms import *
 
 class Home(DetailView):
     model = Page
-
+    template_name='page/index.html'
     def get_object(self, queryset=None):
         page = get_object_or_404(Page, id=1)
         return page
