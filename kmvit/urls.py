@@ -16,7 +16,7 @@ urlpatterns = [
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^blog/', include('blog.urls', namespace='blog')),
     url(r'^portfolio/', include('portfolio.urls', namespace='portfolio')),
-    url(r'^feedback/', FeedBack.as_view(), name='feedback'),
+    url(r'^feedback/$', feedback, name='feedback'),
     url(r'^success/', success, name='success'),
     url(r'^srm/', include('srm.urls', namespace='orders', app_name='orders')),
     url(r'^logout$', logout_view, name='logout'),

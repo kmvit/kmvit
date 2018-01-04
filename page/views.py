@@ -1,11 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import *
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView
 from portfolio.models import *
 from blog.models import *
 from .forms import *
-
+from django.core.mail import EmailMessage
 
 
 class Home(DetailView):
@@ -51,3 +51,30 @@ class FeedBack(CreateView):
     
 def success(request):
     return render(request, 'page/success.html')
+
+
+def feedback(request):
+    form_class = ContactForm
+
+    # new logic!
+    if request.method == 'POST':
+        form = form_class(data=request.POST)
+
+        if form.is_valid():
+            name = request.POST.get(
+                'name'
+            , '')
+            phone = request.POST.get(
+                'phone'
+            , '')
+            email = EmailMessage(
+                'Письмо с сайта kmv-it.ru',
+                name + ' ' + phone,
+                'justscoundrel@yandex.ru',
+                ['justscoundrel@yandex.ru',],
+                headers={'Message-ID': 'foo'},
+)
+            email.send()
+            return redirect('success')
+
+    return redirect('home')

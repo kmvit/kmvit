@@ -1,7 +1,6 @@
 __pycache__/
 *.pyc
 *.pyo
-settings_local.py
-email-local-spool/
+local_settings.py
 *.geany
-env
+db.sqlite3

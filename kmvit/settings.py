@@ -27,7 +27,6 @@ SECRET_KEY = 'b$euzsuuqi5m_^yke3@6fd3s_k*)bmtmtodx2xro*#7@60u-tl'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['kmv-it.ru']
 
 
 # Application definition
@@ -64,21 +63,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'kmvit.urls'
 
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/var/www/django/kmvit/templates'],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
-]
+
 
 WSGI_APPLICATION = 'kmvit.wsgi.application'
 

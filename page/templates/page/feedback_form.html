@@ -1,30 +1,30 @@
-<section class="contact layout-1">
-   <div class="container">
-      <div class="row banner">
-         <div class="col-sm-4 banner-right">
-            <div class="group-title group-title-3">
-               <h2 class="main-title">Напишите  <span>нам</span> <span class="dot"></span> <span class="mute-title">Написать</span></h2>
-            </div>
-         </div>
-         <div class="col-sm-8 banner-left">
-            <div class="banner-content">
-               <div class="title">Давайте работать <span>над новыми проектами</span> вместе!</div>
-               <form action="/feedback/" id='feedback' class="form-contact" method="post" enctype="multipart/form-data">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Обратная связь</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <form action="/feedback/" id='feedback' class="form-contact" method="POST" enctype="multipart/form-data">
                    {% csrf_token %}
-                  <div class="form-group">
-                     <input type="text" placeholder="Имя" name="name" maxlength="200" required id="id_name" class="form-control">
-                  </div>
-                  <div class="form-group">
-                     <input type="text" placeholder="Ваш телефон, пример: +79281112233" name="phone" maxlength="12" required id="id_phone"  class="form-control">
-                  </div>
-                  <div class="form-group">
-                     <textarea rows="5" placeholder="Комментарий" name="message" cols="40" required id="id_message"  class="form-control"></textarea>
-                  </div>
-
-                   <input type="submit" class="btn btn-primary" value="Отправить">
-               </form>
+                     <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Ваше имя:</label>
+                        <input type="text" class="form-control" required name="name" id="id_name">
+                     </div>
+                     <div class="form-group">
+                        <label for="phone" class="col-form-label">Телефон:</label>
+                        <input type="text" class="form-control" required name="phone" id="id_phone">
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        <input type="submit" class="btn btn-primary" value="Отправить">
+                     </div>
+                  </form>
+               </div>
+               
             </div>
          </div>
       </div>
-   </div>
-</section>
