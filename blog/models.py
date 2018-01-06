@@ -30,7 +30,7 @@ class Blog(models.Model):
     img = models.ImageField(upload_to='images/blog', verbose_name='Изображение')
     born = models.DateField(default=timezone.now, verbose_name='Дата')
     category = models.ForeignKey(Category, verbose_name='Категория')
-    tags = models.ForeignKey(Tag,verbose_name='Тэги')
+    tags = models.ManyToManyField(Tag,verbose_name='Тэги')
     description = models.TextField()
     body = RichTextField(verbose_name='Содержание')
 
