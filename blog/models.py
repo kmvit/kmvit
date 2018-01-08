@@ -34,7 +34,6 @@ class Blog(models.Model):
     description = models.TextField()
     body = RichTextField(verbose_name='Содержание')
 
-
     class Meta:
         verbose_name='Блог статья'
         verbose_name_plural = 'Блог'
@@ -42,5 +41,4 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
-
 
