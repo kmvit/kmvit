@@ -7220,8 +7220,10 @@ Yanone Kaffeesatz
 .page-banner-4 .homepage-banner-warpper .banner-info .main-title {
   top: 50%;
   margin-top: -155px;
+
 }
 .page-banner-4 .homepage-banner-warpper .banner-info .caption {
+
   font-size: 2.571em;
   font-weight: 900;
   text-transform: uppercase;
@@ -7242,6 +7244,9 @@ Yanone Kaffeesatz
   font-size: 4.286em;
   text-transform: uppercase;
 }
+.main-title p{
+  font-family: 'Ubuntu Condensed', sans-serif !important;}
+
 .group-title span{
   color:##f3cf09;
 }
