@@ -2,10 +2,10 @@
 <html lang="ru">
    {%load static%}
    <head>
-      <title>{% block title %}Kmv-it – разработка, создание и продвиежние сайтов{% endblock %}</title>
+      <title>{% block title %}Kmv-it – разработка, создание и продвижение сайтов{% endblock %}</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="{% block meta %} Веб студия "Kmv-it", создание сайтов, сайты под ключ в Пятигорске, Ессентуках, Кисловодске, Минеральных водах. Выможете заказать сайт по выгодной цене. {% endblock %}">
+      <meta name="description" content="{% block meta %} Веб студия Kmv-it. Создание сайтов и продвижение сайтов, сайты под ключ в Пятигорске и на КМВ. Заказать сайт по выгодной цене. {% endblock %}">
       <link rel="shortcut icon" href="{% static 'assets/favicon.ico' %}" />
       <meta name="yandex-verification" content="034c1c6f3f98a9b7" />
       <meta name="google-site-verification" content="7vKpXaL5NfU7D2TEwD0DAJVQg-u0_kjHDcVNeZesF4I" />
@@ -14,13 +14,14 @@
       <link type="text/css" rel="stylesheet" href="{% static 'assets/css/components.css' %}">
       <link type="text/css" rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
       <!-- FONT CSS-->
+      <link href="https://fonts.googleapis.com/css?family=Marmelad" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="{% static 'assets/libs/animate.css/animate.c
       ss' %}">
       <link type="text/css" rel="stylesheet" href="{% static 'assets/font/font-icon/font-awesome/css/font-awesome.css' %}">
       <link type="text/css" rel="stylesheet" href="{% static 'assets/font/font-icon/alabicon/style.css' %}">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
       <!-- LIBRARY CSS-->
       <link type="text/css" rel="stylesheet" href="{% static 'assets/libs/bootstrap/css/bootstrap.min.css' %}">
       <link type="text/css" rel="stylesheet" href="{% static 'assets/libs/slick-slider/slick.css' %}">
@@ -54,11 +55,14 @@
                                  </ul>
                               </div>
                               <div class="pull-right">
+		
                                  <ul class="socials list-unstyled">
-                                    <li class="icon-2"><a href="https://vk.com/kmvit" target="_blank" class="link"><i class="fa fa-vk"></i></a></li>
-                                    <li class="icon-2"><a href="https://www.facebook.com/kmvitru/" class="link facebook"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="icon-2"><a href="http://instagram.com/kmv_it" target="_blank" class="link"><i class="fa fa-instagram"></i></a></li>
-                                    <li class="icon-2"><a href="javascript:;" target="_blank" class="link"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class="icon-2"><a href="https://api.whatsapp.com/send?phone=79289557566" target="_blank" class="link"><i class="fab fa-whatsapp"></i></a></li>
+				    <li class="icon-2"><a href="https://t.me/+7928955766" target="_blank" class="link"><i class="fab fa-telegram"></i></a></li>
+			            <li class="icon-2"><a href="https://vk.com/kmvit" target="_blank" class="link"><i class="fab fa-vk"></i></a></li>
+                                    <li class="icon-2"><a href="https://www.facebook.com/kmvitru/" class="link facebook"><i class="fab fa-facebook"></i></a></li>
+                                    <li class="icon-2"><a href="http://instagram.com/kmv_it" target="_blank" class="link"><i class="fab fa-instagram"></i></a></li>
+                                   
                                  </ul>
                               </div>
                            </div>
@@ -75,7 +79,7 @@
                               </div>
                               <div class="navbar-header">
                                  <div class="logo">
-                                    <a href="/" class="header-logo"><img src="{% static 'assets/img/logo/kmvit_logo.png'%}" alt="Веб студия в Пятигорске" /></a>
+                                    <a href="http://kmv-it.ru" class="header-logo"><img src="/media/filer_public/d1/7d/d17ddd8f-4b50-4dc1-a43d-fb1d54de2a88/kmvit_logo.png" alt="Веб студия в Пятигорске" /></a>
                                  </div>
                               </div>
                               <nav class="navigation">
@@ -94,8 +98,8 @@
                                        </div>
                                        <ul class="nav-links nav navbar-nav is-hidden">
                                           <li><a href="/" class="main-menu"><span class="text">Главная</span></a></li>
-                                          <li><a href="/razrabotka-saita" class="main-menu"><span class="text">Разработка сайта</span></a></li>
-                                          <li><a href="/prodvijenie-saitov" class="main-menu"><span class="text">Продвижение сайта</span></a></li>
+                                          <li><a href="/razrabotka-saita" class="main-menu"><span class="text">Создание сайтов</span></a></li>
+                                          <li><a href="/prodvijenie-saitov" class="main-menu"><span class="text">Продвижение сайтов</span></a></li>
                                           <li><a href="/kontekstnaja-reklama" class="main-menu"><span class="text">Контекстная реклама</span></a></li>
                                           <li><a href="/landing-page" class="main-menu"><span class="text">Landing Page</span></a></li>
                                           <li><a href="/portfolio" class="main-menu"><span class="text">Портфолио</span></a></li>
@@ -116,8 +120,8 @@
                                        <li class="dropdown">
                                           <a href="javascript:void(0)" class="main-menu"><span class="text">Услуги</span><span class="icons-dropdown"><i class="fa fa-angle-down"></i></span></a>
                                           <ul class="dropdown-menu dropdown-menu-1">
-                                             <li><a href="/razrabotka-saita" class="link-page"><span class="icons-dropdown"><i class="fa fa-asterisk"></i></span>Разработка сайта</a></li>
-                                             <li><a href="/prodvijenie-saitov" class="link-page"><span class="icons-dropdown"><i class="fa fa-exclamation-circle"></i></span>Продвижение сайта</a></li>
+                                             <li><a href="/razrabotka-saita" class="link-page"><span class="icons-dropdown"><i class="fa fa-asterisk"></i></span>Создание сайтов</a></li>
+                                             <li><a href="/prodvijenie-saitov" class="link-page"><span class="icons-dropdown"><i class="fa fa-exclamation-circle"></i></span>Продвижение сайтов</a></li>
                                              <li><a href="/kontekstnaja-reklama" class="link-page"><span class="icons-dropdown"><i class="fa fa-keyboard-o"></i></span>Контекстная реклама</a></li>
                                              <li><a href="/landing-page" class="link-page"><span class="icons-dropdown"><i class="fa fa-exclamation-circle"></i></span>Landing Page (лендинг пейдж)</a></li>
                                           </ul>
@@ -174,9 +178,10 @@
                                     <div class="content-widget">
                                        <div class="info-list">
                                           <ul class="list-unstyled">
-                                             <li><i class="icons fa fa-map-marker"></i><a href="#" class="link">Пятигорск<br/> ул.Ордженикидзе 11, офис 305</a></li>
-                                             <li><i class="icons fa fa-phone"></i><a href="#" class="link">+7(928)911-74-69 <br />+7(8793)33-16-17</a></li>
-                                             <li><i class="icons fa fa-envelope-o"></i><a href="mailto:kmv-it@yandex.ru" class="link">kmv-it@yandex.ru</a></li>
+
+                                             <li><i class="icons fas fa-map-marker"></i><a href="#" class="link">Пятигорск<br/> ул.Ордженикидзе 11, офис 305</a></li>
+                                             <li><i class="icons fas fa-phone"></i><a href="#" class="link">+7(928)911-74-69 <br />+7(8793)33-16-17</a></li>
+                                             <li><i class="icons fas fa-at"></i><a href="mailto:kmv-it@yandex.ru" class="link">kmv-it@yandex.ru</a></li>
                                           </ul>
                                        </div>
                                     </div>
@@ -203,11 +208,10 @@
                            <div class="row">
                               <div class="col-sm-12">
                                  <div class="socials">
-                                    <a href="https://www.facebook.com/kmvitru/" class="link facebook"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class="link google"><i class="fa fa-google"></i></a>
-                                    <a href="https://vk.com/kmvit" target="_blank" class="link"><i class="fa fa-vk"></i></a>
-                                    <a href="javascript:;" target="_blank" class="link"><i class="fa fa-twitter"></i></a>
-                                    <a href="http://instagram.com/kmv_it" target="_blank" class="link"><i class="fa fa-instagram"></i></a>
+				    <a href="https://t.me/+7928955766" target="_blank" class="link"><i class="fab fa-telegram"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=79289557566" target="_blank" class="link"><i class="fab fa-whatsapp"></i></a>
+                                    <a href="https://vk.com/kmvit" target="_blank" class="link"><i class="fab fa-vk"></i></a>
+                                    <a href="http://instagram.com/kmv_it" target="_blank" class="link"><i class="fab fa-instagram"></i></a>
                                  </div>
                               </div>
                            </div>

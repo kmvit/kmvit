@@ -21,17 +21,24 @@ class City(models.Model):
     def __str__(self):
         return self.title
 
+
+class Contact(models.Model):
+    name = models.CharField(max_length=200)
+    phone = models.CharField(max_length=12, blank=True)
+    city = models.ForeignKey(City)
+    email = models.EmailField(blank=True)
+    company = models.CharField(max_length=200, blank=True)
+    site = models.CharField(max_length=200, blank=True)
+    
+    def __str__(self):
+        return self.name
+
 class Deal(models.Model):
     title = models.CharField(max_length=300, verbose_name='Название')
     born = models.DateField(verbose_name='Дата', default=datetime.now)
-    name = models.CharField(max_length=300, verbose_name='Имя')
-    phone = models.CharField(max_length=13, verbose_name='Телефон')
-    company = models.CharField(max_length=300, verbose_name='Компания')
-    city = models.ForeignKey(City, default=1, verbose_name='Город')
-    site = models.CharField(max_length=250, blank=True, verbose_name='Сайт')
+    contact = models.ForeignKey(Contact, verbose_name='Имя')
     stage = models.ForeignKey(Stage, verbose_name='Этап')
     prepayment = models.IntegerField(verbose_name='Предоплата', blank=True, null=True)
-    prepayment_date = models.DateField(verbose_name='Дата предоплаты', null=True, blank=True)
     budget = models.IntegerField(verbose_name='Бюджет')
     description = models.TextField(verbose_name='Примечания', blank=True)
     
@@ -48,3 +55,5 @@ class Deal(models.Model):
         except:
             return self.budget
     remainder.short_description = 'Остаток'
+
+

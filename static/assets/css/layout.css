@@ -87,7 +87,7 @@ html {
   overflow-x: hidden;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Marmelad', sans-serif !important;
   font-size: 15px !important;
   line-height: 1.714em;
   font-weight: 400;
@@ -100,7 +100,7 @@ h3{
 label,
 p,
 span {
-  font-family: 'Montserrat', sans-serif;
+font-family: 'Marmelad', sans-serif;
   font-size: 1em;
 }
 a {

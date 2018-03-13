@@ -2,7 +2,7 @@
 {% load thumbnail %}
 {% load static %}
 {% block title %}{{page.pre_title}}{% endblock %}
-{% block meta %}{{page.description}}{% endblock %}
+{% block meta %}{{page.description|safe}}{% endblock %}
 {% block content %}
 {% if page.banner %}
 {% block banner %}

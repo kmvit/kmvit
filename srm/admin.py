@@ -4,15 +4,13 @@ from .models import *
 
 
 class DealAdmin(admin.ModelAdmin):
-    list_display = ['title', 'name', 'company','city', 'site', 'stage', 'prepayment', 'prepayment_date', 'remainder', 'budget']
-    empty_value_display = '-empty-'
-    list_editable = ['stage']
+    list_display=['title','contact','born', 'prepayment', 'budget']
     date_hierarchy = 'born'
-    list_filter = ['stage','company']
+    list_filter = ['stage','contact' ]
     
     
     
-    
+admin.site.register(Contact)    
 admin.site.register(City)   
 admin.site.register(Stage)
 admin.site.register(Deal, DealAdmin)

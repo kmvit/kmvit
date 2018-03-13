@@ -221,6 +221,10 @@ body {
 .fixed .right-side {
     padding-top: 60px;
 }
+td span {
+    font-size: 12px;
+    color: #abaaaa;
+}
 @media (max-width: 767px) {
     .fixed .content-wrapper,
     .fixed .right-side {
