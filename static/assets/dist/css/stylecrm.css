@@ -30,7 +30,7 @@ This file contains the common info of this theme.
             *google maps
             *Data table
         * Layout
-            *wrapper 
+            *wrapper
             *layout-boxed
             *Fixed layout
         * Content
@@ -44,8 +44,8 @@ This file contains the common info of this theme.
         * border color
         * background color
         * Page Header
-        * Main Header Component: 
-             * Content 
+        * Main Header Component:
+             * Content
              * main-header
              * header-title
              * content-header
@@ -59,7 +59,7 @@ This file contains the common info of this theme.
              * upcoming works
              * Calender
              * Google map
-        * UI Elements:     
+        * UI Elements:
              * Panel page
              * Buttons page
              * Tabs page
@@ -95,9 +95,9 @@ This file contains the common info of this theme.
             * Form wizard
         * preloader
         * custom scrollbar
-        * back to top 
+        * back to top
         * Portfolio page
-        * customer component: 
+        * customer component:
              * custom button
              * Notes
              * buttonlist
@@ -242,7 +242,7 @@ body.hold-transition .left-side,
 body.hold-transition .main-header .navbar,
 body.hold-transition .main-header .logo {
     /* Fix for IE */
-    
+
     -webkit-transition: none;
     transition: none;
 }
@@ -594,11 +594,11 @@ a.sidebar-toggle .pe-7s-angle-left-circle {
     padding: 0 15px;
     font-weight: 300;
     overflow: hidden;
-    background-color: #0c0b0c;
+    background-color: #24746d;
     color: #241d1d;
     -webkit-transition: width 0.3s ease-in-out;
     transition: width 0.3s ease-in-out;
-    border-bottom: 2px solid #0c0b0c;
+    border-bottom: 2px solid #24746d;
 }
 .main-header .logo .logo-lg {
     display: block;
@@ -1159,7 +1159,7 @@ a.sidebar-toggle .pe-7s-angle-left-circle {
   color: #fff;
 }
 .sidebar-menu .treeview-menu > li:hover > a {
-  color:;  
+  color:;
 }
 .sidebar-menu .treeview-menu > li::before {
     left: 0;
@@ -1394,7 +1394,7 @@ a.sidebar-toggle .pe-7s-angle-left-circle {
     display: block;
     white-space: nowrap;
     /* Prevent text from breaking */
-    
+
     border-bottom: 1px solid #f4f4f4;
 }
 .navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a:hover,
@@ -3612,7 +3612,7 @@ pre .arg {
 }
 .statistic-box > h2 {
  margin-top:0px;
- margin-bottom: 0px; 
+ margin-bottom: 0px;
 }
 /*** Calender page
 ==============================================================================*/

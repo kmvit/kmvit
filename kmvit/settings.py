@@ -111,7 +111,7 @@ CKEDITOR_UPLOAD_PATH =  'uploads/'
 FILER_CANONICAL_URL = 'sharing/'
 
 CKEDITOR_CONFIGS = {
-    'default': { 
+    'default': {
         'skin': 'moono',
         'removePlugins': 'stylesheetparser',
         # 'skin': 'office2013',
@@ -188,4 +188,3 @@ try:
     from .local_settings import *
 except ImportError:
 	raise Exception("Please copy settings_local.py to settings_local.py and modify it accordinly to your installation")
-	

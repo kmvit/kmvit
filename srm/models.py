@@ -12,7 +12,7 @@ class Stage(models.Model):
         verbose_name_plural = 'Этапы'
     def __str__(self):
         return self.title
-        
+
 class City(models.Model):
     title = models.CharField(max_length=300, verbose_name='Название')
     class Meta:
@@ -29,7 +29,7 @@ class Contact(models.Model):
     email = models.EmailField(blank=True)
     company = models.CharField(max_length=200, blank=True)
     site = models.CharField(max_length=200, blank=True)
-    
+
     def __str__(self):
         return self.name
 
@@ -41,19 +41,18 @@ class Deal(models.Model):
     prepayment = models.IntegerField(verbose_name='Предоплата', blank=True, null=True)
     budget = models.IntegerField(verbose_name='Бюджет')
     description = models.TextField(verbose_name='Примечания', blank=True)
-    
-    
+
+
     class Meta:
         verbose_name = 'Сделка'
         verbose_name_plural = 'Сделки'
+        ordering = ['-born']
     def __str__(self):
         return self.title
-        
+
     def remainder(self):
         try:
             return self.budget - self.prepayment
         except:
             return self.budget
     remainder.short_description = 'Остаток'
-
-

@@ -16,18 +16,21 @@
                 {% for field in form %}
                 <div class="col-md-6 form-group">
                     <label class="control-label">{{field.label_tag}}</label>
-                    <p>{{field}}</p>
+                    {{field}}
                 </div>
                 {% endfor %}
+
+
+
                 <!-- Text input-->
                 <div class="col-md-12 form-group user-form-group">
                     <div class="pull-right">
-                        <button type="submit" class="btn btn-add btn-sm">Добавить</button>
+                        <button type="submit" class="btn btn-add btn-sm">Изменить</button>
                     </div>
                 </div>
             </fieldset>
         </form>
       </div>
    </div>
- </div>
+</div>
 {% endblock %}

@@ -15,4 +15,13 @@ class OrderEditForm(ModelForm):
         model = Deal
         fields='__all__'
 
-        
+
+class ContactAddForm(ModelForm):
+    class Meta:
+        model = Contact
+        fields='__all__'
+
+class ContactEditForm(ModelForm):
+    class Meta:
+        model = Contact
+        fields='__all__'

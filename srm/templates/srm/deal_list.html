@@ -1,5 +1,6 @@
 {% extends 'srm/base.html' %}
 {% block content %}
+<div class="col-sm-12 col-md-12">
 <div class="panel panel-bd lobidisable">
    <div class="panel-heading">
       <div class="btn-group" id="buttonexport">
@@ -33,7 +34,6 @@
          <table id="dataTableExample1" class="table table-bordered table-striped table-hover">
             <thead>
                <tr class="info">
-                  <th>Номер заказа</th>
                   <th>Название</th>
                   <th>Клиент</th>
                   <th>Статус</th>
@@ -46,10 +46,9 @@
             <tbody>
                {% for item in deal_list %}
                <tr>
-                  <td><a href="{% url 'orders:order_detail' pk=item.id%}">{{item.id}}</a></td>
-                  <td><p>{{item.title}}</p><span>{{item.description}}</span></td>
-                  <td>{{item.contact}}</td>
-                  <td><span class="{{item.stage.label}}">{{item.stage}}</span></td>
+                  <td><p><a href="{% url 'orders:order_detail' pk=item.id%}">{{item.title}}</a></p><span>{{item.description}}</span></td>
+                  <td><a href="{% url 'orders:contact_detail' pk=item.contact.id%}">{{item.contact}}</a></td>
+                  <td><span class="label {{item.stage.label}} pull-right">{{item.stage}}</span></td>
                   <td>{{item.prepayment}}</td>
                   <td>{{item.born}}</td>
                   <td>{{item.budget}}</td>
@@ -60,10 +59,11 @@
                </tr>
                {% endfor %}
             </tbody>
-          
+
          </table>
            <p>Общая сумма: {{sum.total_sum}} рублей</p>
       </div>
    </div>
+</div>
 </div>
 {% endblock %}
