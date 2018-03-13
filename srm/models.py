@@ -33,8 +33,15 @@ class Contact(models.Model):
     def __str__(self):
         return self.name
 
+class KindofWork(models.Model):
+    title = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.title
+
 class Deal(models.Model):
     title = models.CharField(max_length=300, verbose_name='Название')
+    kindofwork = models.ForeignKey(KindofWork)
     born = models.DateField(verbose_name='Дата', default=datetime.now)
     contact = models.ForeignKey(Contact, verbose_name='Имя')
     stage = models.ForeignKey(Stage, verbose_name='Этап')

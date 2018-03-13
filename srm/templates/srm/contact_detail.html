@@ -67,9 +67,10 @@
                            <div class="detailswork">
                               <span class="label {{item.stage.label}} pull-right">{{item.stage}}</span>
                               <a href="{% url 'orders:order_detail' pk=item.id %}" title="headings">{{item}}</a> <br>
-                              <p>{{item.contact.city}}</p>
+                              <p>{{item.budget}} рублей.</p>
                            </div>
                             {% endfor %}
+                            <p>Общая сумма: {{sum.total_sum}} рублей</p>
                         </div>
                      </div>
                   </div>

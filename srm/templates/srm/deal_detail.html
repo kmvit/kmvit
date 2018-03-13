@@ -20,6 +20,7 @@
                <tr class="info">
                   <th>Дата</th>
                   <th>Клиент</th>
+                  <th>Вид работы</th>
                   <th>Примечания</th>
                   <th>Статус</th>
                   <th>Предоплата</th>
@@ -31,6 +32,7 @@
                <tr>
                   <td>{{deal.born}}</td>
                   <td><a href="{% url 'orders:contact_detail' pk=deal.contact.id %}">{{deal.contact}}</a></td>
+                  <td>{{deal.kindofwork}}</td>
                   <td>{{deal.description}}</td>
                   <td><span class="{{deal.stage.label}}">{{deal.stage}}</span></td>
                   <td>{{deal.prepayment}}</td>

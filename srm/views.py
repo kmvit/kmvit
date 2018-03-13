@@ -85,6 +85,7 @@ class ContactDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super(ContactDetail, self).get_context_data(**kwargs)
         context['deal_list'] = Deal.objects.filter(contact=self.object)
+        context['sum'] = Deal.objects.filter(contact=self.object).aggregate(total_sum=Sum('budget'))
         return context
 
 @method_decorator(login_required, name='dispatch')
