@@ -34,4 +34,10 @@ class TaskAddForm(ModelForm):
     class Meta:
         model = Task
         fields='__all__'
-        exclude = ['status']
+        exclude = ['status','deal']
+
+class CostsForm(ModelForm):
+    class Meta:
+        model = Costs
+        fields='__all__'
+        exclude = ['deal']

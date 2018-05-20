@@ -88,3 +88,14 @@ class Task(models.Model):
         ordering = ['born']
     def __str__(self):
         return self.title
+
+class Costs(models.Model):
+    title = models.CharField(max_length=300, verbose_name='Статья расхода')
+    deal = models.ForeignKey(Deal, verbose_name="Сделка")
+    born = models.DateField(verbose_name='Когда', default=datetime.now)
+    price = models.IntegerField(verbose_name="Сумма")
+    class Meta:
+        verbose_name = 'Расходы'
+        verbose_name_plural = 'Расходы'
+    def __str__(self):
+        return self.title

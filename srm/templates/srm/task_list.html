@@ -10,25 +10,7 @@
       </div>
    </div>
    <div class="panel-body">
-      <!-- Plugin content:powerpoint,txt,pdf,png,word,xl -->
-      <div class="btn-group">
-         <div class="buttonexport">
-            <a href="{% url 'orders:task_add'  %}" class="btn btn-add"><i class="fa fa-plus"></i> Добавить задачу</a>
-         </div>
-      </div>
-      <div class="pull-right">
-         <form action="{% url 'orders:order_filter' %}" method="get">
-            <select name="select">
-               <option selected value="all">Все</option>
-               <option value="Успешное завершение">Успешное завершение</option>
-               <option value="Разработка">Разработка</option>
-               <option value="Предоплата">Предоплата</option>
-               <option value="Принимает решение">Принимает решение</option>
-               <option value="Закрыто и не реализовано">Закрыто и не реализовано</option>
-            </select>
-            <button type="submit" class="btn btn-add btn-sm">Фильтровать</button>
-         </form>
-      </div>
+    
       <!-- ./Plugin content:powerpoint,txt,pdf,png,word,xl -->
       <div class="table-responsive">
          <table id="dataTableExample1" class="table table-bordered table-striped table-hover">

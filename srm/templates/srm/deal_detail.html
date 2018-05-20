@@ -52,7 +52,7 @@
 </div>
 </div>
 
-<div class="col-sm-12 col-md-12">
+<div class="col-sm-6 col-md-6">
 <div class="panel panel-bd lobidisable">
    <div class="panel-heading">
       <div class="btn-group" id="buttonexport">
@@ -65,7 +65,7 @@
       <!-- Plugin content:powerpoint,txt,pdf,png,word,xl -->
       <div class="btn-group">
          <div class="buttonexport">
-            <a href="{% url 'orders:task_add'  %}" class="btn btn-add"><i class="fa fa-plus"></i> Добавить задачу</a>
+            <a href="{% url 'orders:task_add' deal_id=deal.id %}" class="btn btn-add"><i class="fa fa-plus"></i> Добавить задачу</a>
          </div>
       </div>
       <div class="pull-right">
@@ -88,7 +88,6 @@
                <tr class="info">
                   <th>Название</th>
                   <th>Описание</th>
-                  <th>Сделка</th>
                   <th>Срок</th>
                   <th>Статус</th>
                   <th>Действия</th>
@@ -99,7 +98,6 @@
                <tr>
                   <td>{{item.title}}</td>
                   <td>{{item.content}}</td>
-                  <td><a href="{% url 'orders:order_detail' pk=item.deal.id %}">{{item.deal}}</a></td>
                   <td>{% if today == item.born %}<span class="label label-danger pull-right">Deadline today</span>{% else %}{{item.born}}{% endif %}</td>
                   <td>{% if item.finish %}<span class="label label-success pull-right">Завершено</span>{% else %}<span class="label label-default pull-right">В работе</span>{% endif %}</td>
                   <td>
@@ -111,6 +109,53 @@
             </tbody>
 
          </table>
+      </div>
+   </div>
+</div>
+</div>
+
+<div class="col-sm-6 col-md-6">
+<div class="panel panel-bd lobidisable">
+   <div class="panel-heading">
+      <div class="btn-group" id="buttonexport">
+         <a href="#">
+            <h4>Расходы</h4>
+         </a>
+      </div>
+   </div>
+   <div class="panel-body">
+      <!-- Plugin content:powerpoint,txt,pdf,png,word,xl -->
+      <div class="btn-group">
+         <div class="buttonexport">
+            <a href="{% url 'orders:costs_add' deal_id=deal.id %}" class="btn btn-add"><i class="fa fa-plus"></i> Добавить расходы</a>
+         </div>
+      </div>
+      <!-- ./Plugin content:powerpoint,txt,pdf,png,word,xl -->
+      <div class="table-responsive">
+         <table id="dataTableExample1" class="table table-bordered table-striped table-hover">
+            <thead>
+               <tr class="info">
+                  <th>Статья расхода</th>
+                  <th>Сумма</th>
+                  <th>Число</th>
+                  <th>Действия</th>
+               </tr>
+            </thead>
+            <tbody>
+               {% for item in costs_list %}
+               <tr>
+                  <td>{{item.title}}</td>
+                  <td>{{item.price}}</td>
+                  <td>{{item.born}}</td>
+                  <td>
+                     <a class="btn btn-add btn-xs" href="{% url 'orders:costs_edit' pk=item.id %}"><i class="fa fa-pencil"></i></a>
+                     <a class="btn btn-danger btn-xs" href="{% url 'orders:costs_delete' pk=item.id %}"><i class="fa fa-trash-o"></i> </a>
+                  </td>
+               </tr>
+               {% endfor %}
+            </tbody>
+         </table>
+         <p>Остаток от бюджета: {{sum}} рублей</p>
       </div>
    </div>
 </div>

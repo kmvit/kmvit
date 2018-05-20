@@ -54,11 +54,18 @@ class OrderList(ListView):
 @method_decorator(login_required, name='dispatch')
 class OrderDetail(DetailView):
     model = Deal
-    
+
     def get_context_data(self, **kwargs):
         context = super(OrderDetail, self).get_context_data(**kwargs)
         context['today'] = datetime.today().date()
         context['task_list'] = Task.objects.filter(deal=self.object)
+        costs_list = Costs.objects.filter(deal=self.object)
+        context['costs_list'] = costs_list
+        costs_sum = 0
+        for item in costs_list:
+            costs_sum += item.price
+
+        context['sum'] = self.object.budget - costs_sum
         return context
 
 
@@ -77,7 +84,7 @@ class OrderEdit(UpdateView):
 
     def get_success_url(self):
         return reverse('orders:order_list')
-   
+
 
 @method_decorator(login_required, name='dispatch')
 class OrderDelete(DeleteView):
@@ -123,8 +130,8 @@ def order_filter(request):
         order_list = Deal.objects.filter(stage__title = request.GET.get('select'))
     context = {'deal_list':order_list}
     return render(request, 'srm/deal_list.html', context)
-    
-    
+
+
 @method_decorator(login_required, name='dispatch')
 class TaskList(ListView):
     model = Task
@@ -147,8 +154,15 @@ class TaskAdd(CreateView):
     template_name = 'srm/task_add.html'
     def get_success_url(self):
         return reverse('orders:order_detail', kwargs={'pk': self.object.deal.id})
-        
-        
+
+    def form_valid(self, form):
+        form.instance.deal = Deal.objects.get(id=self.kwargs['deal_id'])
+        # form.instance.save()
+        # self.user.teams.add(form.instance)
+        form.save()
+        return super(TaskAdd, self).form_valid(form)
+
+
 @method_decorator(login_required, name='dispatch')
 class TaskEdit(UpdateView):
     model = Task
@@ -163,4 +177,43 @@ class TaskEdit(UpdateView):
 class TaskDelete(DeleteView):
     model = Task
     template_name = 'srm/task_delete.html'
-    success_url = reverse_lazy('orders:task_list')
+    def get_success_url(self):
+        return reverse('orders:order_detail', kwargs={'pk': self.object.deal.id})
+
+
+@method_decorator(login_required, name='dispatch')
+class CostsList(ListView):
+    model = Costs
+
+@method_decorator(login_required, name='dispatch')
+class CostsAdd(CreateView):
+    model = Costs
+    form_class = CostsForm
+    template_name = 'srm/task_add.html'
+    def get_success_url(self):
+        return reverse('orders:order_detail', kwargs={'pk': self.object.deal.id})
+
+    def form_valid(self, form):
+        form.instance.deal = Deal.objects.get(id=self.kwargs['deal_id'])
+        # form.instance.save()
+        # self.user.teams.add(form.instance)
+        form.save()
+        return super(CostsAdd, self).form_valid(form)
+
+
+@method_decorator(login_required, name='dispatch')
+class CostsEdit(UpdateView):
+    model = Costs
+    form_class = CostsForm
+    template_name = 'srm/task_edit.html'
+
+    def get_success_url(self):
+        return reverse('orders:order_detail', kwargs={'pk': self.object.deal.id})
+
+
+@method_decorator(login_required, name='dispatch')
+class CostsDelete(DeleteView):
+    model = Costs
+    template_name = 'srm/task_delete.html'
+    def get_success_url(self):
+        return reverse('orders:order_detail', kwargs={'pk': self.object.deal.id})
