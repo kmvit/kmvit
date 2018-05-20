@@ -14,7 +14,13 @@ from django.db.models import Count, Sum
 # Create your views here.
 @login_required
 def srm_home(request):
-    return render(request, 'srm/index.html')
+    deal_count = Deal.objects.all().count()
+    contact_count = Contact.objects.all().count()
+    task_list = Task.objects.filter(finish=False)[:6]
+    deal_list = Deal.objects.filter(stage__title='Разработка')
+    sum = Deal.objects.all().aggregate(total_sum=Sum('budget'))
+    context = {'task_list':task_list, 'deal_list':deal_list, 'sum':sum, 'deal_count':deal_count, 'contact_count':contact_count}
+    return render(request, 'srm/index.html', context)
 
 
 def login(request):
@@ -45,10 +51,15 @@ class OrderList(ListView):
         context['sum'] = Deal.objects.all().aggregate(total_sum=Sum('budget'))
         return context
 
-
 @method_decorator(login_required, name='dispatch')
 class OrderDetail(DetailView):
     model = Deal
+    
+    def get_context_data(self, **kwargs):
+        context = super(OrderDetail, self).get_context_data(**kwargs)
+        context['today'] = datetime.today().date()
+        context['task_list'] = Task.objects.filter(deal=self.object)
+        return context
 
 
 @method_decorator(login_required, name='dispatch')
@@ -66,7 +77,7 @@ class OrderEdit(UpdateView):
 
     def get_success_url(self):
         return reverse('orders:order_list')
-
+   
 
 @method_decorator(login_required, name='dispatch')
 class OrderDelete(DeleteView):
@@ -112,3 +123,44 @@ def order_filter(request):
         order_list = Deal.objects.filter(stage__title = request.GET.get('select'))
     context = {'deal_list':order_list}
     return render(request, 'srm/deal_list.html', context)
+    
+    
+@method_decorator(login_required, name='dispatch')
+class TaskList(ListView):
+    model = Task
+    queryset = Task.objects.filter(finish=False)
+
+    def get_context_data(self, **kwargs):
+        context = super(TaskList, self).get_context_data(**kwargs)
+        context['today'] = datetime.today().date()
+        return context
+
+@method_decorator(login_required, name='dispatch')
+class TaskDetail(DetailView):
+    model = Task
+
+
+@method_decorator(login_required, name='dispatch')
+class TaskAdd(CreateView):
+    model = Task
+    form_class = TaskAddForm
+    template_name = 'srm/task_add.html'
+    def get_success_url(self):
+        return reverse('orders:order_detail', kwargs={'pk': self.object.deal.id})
+        
+        
+@method_decorator(login_required, name='dispatch')
+class TaskEdit(UpdateView):
+    model = Task
+    form_class = TaskAddForm
+    template_name = 'srm/task_edit.html'
+
+    def get_success_url(self):
+        return reverse('orders:order_detail', kwargs={'pk': self.object.deal.id})
+
+
+@method_decorator(login_required, name='dispatch')
+class TaskDelete(DeleteView):
+    model = Task
+    template_name = 'srm/task_delete.html'
+    success_url = reverse_lazy('orders:task_list')

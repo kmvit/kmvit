@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models import Sum
 from datetime import datetime
+import os
 
 # Create your models here.
 
@@ -39,6 +40,8 @@ class KindofWork(models.Model):
     def __str__(self):
         return self.title
 
+
+
 class Deal(models.Model):
     title = models.CharField(max_length=300, verbose_name='Название')
     kindofwork = models.ForeignKey(KindofWork)
@@ -63,3 +66,25 @@ class Deal(models.Model):
         except:
             return self.budget
     remainder.short_description = 'Остаток'
+
+
+class DealFile(models.Model):
+    file = models.FileField(upload_to='deal_file')
+    deal = models.ForeignKey(Deal, blank=True)
+
+    def __str__(self):
+       return self.file.name
+
+class Task(models.Model):
+    title = models.CharField(max_length=300, verbose_name='Название')
+    deal = models.ForeignKey(Deal)
+    born = models.DateField(verbose_name='Срок завершения', default=datetime.now)
+    content = models.TextField(verbose_name='Содержание', blank=True)
+    finish = models.BooleanField(verbose_name='Завершено', default=False)
+
+    class Meta:
+        verbose_name = 'Задача'
+        verbose_name_plural = 'Задачи'
+        ordering = ['born']
+    def __str__(self):
+        return self.title
