@@ -17,9 +17,11 @@ def srm_home(request):
     deal_count = Deal.objects.all().count()
     contact_count = Contact.objects.all().count()
     task_list = Task.objects.filter(finish=False)[:6]
-    deal_list = Deal.objects.filter(stage__title='Разработка')
+    deal_list = Deal.objects.filter(stage__title='Разработка', archive=False)
     sum = Deal.objects.all().aggregate(total_sum=Sum('budget'))
-    context = {'task_list':task_list, 'deal_list':deal_list, 'sum':sum, 'deal_count':deal_count, 'contact_count':contact_count}
+    context = {
+    'task_list':task_list, 'deal_list':deal_list, 'sum':sum, 'deal_count':deal_count,
+    'contact_count':contact_count }
     return render(request, 'srm/index.html', context)
 
 
@@ -45,11 +47,18 @@ def logout_view(request):
 @method_decorator(login_required, name='dispatch')
 class OrderList(ListView):
     model = Deal
+    queryset = Deal.objects.filter(archive=False)
 
     def get_context_data(self, **kwargs):
         context = super(OrderList, self).get_context_data(**kwargs)
         context['sum'] = Deal.objects.all().aggregate(total_sum=Sum('budget'))
         return context
+
+
+@method_decorator(login_required, name='dispatch')
+class ArchiveOrderList(ListView):
+    model = Deal
+    queryset = Deal.objects.filter(archive=True)
 
 @method_decorator(login_required, name='dispatch')
 class OrderDetail(DetailView):
@@ -107,6 +116,13 @@ class ContactDetail(DetailView):
         return context
 
 @method_decorator(login_required, name='dispatch')
+class ContactAdd(CreateView):
+    model = Contact
+    form_class = ContactAddForm
+    def get_success_url(self):
+        return reverse('orders:contact_list')
+
+@method_decorator(login_required, name='dispatch')
 class ContactEdit(UpdateView):
     model = Contact
     form_class = ContactEditForm
@@ -162,6 +178,13 @@ class TaskAdd(CreateView):
         form.save()
         return super(TaskAdd, self).form_valid(form)
 
+@method_decorator(login_required, name='dispatch')
+class TaskAddAll(CreateView):
+    model = Task
+    form_class = TaskAddAllForm
+    template_name = 'srm/task_add.html'
+    def get_success_url(self):
+        return reverse('orders:task_list')
 
 @method_decorator(login_required, name='dispatch')
 class TaskEdit(UpdateView):

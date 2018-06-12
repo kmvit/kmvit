@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
    <head>
-       {% load static %}
+       {% load static my_tags %}
         {% block head %}
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -75,8 +75,9 @@
                <div class="navbar-custom-menu">
                   <ul class="nav navbar-nav">
                      <!-- Orders -->
-
                      <!-- user -->
+
+                     {% task_notification %}
                      <li class="dropdown dropdown-user">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="/static/assets/dist/img/avatar5.png" class="img-circle" width="45" height="45" alt="user"></a>
@@ -85,6 +86,7 @@
                            <li><a href="{% url 'logout' %}">
                               <i class="fa fa-sign-out"></i> Выйти</a>
                            </li>
+
                         </ul>
                      </li>
                   </ul>
@@ -99,19 +101,25 @@
                <!-- sidebar menu -->
                <ul class="sidebar-menu">
                   <li class="active">
-                     <a href="{% url 'orders:order_list' %}"><i class="fa fa-tachometer"></i><span>Сделки</span>
+                     <a href="{% url 'orders:order_list' %}"><i class="fa fa-shopping-cart"></i><span>Сделки</span>
                      <span class="pull-right-container">
                      </span>
                      </a>
                   </li>
                   <li class="active">
-                     <a href="{% url 'orders:task_list' %}"><i class="fa fa-tachometer"></i><span>Задачи</span>
+                     <a href="{% url 'orders:task_list' %}"><i class="fa fa-book"></i><span>Задачи</span>
                      <span class="pull-right-container">
                      </span>
                      </a>
                   </li>
                   <li>
-                     <a href="{% url 'orders:contact_list' %}"><i class="fa fa-tachometer"></i><span>Контакты</span>
+                     <a href="{% url 'orders:contact_list' %}"><i class="fa fa-users"></i><span>Контакты</span>
+                     <span class="pull-right-container">
+                     </span>
+                     </a>
+                  </li>
+                  <li class="active">
+                     <a href="{% url 'orders:archive_order_list' %}"><i class="fa fa-bitbucket"></i><span>Архив сделок</span>
                      <span class="pull-right-container">
                      </span>
                      </a>

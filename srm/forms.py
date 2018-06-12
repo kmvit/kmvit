@@ -36,6 +36,17 @@ class TaskAddForm(ModelForm):
         fields='__all__'
         exclude = ['status','deal']
 
+class TaskAddAllForm(ModelForm):
+    class Meta:
+        model = Task
+        fields='__all__'
+        exclude = ['status']
+
+    def __init__(self, *args, **kwargs):
+        super(TaskAddAllForm, self).__init__(*args, **kwargs)
+        self.fields['deal'].queryset = Deal.objects.filter(archive=False)
+
+
 class CostsForm(ModelForm):
     class Meta:
         model = Costs

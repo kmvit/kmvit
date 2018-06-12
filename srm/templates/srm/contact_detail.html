@@ -12,6 +12,9 @@
    <div class="panel-body">
       <!-- Plugin content:powerpoint,txt,pdf,png,word,xl -->
       <div class="btn-group">
+         <div class="buttonexport">
+            <a href="{% url 'orders:order_add' %}" class="btn btn-add"><i class="fa fa-plus"></i> Добавить сделку</a>
+         </div>
       </div>
       <!-- ./Plugin content:powerpoint,txt,pdf,png,word,xl -->
       <div class="table-responsive">
@@ -56,6 +59,7 @@
                         <div class="dropdown">
 
                           <div class="dropdown-toggle" data-toggle="dropdown"><span class="panel-control-icon glyphicon glyphicon-cog"></span></div></div></div>
+
                         <div class="panel-body">
                           {% for item in deal_list %}
                            <div class="work-touchpoint">

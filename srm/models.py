@@ -51,6 +51,7 @@ class Deal(models.Model):
     prepayment = models.IntegerField(verbose_name='Предоплата', blank=True, null=True)
     budget = models.IntegerField(verbose_name='Бюджет')
     description = models.TextField(verbose_name='Примечания', blank=True)
+    archive = models.BooleanField(default=False, verbose_name="В архив")
 
 
     class Meta:
