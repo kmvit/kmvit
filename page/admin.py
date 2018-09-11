@@ -8,7 +8,7 @@ class SectionInline(admin.StackedInline):
 class PageAdmin(admin.ModelAdmin):
     inlines = [ SectionInline, ]
 
- 
+
 admin.site.register(Page, PageAdmin)
 admin.site.register(Whoweare)
 admin.site.register(Whatwedo)
@@ -19,3 +19,4 @@ admin.site.register(Team)
 admin.site.register(Review)
 admin.site.register(Banner)
 admin.site.register(FeedBack)
+admin.site.register(StaticInfo)

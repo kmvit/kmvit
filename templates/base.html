@@ -50,19 +50,19 @@
                               <div class="pull-left">
                                  <ul class="info-contact list-unstyled">
                                     <li class="icon Analyzeloop"><a href="mailto:kmv-it@yandex.ru" class="alab-Analyzeloop"><span>г.Пятигорск</span></a></li>
-                                    <li class="icon mail"><a href="tel:+78793331617" class="alab-phone"><span>+7(8793)33-16-17</span></a></li>
-                                    <li class="icon mail"><a href="tel:+79289117469" class="alab-phone"><span>+7(928)911-74-69</span></a></li>
+                                    <li class="icon mail"><a href="tel:+78793331617" class="alab-phone"><span>{{phone}}</span></a></li>
+                                    <li class="icon mail"><a href="tel:+79289117469" class="alab-phone"><span>{{phone_mobile}}</span></a></li>
                                  </ul>
                               </div>
                               <div class="pull-right">
-		
+
                                  <ul class="socials list-unstyled">
                                     <li class="icon-2"><a href="https://api.whatsapp.com/send?phone=79289557566" target="_blank" class="link"><i class="fab fa-whatsapp"></i></a></li>
 				    <li class="icon-2"><a href="https://t.me/+7928955766" target="_blank" class="link"><i class="fab fa-telegram"></i></a></li>
 			            <li class="icon-2"><a href="https://vk.com/kmvit" target="_blank" class="link"><i class="fab fa-vk"></i></a></li>
                                     <li class="icon-2"><a href="https://www.facebook.com/kmvitru/" class="link facebook"><i class="fab fa-facebook"></i></a></li>
                                     <li class="icon-2"><a href="http://instagram.com/kmv_it" target="_blank" class="link"><i class="fab fa-instagram"></i></a></li>
-                                   
+
                                  </ul>
                               </div>
                            </div>
@@ -79,7 +79,7 @@
                               </div>
                               <div class="navbar-header">
                                  <div class="logo">
-                                    <a href="http://kmv-it.ru" class="header-logo"><img src="/static/assets/img/logo/kmvit_logo_main.png" alt="Веб студия в Пятигорске" /></a>
+                                    <a href="http://kmv-it.ru" class="header-logo"><img src="{{logo.url}}" alt="Веб студия в Пятигорске" /></a>
                                  </div>
                               </div>
                               <nav class="navigation">
@@ -110,7 +110,7 @@
                                     </div>
                                  </div>
                                  <div class="navigation-pc">
-                                    <a href="/" class="logo-brand-menu hidden-lg hidden-md"><img src="{% static 'assets/img/logo/logo.png' %}" alt="" class="img-responsive" /></a>
+                                    <a href="/" class="logo-brand-menu hidden-lg hidden-md"><img src="{{logo.url}}" alt="" class="img-responsive" /></a>
                                     <div class="group-title group-title-1 hidden-lg hidden-md">
                                        <h2 class="main-title"><span class="mute-title">Меню</span></h2>
                                     </div>
@@ -171,7 +171,7 @@
                               <div class="col-sm-3">
                                  <div class="footer-logo">
                                     <div class="text">Веб студия "Кухня сайтов"</div>
-                                    <p>Реклама вашего бизнеса в интернете</p>
+                                    <p>{{footer_company_info}}</p>
                                  </div>
                               </div>
                               <div class="col-sm-3">
@@ -181,9 +181,9 @@
                                        <div class="info-list">
                                           <ul class="list-unstyled">
 
-                                             <li><i class="icons fas fa-map-marker"></i><a href="#" class="link">Пятигорск<br/> ул.Ордженикидзе 11, офис 305</a></li>
-                                             <li><i class="icons fas fa-phone"></i><a href="#" class="link">+7(928)911-74-69 <br />+7(8793)33-16-17</a></li>
-                                             <li><i class="icons fas fa-at"></i><a href="mailto:kmv-it@yandex.ru" class="link">kmv-it@yandex.ru</a></li>
+                                             <li><i class="icons fas fa-map-marker"></i><a href="#" class="link">Пятигорск<br/> {{address}}</a></li>
+                                             <li><i class="icons fas fa-phone"></i><a href="#" class="link">{{phone}} <br />{{phone_mobile}}</a></li>
+                                             <li><i class="icons fas fa-at"></i><a href="mailto:kmv-it@yandex.ru" class="link">{{email}}</a></li>
                                           </ul>
                                        </div>
                                     </div>
@@ -263,14 +263,14 @@
                      });
                  } catch(e) { }
              });
-         
+
              var n = d.getElementsByTagName("script")[0],
                  s = d.createElement("script"),
                  f = function () { n.parentNode.insertBefore(s, n); };
              s.type = "text/javascript";
              s.async = true;
              s.src = "https://mc.yandex.ru/metrika/watch.js";
-         
+
              if (w.opera == "[object Opera]") {
                  d.addEventListener("DOMContentLoaded", f, false);
              } else { f(); }
@@ -283,7 +283,7 @@
       <!-- RedConnect -->
       <script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async"
          src="https://web.redhelper.ru/service/main.js?c=justscoundrel"></script>
-      <div style="display: none"><a class="rc-copyright" 
+      <div style="display: none"><a class="rc-copyright"
          href="http://redconnect.ru">Закажите звонок в студию</a></div>
       <!--/RedConnect -->
    </body>

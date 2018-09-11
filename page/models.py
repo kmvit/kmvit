@@ -69,8 +69,8 @@ class Banner(models.Model):
 		verbose_name_plural='Баннеры'
 	def __str__(self):
 		return self.title
-		
-		
+
+
 
 class Page(models.Model):
 	title = models.CharField(max_length=300, verbose_name='Название')
@@ -100,7 +100,7 @@ class Page(models.Model):
 
 class Section(models.Model):
     title = models.CharField(max_length=300, verbose_name='Заголовок')
-    body = RichTextField(blank=True, verbose_name='Содержание') 
+    body = RichTextField(blank=True, verbose_name='Содержание')
     page = models.ForeignKey(Page, verbose_name='Страница к которой принадлежит')
     class Meta:
 	    verbose_name='Секции'
@@ -117,3 +117,27 @@ class FeedBack(models.Model):
 		verbose_name_plural='Письма от пользователей'
 	def __str__(self):
 		return self.name
+
+class StaticInfo(models.Model):
+    """Static info in site for all pages"""
+    site_title = models.CharField(max_length=100, verbose_name='Заголовок сайта')
+    logo = models.ImageField(upload_to='page', verbose_name='Логотип')
+    phone = models.CharField(max_length=20, verbose_name='Телефон')
+    phone_mobile = models.CharField(max_length=20, blank=True, verbose_name='Мобильный телефон')
+    address = models.TextField(verbose_name='Адрес')
+    email = models.EmailField(verbose_name='Email', blank=True)
+    footer_company_info = models.TextField(verbose_name='Текст в подвале', blank=True)
+
+    class Meta:
+        verbose_name = 'Статические данные на сайте'
+        verbose_name_plural = 'Статические данные на сайте'
+
+    def save(self, *args, **kwargs):
+        if StaticInfo.objects.exists() and not self.pk:
+        # if you'll not check for self.pk
+        # then error will also raised in update of exists model
+            raise ValidationError('There is can be only one JuicerBaseSettings instance')
+        return super(StaticInfo, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return 'Контактная информация на сайте'
