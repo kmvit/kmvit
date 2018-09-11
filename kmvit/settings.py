@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'portfolio',
     'easy_thumbnails',
     'srm',
-    'ckeditor_uploader'
+    'ckeditor_uploader',
+    'captcha',
 ]
 
 

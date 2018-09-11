@@ -6,6 +6,7 @@ from portfolio.models import *
 from blog.models import *
 from .forms import *
 from django.core.mail import EmailMessage
+from django.http import Http404
 
 
 class Home(DetailView):
@@ -58,7 +59,7 @@ def feedback(request):
 
     # new logic!
     if request.method == 'POST':
-        form = form_class(data=request.POST)
+        form = form_class(request.POST)
 
         if form.is_valid():
             name = request.POST.get(
@@ -76,5 +77,7 @@ def feedback(request):
 )
             email.send()
             return redirect('success')
+        else:
+            raise Http404
 
     return redirect('home')

@@ -20,6 +20,7 @@ urlpatterns = [
     url(r'^success/', success, name='success'),
     url(r'^srm/', include('srm.urls', namespace='orders', app_name='orders')),
     url(r'^logout$', logout_view, name='logout'),
+    url(r'^captcha/', include('captcha.urls')),
     url(r'^(?P<slug>[\w-]+)/$', PageDetail.as_view(), name='page'),
     
 

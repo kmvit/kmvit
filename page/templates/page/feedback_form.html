@@ -18,6 +18,11 @@
                         <label for="phone" class="col-form-label">Телефон:</label>
                         <input type="text" class="form-control" required name="phone" id="id_phone">
                      </div>
+                     <div class="form-group">
+                        <label for="phone" class="col-form-label">{{form.label_tag.captcha}}:</label>
+                        {{form.captcha}}
+                        <button class='js-captcha-refresh'></button>
+                     </div>
                      <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
                         <input type="submit" class="btn btn-primary" value="Отправить">
