@@ -3870,15 +3870,10 @@ svg{
   width:50%;
   height:50%;
 }
-.svg-index-wrapper{
-  height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
+
 
 .svg-index{
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/194122/07t2mb2.gif);
+  background-image: url(/static/assets/img/background/07t2mb2.gif);
   overflow:hidden;
   display: flex;
   align-items: center;
