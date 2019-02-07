@@ -1347,6 +1347,7 @@
 ----------  1.9. Media screen max width 767px  ----------
 */
 @media screen and (max-width: 767px) {
+
   .margin-top {
     margin-top: 60px;
   }

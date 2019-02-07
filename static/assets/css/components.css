@@ -1085,7 +1085,7 @@ ul.slick-dots li.slick-active {
     -o-transition: border-color 0.3s;
 }
 .box-media.layout-5 .box-icon {
-  font-size:30px;    
+  font-size:30px;
   border: 0;
   background-color: transparent;
 }
@@ -7217,7 +7217,7 @@ Yanone Kaffeesatz
   width: 80%;
 }
 .page-banner-4 .homepage-banner-warpper .banner-info .main-title {
-  top: 50%;
+  top: 60%;
   margin-top: -155px;
 
 }
