@@ -37,20 +37,12 @@
                   <div class="col-md-2">
                      <div class="about-project-left">
                         <div class="about-project-inner">
-                           <div class="small-title">Кто делал</div>
-                           <div class="text">{{portfolio.developer}}</div>
-                        </div>
-                        <div class="about-project-inner">
                            <div class="small-title">Год</div>
                            <div class="text">{{portfolio.year}} </div>
                         </div>
                         <div class="about-project-inner">
                            <div class="small-title">Клиент</div>
                            <div class="text">{{portfolio.client}} </div>
-                        </div>
-                        <div class="about-project-inner">
-                           <div class="small-title">Что использовали</div>
-                           <div class="text">{{portfolio.skills}} </div>
                         </div>
                         <div class="about-project-inner">
                            <div class="small-title">Посмотреть вживую</div>
@@ -90,23 +82,34 @@
                         {% endif %}
                      </div>
                   </div>
+
+                  <ul class="pager">
+                      {% if object.get_next %}
+                          <li class="previous">
+                               <a href="{% url 'page' object.get_next_by_created_at.slug %}">&larr; Previous Post</a>
+                          </li>
+                      {% endif %}
+                      {% if object.get_previous %}
+                          <li class="next">
+                               <a href="{% url 'page' object.get_previous_by_created_at.slug %}">Next Post &rarr;</a>
+                          </li>
+                      {% endif %}
+                  </ul>
                   <div class="clearfix"></div>
-                  <div class="col-sm-6">
-                     <div class="about-project-base">
-                        <div class="title">Описание</div>
-                        <div class="description">
-                           <div class="text">{{portfolio.description}}</div>
+                  <section class="banner-homepage layout-2 page-branding">
+                     <div class="box-content-wrap">
+                        <div class="box-purchase">
+                           <div class="box-purchase-main">
+                              <div class="purchase-wrapper">
+                                 <h1 class="mute-title">Качественный и профессиональный</h1>
+                                 <h4 class="main-title">Хотите сайт на выгодных условиях?</h4>
+                                 <button data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-read-more" type="button">Узнать цену</button>
+                              </div>
+                           </div>
                         </div>
                      </div>
-                  </div>
-                  <div class="col-sm-6">
-                     <div class="about-project-base">
-                        <div class="title">Что было сделано</div>
-                        <div class="description">
-                           <div class="text">{{portfolio.work|safe|linebreaks}}</div>
-                        </div>
-                     </div>
-                  </div>
+                     <div class="clearfix"></div>
+                  </section>
                </div>
             </div>
          </div>
