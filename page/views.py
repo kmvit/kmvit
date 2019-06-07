@@ -43,7 +43,7 @@ class PageDetail(DetailView):
         context['fact']= Fact.objects.all()
         context['review'] = Review.objects.all()
         context['blog'] = Blog.objects.all()
-        content['form'] = ContactForm
+        context['form'] = ContactForm
         assert isinstance(context, object)
         return context
 
