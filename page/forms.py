@@ -12,5 +12,3 @@ class FeedBackAdd(forms.ModelForm):
 class ContactForm(forms.Form):
     name = forms.CharField(required=True)
     phone = forms.CharField(required=True)
-    captcha = CaptchaField()
-    
